@@ -6,7 +6,16 @@
     <description>Recent content on Tanzil Zubair Bin Zaman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Sun, 12 May 2019 12:14:34 +0600</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Nov 2020 07:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>This Website !</title>
+      <link>/projects/project-3/</link>
+      <pubDate>Mon, 30 Nov 2020 07:00:00 +0000</pubDate>
+      
+      <guid>/projects/project-3/</guid>
+      <description>This Website! Yes, this website!. Built using HTML, Javascript and CSS (along with a few libraries to ease the pain of boilerplate code) , with Hugo as the CMS and Forestry mixed in for a little GUI convenience, this is my little space on the internet.</description>
+    </item>
+    
     <item>
       <title>Amazon increase income 1.5 Million</title>
       <link>/blog/post-4/</link>
@@ -14,15 +23,6 @@
       
       <guid>/blog/post-4/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
-    </item>
-    
-    <item>
-      <title>Artwork Design</title>
-      <link>/projects/project-3/</link>
-      <pubDate>Sun, 12 May 2019 12:14:34 +0600</pubDate>
-      
-      <guid>/projects/project-3/</guid>
-      <description>Project Requirements Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
     </item>
     
   </channel>
