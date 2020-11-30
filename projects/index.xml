@@ -2,17 +2,17 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Projects on Tanzil Zubair Bin Zaman</title>
-    <link>tanzilzubair.github.io/projects/</link>
+    <link>/projects/</link>
     <description>Recent content in Projects on Tanzil Zubair Bin Zaman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 30 Nov 2020 07:00:00 +0000</lastBuildDate><atom:link href="tanzilzubair.github.io/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Nov 2020 07:00:00 +0000</lastBuildDate><atom:link href="/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>This Website !</title>
-      <link>tanzilzubair.github.io/projects/project-3/</link>
+      <link>/projects/project-3/</link>
       <pubDate>Mon, 30 Nov 2020 07:00:00 +0000</pubDate>
       
-      <guid>tanzilzubair.github.io/projects/project-3/</guid>
+      <guid>/projects/project-3/</guid>
       <description>This Website! Yes, this website!. Built using HTML, Javascript and CSS (along with a few libraries to ease the pain of boilerplate code) , with Hugo as the CMS and Forestry mixed in for a little GUI convenience, this is my little space on the internet.</description>
     </item>
     
