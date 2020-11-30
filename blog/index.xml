@@ -5,16 +5,6 @@
     <link>/blog/</link>
     <description>Recent content in Blog on Tanzil Zubair Bin Zaman</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 12 May 2019 12:14:34 +0600</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Amazon increase income 1.5 Million</title>
-      <link>/blog/post-4/</link>
-      <pubDate>Sun, 12 May 2019 12:14:34 +0600</pubDate>
-      
-      <guid>/blog/post-4/</guid>
-      <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
-    </item>
-    
+    <language>en-us</language><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
