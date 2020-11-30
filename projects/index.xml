@@ -16,5 +16,14 @@
       <description>This Website! Yes, this website!. Built using HTML, Javascript and CSS (along with a few libraries to ease the pain of boilerplate code) , with Hugo as the CMS and Forestry mixed in for a little GUI convenience, this is my little space on the internet.</description>
     </item>
     
+    <item>
+      <title>Minecraft: Nuclear Weapons Add-on</title>
+      <link>/projects/project-2/</link>
+      <pubDate>Sun, 12 May 2019 07:00:34 +0000</pubDate>
+      
+      <guid>/projects/project-2/</guid>
+      <description>Minecraft Add-on The Beginning Ahh, my first coding project. Minecraft is something that I’ve loved all my life, the joy, the freedom, the boundless possibilities spreading out before you every time you open a world….</description>
+    </item>
+    
   </channel>
 </rss>
