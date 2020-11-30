@@ -2,26 +2,26 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Tanzil Zubair Bin Zaman</title>
-    <link>/</link>
+    <link>tanzilzubair.github.io/</link>
     <description>Recent content on Tanzil Zubair Bin Zaman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 30 Nov 2020 07:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Mon, 30 Nov 2020 07:00:00 +0000</lastBuildDate><atom:link href="tanzilzubair.github.io/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>This Website !</title>
-      <link>/projects/project-3/</link>
+      <link>tanzilzubair.github.io/projects/project-3/</link>
       <pubDate>Mon, 30 Nov 2020 07:00:00 +0000</pubDate>
       
-      <guid>/projects/project-3/</guid>
+      <guid>tanzilzubair.github.io/projects/project-3/</guid>
       <description>This Website! Yes, this website!. Built using HTML, Javascript and CSS (along with a few libraries to ease the pain of boilerplate code) , with Hugo as the CMS and Forestry mixed in for a little GUI convenience, this is my little space on the internet.</description>
     </item>
     
     <item>
       <title>Amazon increase income 1.5 Million</title>
-      <link>/blog/post-4/</link>
+      <link>tanzilzubair.github.io/blog/post-4/</link>
       <pubDate>Sun, 12 May 2019 12:14:34 +0600</pubDate>
       
-      <guid>/blog/post-4/</guid>
+      <guid>tanzilzubair.github.io/blog/post-4/</guid>
       <description>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</description>
     </item>
     
