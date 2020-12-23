@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
   <meta charset="utf-8">
-  <title>Amazon increase income 1.5 Million</title>
+  <title>What goes into a Flutter app ( Part 1 )</title>
 
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
 <meta name="HandheldFriendly" content="true">
-  <meta name="description" content="This is meta description.">
+  <meta name="description" content="This article seeks to bridge a gap and provide newer coders with a high level overview of what exactly goes into making a Flutter app.">
   <meta name="attribution" content='<a href="https://www.vecteezy.com/free-vector/t-logo">T Logo Vectors by Vecteezy</a>'>
   <meta name="author" content="Tanzil Zubair Bin Zaman">
   <meta name="generator" content="Hugo 0.78.2" />
@@ -109,7 +109,7 @@
   <div class="container">
     <div class="row">
       <div class="col-12 text-center">
-        <h1 class="text-white font-tertiary">Amazon increase income 1.5 Million</h1>
+        <h1 class="text-white font-tertiary">What goes into a Flutter app ( Part 1 )</h1>
       </div>
     </div>
   </div>
@@ -129,47 +129,91 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-9 text-center mb-4">
-          <img src="/images/content/blog/post-4.jpg" alt="Amazon increase income 1.5 Million" class="img-fluid rounded mb-4">
-          <p class="font-secondary">Published on May 12, 2019 by <span class="text-primary">Tanzil Zubair Bin Zaman</span></p>
+          <img src="/images/content/blog/post-4.jpg" alt="What goes into a Flutter app ( Part 1 )" class="img-fluid rounded mb-4">
+          <p class="font-secondary">Published on Dec 01, 2020 by <span class="text-primary">Tanzil Zubair Bin Zaman</span></p>
         </div>
         <div class="col-lg-9">
           <div class="content">
-            <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore
-et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
-ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu
-fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
-mollit anim id est laborum.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est.</p>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
-ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
-labore et dolore magnam aliquam quaerat voluptatem.</p>
+            <h2 id="disclaimer">Disclaimer</h2>
+<p>This article is meant to be a starting point for people new to coding and trying their hand at Dart and Flutter, much as I was and did.</p>
+<p>It discusses the core components of what comprises an app, and also tries to function as an appendix of sorts, giving a high level view of all the moving parts, but also providing the terms that can be used to easily find guides and detailed explanations of each part, for when you naturally stumble across the problem they are meant to solve, and need to find it again.</p>
+<p>Most of these are given in <em>italics</em>.</p>
+<p>This article will also be a part of a series, as the concepts it discusses are too big even for an introductory explanation to be given in one article.</p>
+<hr>
+<h2 id="cogs-in-the-machine">Cogs in the machine</h2>
+<p>The different parts of an app are:</p>
+<ul>
+<li>The <strong><em>UI</em></strong> ( Ex: Containers, RaisedButtons, Columns, Rows etc. )</li>
+<li>The <strong><em>State Management</em></strong> solution ( Ex: Bloc, Mobx, Provider, Redux etc. )</li>
+<li>The <strong><em>Dependency Injection</em></strong> solution ( Ex: Provider, GetIt, etc. )</li>
+<li>The <strong><em>Local Data Persistence</em></strong> solution ( Ex: Sqflite, Hive, etc. )</li>
+<li>The <strong><em>Network and Connectivity</em></strong> code/combo/framework ( Ex: Chopper, Dio, etc. )</li>
+<li>The <strong><em>Architecture Pattern</em></strong> ( Ex: MVVM, MVC, MVP etc. )</li>
+</ul>
+<p>Note: The architecture isn’t really a component <em>per se</em>, but rather comprises of coding practices and such that hold together the rest of the components mentioned above.</p>
+<p>If we are to use the machine analogy, the architecture would be the lubricant used in-between the gears, or maybe the screw holding the gears in place, while the components are the gears themselves. Just as important, but not the same</p>
+<p>………and thats about it! Everything seems better when its listed out in an organized way, doesn’t it?</p>
+<p>Now, lets provide some explanations and examples for each of these components</p>
+<h2 id="diving-off-the-deep-end">Diving off the deep-end</h2>
+<hr>
+<h3 id="the-ui">The UI</h3>
+<p>Perhaps the easiest part of the app amongst the six (at least in Flutter), the UI comprises of  the layout of the application, the buttons, cards, sliders etc, along with their shapes, colors, position etc. . It is of course made using widgets, such as Containers, Columns, Rows etc.</p>
+<h3 id="state-management">State Management</h3>
+<p>Ohhh boy this is a biggie. State Management is a wildly, and I mean <em>wildly</em> heated topic in code in general, and no less in Flutter, with countless ways to manage it, and with people who swear by their method on each side.</p>
+<p><strong><em>Now before we get to a solution, it would be better to understand what exactly we are trying to solve.</em></strong></p>
+<p>The state of an app can be thought of as all of the data in an app <strong>that changes</strong> , and depending on which the UI also changes.</p>
+<p>For example, in  the default Counter app generated when a new Flutter app is created, the state would be the text that displays the count. It is data that <em>changes</em>, due to which the UI <em>also changes</em>.</p>
+<p>Now this change can be triggered by anything from the user pressing a button to a refresh that pulled in new data from a database somewhere.</p>
+<p>State is therefore data that changes during the lifecycle of an app, and since multiple parts of the app, located in various different, far away parts of the widget tree might need to share ( that is detect, read and most importantly <em>react to</em> ) the same data, it becomes important, and <em>exponentially more cumbersome</em> to pass data around, and react to it.</p>
+<p>*The purpose of state management is therefore to keep track of when state changes, across the app, and to then notify all the widgets that use that state that they need to rebuild.*</p>
+<p>Most apps, big or small, require state management to a certain degree. As said before , state management is a problem that has a <em>lot</em> of solutions. Also, due to how interconnected state and its management solution is with nearly every other part of an app,  it is also <em>very</em> closely tied to your approach to Dependency Injection, and the Architecture Pattern you implement, and affects them both.</p>
+<p>Some of the more popular approaches to state management, separated by the scales of apps for which they are commonly used, are listed below:</p>
+<p><strong><em>For small-scale apps</em></strong></p>
+<ul>
+<li>Scoped Model</li>
+<li>setState</li>
+<li>Provider</li>
+<li>Riverpod</li>
+</ul>
+<p><strong><em>For medium-sized apps</em></strong></p>
+<ul>
+<li>Provider</li>
+<li>Riverpod</li>
+<li>Mobx</li>
+<li>Scoped Model</li>
+</ul>
+<p><strong><em>For large-scale apps</em></strong></p>
+<ul>
+<li>Bloc</li>
+<li>Provider</li>
+<li>Riverpod</li>
+<li>Mobx</li>
+<li>Redux</li>
+</ul>
+<p><em>Note:</em> The in-built approach to state management in Flutter is the <strong><em>Inherited Widget</em></strong>, but it is very low-level in nature, and as such has lots of boilerplate associated with it, along with being hard to understand. As such, it is not explicitly mentioned here.</p>
+<p>It is however what Provider and some other state management approaches work with, under the hood.</p>
+<h3 id="dependency-injection">Dependency Injection</h3>
+<p>Ahh yes, Dependency Injection. This is one of the components with the most amount of theory behind it, but in effect, is quite simple.</p>
+<p>It is simply providing your classes/widgets/objects/instances with <em>other</em> classes/widgets/objects/instances that they use (and therefore, <strong><em>depend</em></strong> on).</p>
+<p>In fact, you may have already been doing this, with the constructors of your classes/widgets/objects/instances.</p>
+<p><strong><em>Well, then what problem does dependency injection solve ?</em></strong> Imagine you have your Widget tree, and you need to pass an object, of, say, type <em>DeviceData</em>,  that contains the sizing information and device orientation, from the topmost widget, to a widget <em>7 (widget) layers down</em>.</p>
+<p>This means that you would have to code in 7 separate constructors, with the widgets in the middle keeping the object solely to be able to pass it down to the next widget.</p>
+<p>This is not a sign of good code.</p>
+<p>Furthermore, when you get more advanced with a project, you might want to use abstractions more and more, so that you can switch out the concrete implementation of a class for one more suitable for testing, and that is simply not feasible here if you have to change 7 different constructors to switch out one implementation housed in one part of your code.</p>
+<p>This is the problem dependency injection solves. The idea being you can declare all objects or dependencies elsewhere in your code, possibly even using abstractions instead of concrete implementations (so as to accommodate switching out for mock classes), and then access them wherever you need to use them, without the hassle of passing them through constructors etc.</p>
+<p>Some of the more popular packages used for Dependency Injection are:</p>
+<ul>
+<li>GetIt ( Not strictly for dependency injection, but also a <em>service locator</em> )</li>
+<li>Provider ( Provider is useful for both dependency injection <em>and</em>  state management )</li>
+</ul>
+<h2 id="the-end-for-now">The End (For now)</h2>
+<p>Well, I think I&rsquo;ve been rambling on for long enough. As mentioned near the beginning, this article will be part of a series, so while this is the end of this article, it is the beginning of a n adventure.</p>
+<hr>
 <blockquote>
-<p>Dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.</p>
+<p><strong><em>Some things have been oversimplified for the sake of newcomers, and some I may have gotten wrong myself.</em></strong></p>
+<p><strong><em>If you have found incorrect information, please do not hesitate to contact me, and I will update this or any other article to reflect the correct information.</em></strong></p>
+<p><strong><em>To err is human, after all</em></strong></p>
 </blockquote>
-<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et
-dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex
-ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
-nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit
-anim id est laborum. Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque
-laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae
-dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia
-consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem
-ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut
-labore et dolore magnam aliquam quaerat voluptatem.</p>
 
           </div>
         </div>

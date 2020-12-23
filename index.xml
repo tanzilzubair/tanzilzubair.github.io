@@ -6,7 +6,16 @@
     <description>Recent content on Tanzil Zubair Bin Zaman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Mon, 30 Nov 2020 07:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 01 Dec 2020 07:00:00 +0000</lastBuildDate><atom:link href="/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>What goes into a Flutter app ( Part 1 )</title>
+      <link>/blog/post-4/</link>
+      <pubDate>Tue, 01 Dec 2020 07:00:00 +0000</pubDate>
+      
+      <guid>/blog/post-4/</guid>
+      <description>Disclaimer This article is meant to be a starting point for people new to coding and trying their hand at Dart and Flutter, much as I was and did.</description>
+    </item>
+    
     <item>
       <title>This Website !</title>
       <link>/projects/project-3/</link>
@@ -19,10 +28,10 @@
     <item>
       <title>Minecraft: Nuclear Weapons Add-on</title>
       <link>/projects/project-2/</link>
-      <pubDate>Sun, 12 May 2019 07:00:34 +0000</pubDate>
+      <pubDate>Thu, 10 Nov 2016 07:00:34 +0000</pubDate>
       
       <guid>/projects/project-2/</guid>
-      <description>Minecraft Add-on The Beginning Ahh, my first coding project. Minecraft is something that I’ve loved all my life, the joy, the freedom, the boundless possibilities spreading out before you every time you open a world….</description>
+      <description>The Beginning Ahh, my first coding project. Minecraft is something that I’ve loved all my life, the joy, the freedom, the boundless possibilities spreading out before you every time you open a world….</description>
     </item>
     
   </channel>
