@@ -16,5 +16,32 @@
       <description>Disclaimer This article is meant to be a starting point for people new to coding and trying their hand at Dart and Flutter, much as I was and did.</description>
     </item>
     
+    <item>
+      <title>What goes into a Flutter app ( Part 2 )</title>
+      <link>/blog/post-3/</link>
+      <pubDate>Sun, 12 May 2019 12:14:34 +0600</pubDate>
+      
+      <guid>/blog/post-3/</guid>
+      <description>Disclaimer This is Part 2 of a series of articles that explore and seek to provide newcomers with a high-level overview of what all the parts of an app consist of and do, so that they can hit the ground running.</description>
+    </item>
+    
+    <item>
+      <title>What goes into a Flutter app ( Part 3 )</title>
+      <link>/blog/post-2/</link>
+      <pubDate>Sun, 12 May 2019 12:14:34 +0600</pubDate>
+      
+      <guid>/blog/post-2/</guid>
+      <description>Disclaimer This is Part 3 and the final part of a series of articles that explore and seek to provide newcomers with a high-level overview of what all the parts of a Flutter app consist of and do, so that they can hit the ground running.</description>
+    </item>
+    
+    <item>
+      <title>What goes into a Flutter app ( Part 4 )</title>
+      <link>/blog/post-5/</link>
+      <pubDate>Sun, 12 May 2019 12:14:34 +0600</pubDate>
+      
+      <guid>/blog/post-5/</guid>
+      <description>Heading 1 Heading 2 Heading 3 Heading 4 Heading 5 Heading 6 Emphasis Emphasis, aka italics, with asterisks or underscores.</description>
+    </item>
+    
   </channel>
 </rss>

@@ -4,126 +4,227 @@
   <title>This Website !</title>
 
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
-<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-<meta name="HandheldFriendly" content="true">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
   <meta name="description" content="This is my website, my little space on the internet to share my thoughts, my opinions, and proudly display my projects.">
   <meta name="attribution" content='<a href="https://www.vecteezy.com/free-vector/t-logo">T Logo Vectors by Vecteezy</a>'>
-  <meta name="author" content="Tanzil Zubair Bin Zaman">
-  <meta name="generator" content="Hugo 0.78.2" />
+  <meta name="theme-color" content="#ffffff">
 
-  <style>
-    :root{
-      --primary-color:#22368e;
-    }
-  </style>
+  
+  <meta name="author" content="Tanzil Zubair Bin Zaman">
+  
+  <meta name="generator" content="Hugo 0.78.2" />
 
   <!-- plugins -->
   
   <link rel="stylesheet" href="/plugins/bootstrap/bootstrap.min.css ">
   
-  <link rel="stylesheet" href="/plugins/slick/slick.css ">
-  
   <link rel="stylesheet" href="/plugins/themify-icons/themify-icons.css ">
   
-
-  <!-- Main Stylesheet -->
-  
-  <link rel="stylesheet" href="/css/style.min.css" media="screen"> 
-<link rel="apple-touch-icon" sizes="180x180" href="/images/favicon//apple-touch-icon.png">
-<link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
-<link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
-<meta name="theme-color" content="#ffffff">
+  <link rel="stylesheet" href="/plugins/swiper/swiper.min.css ">
   
 
+
+  
+  <link rel="stylesheet" href="/css/style.min.css" media="screen">
+
+  
+  <link rel="stylesheet" href="/css/blog_cards.min.css" media="screen">
+
+  
+  <link rel="stylesheet" href="/css/preloader.min.css" media="screen">
+
+  
+  <link rel="stylesheet" href="/css/project_cards.min.css" media="screen">
+
+  
+  <link rel="stylesheet" href="/css/404-page.min.css" media="screen">
+
+  
+  <link rel="stylesheet" href="/css/form.min.css" media="screen">
+
+  
+  <link rel="stylesheet" href="/css/navigation.min.css" media="screen">
+
+  
+  <link rel="stylesheet" href="/css/typography.min.css" media="screen">
+
+  
+  <link rel="stylesheet" href="/css/menu.min.css" media="screen">
+
+
+
+  <link href="https://fonts.googleapis.com/css?family=Sunflower:300,500,700" rel="stylesheet">
+
+
+  <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon//apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+
+
+  
+  
 </head><body>
 <!-- preloader start -->
 <div class="preloader">
-  
-  <img src="/images/preloader.gif " alt="preloader">
-  
+    <div class="wrap-loader">
+        <div class="group">
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="ring"></div>
+        </div>
+        <div class="group">
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="ring"></div>
+        </div>
+        <div class="group">
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="ring"></div>
+          <div class="ring"></div>
+        </div>
+      </div>
 </div>
 <!-- preloader end -->
 <header class="navigation fixed-top">
-  <nav class="navbar navbar-expand-lg navbar-dark">
-    
-    <a class="responsive-navbar" href="/">
-      
-      <h3 class="logo-text font-tertiary">Tanzil Zubair Bin Zaman</h3>
-      
-    </a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navigation"
-      aria-controls="navigation" aria-expanded="false" aria-label="Toggle navigation">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-
-    <div class="collapse navbar-collapse text-center" id="navigation">
-      <ul class="navbar-nav ml-auto">
-        <li class="nav-item">
-          <a class="nav-link"href="/"> Home </a>
-        </li>
-        
-        
-        
-        
-        
-        <li class="nav-item ">
-          <a class="nav-link" href="/about">About</a>
-        </li>
-        
-        
-        
-        
-        
-        <li class="nav-item ">
-          <a class="nav-link" href="/projects">Projects</a>
-        </li>
-        
-        
-        
-        
-        
-        <li class="nav-item ">
-          <a class="nav-link" href="/blog">Blog</a>
-        </li>
-        
-        
-        
-        
-        
-        <li class="nav-item ">
-          <a class="nav-link" href="/contact">Contact</a>
-        </li>
-        
-        
-      </ul>
+  <div class="hamburger">
+    <div class="hamburger__container">
+      <span class="hamburger__top"></span>
+      <span class="hamburger__middle"></span>
+      <span class="hamburger__bottom"></span>
     </div>
-  </nav>
+  </div>
+  
+  <div class="menu">
+    <div class="menu__container bg-white">
+      <nav class="menu__nav">
+        <ul class="menu__list">
+          <li class="menu__item js-span">Menu</li>
+          <li class="menu__item">
+            <a class="menu__link" href="/"> Home </a>
+          </li>
+          
+      
+        <li class="menu__item">
+        <a class="menu__link" href="/about">About</a>
+      </li>
+      
+        <li class="menu__item">
+        <a class="menu__link" href="/projects">Projects</a>
+      </li>
+      
+        <li class="menu__item">
+        <a class="menu__link" href="/blog">Blog</a>
+      </li>
+      
+        <li class="menu__item">
+        <a class="menu__link" href="/contact">Contact</a>
+      </li>
+      
+      <li class="menu__item menu__item--img">
+        <a href="https://tanzilzubair.github.io" data-hover="">
+          <svg xmlns="http://www.w3.org/2000/svg" width="0.7in" height="0.7in" viewBox="0 0 600 600"><path d="M300.127 29.472c-148.137 0-268.654 120.518-268.654 268.652S151.99 566.778 300.127 566.778 568.78 446.261 568.78 298.124 448.263 29.472 300.127 29.472zm258.122 237.892c-61.755 7.872-123.11 6.044-150.822 4.531l34.729-15.455h.166c.741-.017 52.452-1.444 113.15-7.116q1.7 8.918 2.777 18.04zM456.492 398.815L436.4 281.646q4.7.1 9.758.168L483.727 387.7c4.382 36.737-.771 54-4.4 54.7-3.348.592-13.596-11.892-22.835-43.585zm12.676 47.09q-9.091-6.385-18.463-13a142.173 142.173 0 0 0 3.252-14.383c3.922 10.284 9.143 21.17 15.211 27.383zM553.683 240.8c-36.55 3.392-69.786 5.26-90.271 6.184l40.3-17.936c1.157-.036 18.7-.648 46.2-2.9q2.096 7.241 3.771 14.652zm-6.347-23.107c-8.193.66-15.508 1.18-21.622 1.566l19.248-8.566a255.569 255.569 0 0 1 2.374 6.997zM300.127 38.123c109.644 0 203.585 68.255 241.744 164.476l-146.248 65.083c-.333-16.13-1.921-58.647-9.534-93.734-8.537-39.361-44.24-67.929-84.893-67.929a87.12 87.12 0 0 0-84.58 66.744l-94.027.183a4.324 4.324 0 0 0-3.771 6.429c1.342 2.412 15.389 23.407 96.479 27.32A87.12 87.12 0 0 0 301.2 280a137.785 137.785 0 0 0 37.255-4.74c-6.366 10.437-19.032 25.885-38.214 25.885a4.326 4.326 0 1 0 0 8.651c34.748 0 50.47-39.05 51.123-40.711a4.33 4.33 0 0 0-5.95-5.455 71.776 71.776 0 0 1-13.4 4.329c19.333-18.923 17.259-36.215 17.143-37.056a4.325 4.325 0 0 0-6.95-2.815 77.551 77.551 0 0 1-48.212 16.589 78.8 78.8 0 0 1-70.661-44.479c-.04-.081-.095-.148-.139-.226-.2-2.3-.326-4.613-.326-6.96a78.366 78.366 0 0 1 37.959-67.1 78.779 78.779 0 0 1 77.332 30.2 77.563 77.563 0 0 1 15.486 48.578 4.327 4.327 0 0 0 6.408 3.893c.68-.375 13.343-7.7 18.292-29.424 8.652 42.548 8.722 94.644 8.722 95.182a86.134 86.134 0 1 1-172.267 0 4.306 4.306 0 0 0-.162-1.113 5.174 5.174 0 0 0-.083-.268 4.322 4.322 0 0 0-.408-.88c-.024-.039-.04-.081-.065-.119a4.249 4.249 0 0 0-.706-.808c-.072-.065-.145-.121-.22-.181a4.276 4.276 0 0 0-.829-.526c-.035-.016-.06-.043-.094-.059L58.59 202.073c38.294-95.944 132.093-163.95 241.537-163.95zm71.519 120.551c.4 19.358-5.052 30.555-9.658 36.51a86.051 86.051 0 0 0-16.9-44.242 87.468 87.468 0 0 0-60.56-34.471 78.337 78.337 0 0 1 87.114 42.2zm-157.282 39.305c-46.4-2.38-69.105-10.52-79.619-16.4l80.262-.157a87.233 87.233 0 0 0-.8 11.59c.004 1.664.063 3.32.157 4.967zm15.24 26.763a87.5 87.5 0 0 0 64.384 28.58 86.052 86.052 0 0 0 45.57-12.866c-2.038 7.308-7.813 18.453-23.8 29.759a4.171 4.171 0 0 0-.537.468c-4.265.407-8.936.661-14.028.661a78.432 78.432 0 0 1-71.593-46.602zm71.322 199.43c16.68 0 54.929-27.59 77.408-74.172-19 79.7-63.516 125.6-77.408 125.6-10.8 0-32.369-18.394-51.067-52.482-11.347-20.686-20.133-44.3-26.074-69.608 21.595 45.063 57.685 70.662 77.141 70.662zm-77.975-96.031a94.673 94.673 0 0 0 154.274 2.353c-19.556 54-62.667 85.028-76.3 85.028-16.749 0-59.898-30.563-77.974-87.381zM55.472 210.156l20.549 9.136c-6.444-.4-14.269-.96-23.078-1.675.816-2.499 1.641-4.995 2.529-7.461zm-5.113 15.915c28.718 2.368 46.831 2.968 47.181 2.978h.129c.086 0 .165-.019.247-.024l40.444 17.982c-20.591-.921-54.5-2.813-91.771-6.293q1.677-7.403 3.77-14.643zM44.8 249.245c61.081 5.74 113.289 7.179 114.034 7.2h.115a4.288 4.288 0 0 0 .523-.052l34.8 15.473c-27.566 1.527-89.772 3.443-152.249-4.62q1.077-9.099 2.777-18.001zm99.864 149.57c-9.239 31.7-19.512 44.163-22.834 43.582-3.631-.7-8.784-17.963-4.4-54.7L155 281.814q5.056-.065 9.757-.169zm5.785 34.093q-9.3 6.564-18.357 12.923c6.037-6.224 11.2-17.064 15.107-27.305a142.024 142.024 0 0 0 3.246 14.382zM40.123 298.124c0-6 .277-11.923.678-17.817l7.384-3.54q10.356 1.212 20.6 2.087l-28.533 24.4c-.033-1.714-.129-3.41-.129-5.13zm4.844 49.83a258.974 258.974 0 0 1-4.292-33.683l40.3-34.459a821.1 821.1 0 0 0 19.679 1.142l-54.721 66.191c-.339.299-.64.531-.966.809zM64.918 408.8c-1.3-2.742-2.557-5.5-3.758-8.3 2.043-1.949 4.131-3.87 6.033-5.89a133.927 133.927 0 0 0-2.275 14.19zm-7.24-16.928a257.94 257.94 0 0 1-9.753-30.557 230.411 230.411 0 0 1 4.687-8.669l58.915-71.264q6.732.224 13.2.343l-51.8 92.993a1.42 1.42 0 0 0-.083.1 191.72 191.72 0 0 1-15.166 17.049zm17.631 36.619q-.773-1.327-1.533-2.663a11.937 11.937 0 0 1-.486-1.727c-.018-.1-.024-.2-.047-.3-1.094-6.959-.057-21.6 6.87-44.221l54.437-97.72c2.782.023 5.519.036 8.195.036 1.035 0 2.027-.008 3.045-.011l-36.319 102.351c-.041.077-.084.156-.123.234-16.636 33.605-30.536 45.369-34.039 44.016zm4.7 7.771c9.5-3.479 19.682-17.38 27.265-29.96a139.21 139.21 0 0 0 .85 23.706c-8 4.654-15.73 9.126-23.409 13.568-1.627-2.404-3.161-4.865-4.707-7.319zm9.744 14.395c6.666-3.856 13.365-7.734 20.27-11.749 1.982 6.4 5.165 11.025 10.17 11.987a9.948 9.948 0 0 0 5.507-.576 9293.811 9293.811 0 0 1-23.348 16.312q-6.602-7.74-12.6-15.979zm18.312 22.534a9990.297 9990.297 0 0 0 45.318-31.762c2.514 6.021 5.693 10.765 9.7 12.832 0 .15 0 .3-.006.45q-21.1 17.71-40.122 33.467c-5.155-4.811-10.143-9.787-14.891-14.992zm21.393 20.835a8645.718 8645.718 0 0 0 33.583-28q.105 12.394.836 24.575l-3.942 3.892c-4.624 4.558-9.182 8.811-13.726 13.019-5.78-4.262-11.352-8.779-16.752-13.491zm23.94 18.6c3.756-3.494 7.512-6.994 11.32-10.726.564 6.541 1.407 12.991 2.261 19.438q-6.934-4.151-13.579-8.713zm275.1-20.6a3.162 3.162 0 0 0-.024.336 438.381 438.381 0 0 1-3.58 33.8 259.574 259.574 0 0 1-248.555.562q-2.479-16.973-3.658-34.37c0-.1-.016-.192-.02-.291q-1.288-19.673-.886-39.93a4.227 4.227 0 0 0 .143-1.049 4.285 4.285 0 0 0-.113-.953c1.191-49.08 9.82-100.861 25.894-155.949a4.326 4.326 0 1 0-8.307-2.422c-15.466 53.01-24.117 103.032-25.989 150.6-3.6-6.492-7.942-20.4-10.036-43.156l20.206-117.8c15.66-.493 27.194-1.234 32.656-1.633 1.8 127.345 66.154 204.472 94.7 204.472 24.013 0 92.7-80.116 94.692-204.422 5.7.41 16.92 1.111 31.961 1.585l20.206 117.8c-2.1 22.751-6.435 36.651-10.033 43.146-1.872-47.568-10.527-97.589-25.992-150.592a4.326 4.326 0 1 0-8.307 2.422c16.074 55.085 24.7 106.869 25.892 155.954a4.353 4.353 0 0 0-.113.948 4.288 4.288 0 0 0 .148 1.063q.405 20.241-.883 39.883zm5.75 28.747c.825-6.262 1.645-12.525 2.192-18.876 3.673 3.6 7.3 6.982 10.926 10.361-4.288 2.961-8.65 5.818-13.118 8.519zm20.308-13.632c-4.417-4.1-8.846-8.229-13.338-12.658l-3.936-3.882q.743-12.179.829-24.583a8434.56 8434.56 0 0 0 33.126 27.617c-5.381 4.719-10.924 9.246-16.681 13.51zm23.163-19.371q-18.846-15.624-39.641-33.067l-.007-.453c4-2.067 7.184-6.812 9.7-12.832a10143.928 10143.928 0 0 0 44.777 31.387c-4.728 5.203-9.703 10.166-14.829 14.969zm20.521-21.539c-7.464-5.2-15-10.463-22.817-15.942a9.87 9.87 0 0 0 5.537.6c5-.962 8.189-5.585 10.17-11.987a9692.917 9692.917 0 0 0 19.633 11.381q-5.956 8.224-12.523 15.952zm17.553-23.031c-7.473-4.322-14.99-8.673-22.763-13.194a139.314 139.314 0 0 0 .849-23.706c7.381 12.245 17.261 25.776 26.524 29.714-1.515 2.408-3.02 4.826-4.61 7.186zm12.172-19.958c-.989 1.793-2.033 3.552-3.063 5.32-4.584-.527-17.681-12.942-33.1-44.089a7.558 7.558 0 0 0-.126-.234l-36.314-102.354c1.018 0 2.01.011 3.045.011 2.676 0 5.413-.013 8.194-.037l54.439 97.717c6.76 22.091 7.894 36.515 6.925 43.663zM536.1 407.1c-.541-4.182-1.243-8.4-2.144-12.5 1.707 1.812 3.575 3.545 5.4 5.308-1.033 2.428-2.147 4.808-3.256 7.192zm6.728-15.882a193.172 193.172 0 0 1-14.518-16.41c-.028-.032-.053-.065-.081-.1l-51.8-92.994q6.459-.122 13.193-.343l58.92 71.265c1.48 2.6 2.816 5.059 4.07 7.45a257.67 257.67 0 0 1-9.781 31.133zm12.577-43.918c-.064-.056-.121-.1-.185-.155l-54.72-66.193a816.155 816.155 0 0 0 19.678-1.142l39.461 33.742a259.735 259.735 0 0 1-4.234 33.748zm-23.043-68.445q10.227-.882 20.6-2.087l6.454 3.1c.423 6.041.714 12.117.714 18.264 0 1.468-.087 2.915-.112 4.377z" fill="#231f20"></path><path d="M300.127 1.251c-163.7 0-296.874 133.175-296.874 296.873S136.428 595 300.127 595 597 461.822 597 298.124 463.825 1.251 300.127 1.251zm0 585.1C141.2 586.35 11.9 457.052 11.9 298.124S141.2 9.9 300.127 9.9s288.222 129.3 288.222 288.224S459.054 586.35 300.127 586.35z" fill="#231f20"></path><path d="M312.491 179.912h-8.553a26.51 26.51 0 0 0-48.47 0h-8.937a4.326 4.326 0 1 0 0 8.651h8.937a26.506 26.506 0 0 0 48.469 0h8.554a4.326 4.326 0 1 0 0-8.651zm-32.791 15.77a17.987 17.987 0 0 1-14.227-7.119h28.456a17.992 17.992 0 0 1-14.229 7.119zm-14.267-15.77a17.863 17.863 0 0 1 28.535 0z" fill="#231f20"></path></svg>          </a>
+      </li>
+        </ul>
+      </nav>
+      <nav class="menu__nav">
+        <ul class="menu__list">
+          <li class="menu__item js-span">My socials</li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Work In</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Progress</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Check Back</a>
+          </li>
+          <li class="menu__item">
+            <a class="menu__link" href="#">Soon!</a>
+          </li>
+          
+        </ul>
+      </nav>
+      <div class="menu__sidebar">
+        <div class="menu__flip">
+          <div class="menu__copy">
+            <span>Website by Tanzil Zubair Bin Zaman</span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <nav id="long-nav">
+    <div class="logo">
+     
+     <a href="/">
+      <h3 class="logo-text">Tanzil Zubair Bin Zaman</h3>
+    </a>
+    
+    </div>
+    
+    
+    <ul class="nav-list">
+      <li class="navbar-item">
+        <a class="nav-link" href="/"> Home </a>
+      </li>
+      
+      
+      
+      
+        <li class="navbar-item ">
+        <a class="nav-link" href="/about">About</a>
+      </li>
+      
+      
+      
+        <li class="navbar-item ">
+        <a class="nav-link" href="/projects">Projects</a>
+      </li>
+      
+      
+      
+        <li class="navbar-item ">
+        <a class="nav-link" href="/blog">Blog</a>
+      </li>
+      
+      
+      
+        <li class="navbar-item ">
+        <a class="nav-link" href="/contact">Contact</a>
+      </li>
+      
+    </ul>
+  </nav>  
 </header>
 
 
 
-
-
-
-<section class="page-title bg-primary position-relative overflow-hidden">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 text-center">
-        <h1 class="text-white font-tertiary">This Website !</h1>
+<section class="hero-area-alt bg-primary abs-pos-parent" id="particle-bg-2">
+    <div class="container">
+      <div class="row">
+        <div class="abs-pos-child-title">
+          <p class="banner-text-3">This Website !</p>
+        </div>
       </div>
     </div>
-  </div>
+  </section>
   
-  <img src="/images/illustrations/page-title.png" alt="illustrations" class="bg-shape-1 w-100">
-  <img src="/images/illustrations/leaf-pink-round.svg" alt="illustrations" class="bg-shape-2">
-  <img src="/images/illustrations/dots-cyan.svg" alt="illustrations" class="bg-shape-3">
-  <img src="/images/illustrations/leaf-orange.svg" alt="illustrations" class="bg-shape-4">
-  <img src="/images/illustrations/leaf-yellow.svg" alt="illustrations" class="bg-shape-5">
-  <img src="/images/illustrations/dots-group-cyan.svg" alt="illustrations" class="bg-shape-6">
-  <img src="/images/illustrations/leaf-cyan-lg.svg" alt="illustrations" class="bg-shape-7">
-</section>
-
-
 
 
 <section class="section">
@@ -143,7 +244,6 @@
               </div>
             </div>
           </div>
-          
           
           <div class="col-sm-6 mb-5">
             <div class="project-meta">
@@ -189,82 +289,22 @@
   </div>
 </section>
 
-
-
-
-<section class="section section-on-footer" data-background="/images/backgrounds/bg-dots.png">
-  <div class="container">
-    <div class="row">
-      <div class="col-12 text-center">
-      
-      </div>
-      <div class="col-lg-8 mx-auto">
-        <div class="bg-white rounded text-center p-5 shadow-down">
-          <h2 class="mb-80">Contact</h2>
-          <form action="https://formspree.io/f/mrgoalak" method="POST" class="row">
-            <div class="col-md-6">
-              <input type="text" id="name" name="name" placeholder="Full Name" class="form-control px-0 mb-4">
-            </div>
-            <div class="col-md-6">
-              <input type="email" id="email" name="email" placeholder="Email Address" class="form-control px-0 mb-4">
-            </div>
-            <div class="col-12">
-              <textarea name="message" id="message" class="form-control px-0 mb-4"
-                placeholder="Type Message Here"></textarea>
-            </div>
-            <div class="col-lg-6 col-10 mx-auto">
-              <button class="btn btn-primary w-100">send</button>
-            </div>
-          </form>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
-
-
-
-
 <footer class="bg-dark footer-section">
-  <div class="section">
-    <div class="container">
-      <div class="row">
-        <div class="col-md-4">
-          
-          
-        </div>
-      </div>
-    </div>
-  </div>
-  <div class="border-top text-center border-dark py-5">
-    <p class="mb-0 text-light"></p>
-  </div>
 </footer>
-
-
-<!-- Google Map API -->
-
 
 <!-- JS Plugins -->
 
 <script src="/plugins/jQuery/jquery.min.js"></script>
 
-<script src="/plugins/bootstrap/bootstrap.min.js"></script>
+<script src="/plugins/particleground/particleground.min.js"></script>
 
-<script src="/plugins/slick/slick.min.js"></script>
+<script src="/plugins/anime/anime.min.js"></script>
 
-<script src="/plugins/shuffle/shuffle.min.js"></script>
-
-<script src="/plugins/google-map/map.js"></script>
-
+<script src="/plugins/swiper/swiper.min.js"></script>
 
 <!-- Main Script -->
 
 <script src="/js/script.min.js"></script>
-
-
-
 </body>
 
 </html>
