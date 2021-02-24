@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en-us"><head>
   <meta charset="utf-8">
-  <title>Projects</title>
+  <title>MobX-Architecture, my first Flutter package!</title>
 
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="HandheldFriendly" content="true">
-  <meta name="description" content="This is where my projects reside.">
+  <meta name="description" content="This is meta description">
   <meta name="attribution" content='<a href="https://www.vecteezy.com/free-vector/t-logo">T Logo Vectors by Vecteezy</a>'>
   <meta name="theme-color" content="#ffffff">
 
@@ -193,7 +193,7 @@
       
       
       
-        <li class="navbar-item active">
+        <li class="navbar-item ">
         <a class="nav-link" href="/projects">Projects</a>
       </li>
       
@@ -214,130 +214,94 @@
 </header>
 
 
+
 <section class="hero-area-alt bg-primary abs-pos-parent" id="particle-bg-2">
-  <div class="container">
-    <div class="row">
-      <div class="abs-pos-child-title">
-        <h1 class="banner-text-2">Projects</h1>
+    <div class="container">
+      <div class="row">
+        <div class="abs-pos-child-title">
+          <p class="banner-text-3">MobX-Architecture, my first Flutter package!</p>
+        </div>
       </div>
     </div>
-  </div>
-</section>
+  </section>
+  
 
 
 <section class="section">
-   <div class="container">
-      <div class="wrapper-project">
-         
-         
-         <div class="blog-card card_B" style="
-background: linear-gradient(
-to bottom,
-rgba(0, 0, 0, 0),
-rgba(0, 0, 0, 0),
-rgba(0, 0, 0, 0.98)
-),
-url('/') no-repeat 45% /
-cover;
-">
-<div class="date">
-   Feb 01, 2021
+  <div class="container">
+    <div class="row">
+      <div class="col-lg-5 mb-5">
+        <img src="/" class="img-fluid w-100" alt="MobX-Architecture, my first Flutter package!">
+      </div>
+      <div class="col-lg-7 mb-5 mb-lg-0 align-self-center">
+        <div class="row mx-0">
+          <div class="col-sm-6 mb-5">
+            <div class="project-meta">
+              <i class="ti-calendar"></i>
+              <div class="ml-3">
+                <h4>Date</h4>
+                <p>Feb 01, 2021</p>
+              </div>
+            </div>
+          </div>
+          
+          <div class="col-sm-6 mb-5">
+            <div class="project-meta">
+              <i class="ti-folder"></i>
+              <div class="ml-3">
+                <h4>The Tech Stack</h4>
+                <p>Flutter, Dart</p>
+              </div>
+            </div>
+          </div>
+          
+          
+          <div class="col-sm-6 mb-5">
+            <div class="project-meta">
+              <i class="ti-link"></i>
+              <div class="ml-3">
+                <h4>Project Link</h4>
+                <p><a href="https://pub.dev/packages/mobx_architecture">https://pub.dev/packages/mobx_architecture</a></p>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+      <div class="col-lg-11">
+        <div class="content"><h2 id="the-inspiration">The Inspiration</h2>
+<p>The internet is a big place, and getting bigger everyday. As such, if you know what you&rsquo;re looking for, and if you look hard enough, 9 times out of 10 you&rsquo;re going to find what you&rsquo;re looking for, or at least a variation that works well enough with some modifications. Bridges built by others to traverse commonly faced problems.</p>
+<p>Rarely though, will you turn up with not even enough to build off of, and rarer still you then proceed to build what you wanted in the first place: too much work, not enough results, and that&rsquo;s without factoring in complexity. This would be the time to start considering alternatives, or workarounds. I&rsquo;ve done the same more times than I can remember.</p>
+<p>This time though, when I couldn&rsquo;t turn up with anything when I searched for architectures regarding the excellent state management library MobX, and with a workaround or alternative not really being viable, I found myself with a rare choice, the choice to build a bridge for the next person, as well as solve my own problem. The project wasn&rsquo;t very large, at least for a passable first version, but would compensate that more than enough with complexity.</p>
+<p>I would be working with <em>generics</em> in this project, and have to design a public API that wouldn&rsquo;t face breaking changes with every update. I also had to extensively test the code I had written for bugs, and do something I had absolutely zero experience with: documentation.</p>
+<p>This code would have to be secure, relatively bug free, provide a clear, concise and most importantly consistent and intuitive public API, and also be well documented.</p>
+<p>Furthermore it would also have to be maintainable and modular by design, one because the package had to be redundant, with errors in one module not being able to affect the functionality of other modules, and second because no two projects share the same dependencies, requirements AND implementation except in extremely unlikely scenarios, which would naturally mean modules had to be interchangeable with third party ones better suited to the project in question.</p>
+<p>Modules would therefore have to be able to be switched out for third party ones with coding styles, guidelines and protocols that would be impossible to predict and prepare for on a per third party module basis. Fortunately, due to the limited scope of V1 of the package (an intentional decision, and a requirement learned the hard way from previous experience), modularity was not a big problem, and could easily be ignored, at least for now.</p>
+<h2 id="the-plan">The Plan</h2>
+<p>This project would be an <em>architecture framework,</em> helping mesh together MobX, the state management solution of the Flutter project, with the UI and integrating both into the <a href="https://en.wikipedia.org/wiki/Model%E2%80%93view%E2%80%93viewmodel" title="MVVM"><em>MVVM</em></a> architecture pattern, a pattern that is quite intuitive, and plays well with mobile app projects.</p>
+<p>Under this architecture:</p>
+<ul>
+<li>The <strong><em>Model</em></strong> would be classes communicating with external APIs, sanitizing the data coming in, providing functionality, etc. similar if not exactly what the original pattern describes it to be</li>
+<li>The <strong><em>View Model</em></strong> would have some additional responsibilities, and be unified with MobX stores, therefore handling both the business logic <em>and</em> the state of the <strong><em>View</em></strong> it is bound to</li>
+<li>The <strong><em>View</em></strong> would be the UI of the Flutter project, and would also be similar if not exactly what the original pattern describes it to be, the only difference being it would have <em>Observer</em> widgets sprinkled in between, wherever needed, to react to state changes</li>
+</ul>
+<p>Along with the above principles, the main functionality provided by the package would be (at least in V1) simply providing an elegant, clean way to &ldquo;bind&rdquo; these <em>View Models</em> to the UI.</p>
+<h2 id="the-execution">The Execution</h2>
+<p>Although quite simple on paper, as is usually the case, when I started coding, I realized this &ldquo;simple&rdquo; functionality housed a fair bit of things in it. I would need 6 different types of widgets, to cover all the possible scenarios of View Model binding, a fair bit larger than the 2 widgets I thought I originally needed.</p>
+<p>I also ended up needing to learn much more about Dart <em>generics</em> than I originally planned to, as I realized the functionality I required needed more complex manipulation of generics than I originally thought.</p>
+<p>Here, a narrow vision for V1 helped me out greatly, as the project had to grow to be able to accommodate the expanding feature set I realized was quite necessary for a minimum viable product, but the growth was <em>greatly</em> curbed by the original narrow scope of the first version.</p>
+<h2 id="the-current-state">The Current State</h2>
+<p>Currently, that&rsquo;s all the package does, but architectures aren&rsquo;t that simple, incorporating everything from data persistence and dependency injection to network and cloud database communication code.</p>
+<p>However, these aspects of projects tend to vary <em>widely</em>, and therein lies my problem: striking a balance between creating a maintainable and scaleable architecture (which by definition requires rigorous and strict practices in code implementation) and creating a flexible, adaptable architecture that can be fit into a wider range of projects.</p>
+<p>This is the primary reason the architecture must be designed with modularity as a core principle, with modules for, say, data persistence and dependency injection being swappable for other packages as otherwise the number of projects this package can benefit decreases <em>drastically.</em></p>
+<h2 id="the-end">The End</h2>
+<p>This project is and will be very much a work in progress, with new features being added whenever required, fixes for the inevitable bugs that will slip through, etc, and I intend for this to evolve into a production ready architecture framework than any developer using MobX in Flutter will love and enjoy to use.</p>
+<p><em>Check out the GitHub repo of version 1.0.0 of the project</em> <a href="https://github.com/tanzilzubair/mobx_architecture" title="here"><em>here</em></a><em>!</em></p>
+<hr>
 </div>
-<div class="initial-content">
-   <a href="/projects/mobx-architecture-my-first-package/">
-      <div class="content-title">
-         MobX-Architecture, my first Flutter package!
       </div>
-      <div class="content-text">
-         This is my first attempt at making packages, smaller, bundled up software that other developers can use in their own projects to help them out!
-      </div>
-   </a>
-</div>
-<a href="/projects/mobx-architecture-my-first-package/">
-   <div class="hover-contentB">
-      <div class="content-summary">
-         <div class="content-title">MobX-Architecture</div>
-         <div class="content-text">
-            This package helps developers develop an architecture for the apps they&#39;re developing, by building a MVVM architecture around MobX, and providing tools to help them bind MobX to the rest of their project.
-         </div>
-      </div>
-   </div>
-</a>
-</div>
-         
-         <div class="blog-card card_B" style="
-background: linear-gradient(
-to bottom,
-rgba(0, 0, 0, 0),
-rgba(0, 0, 0, 0),
-rgba(0, 0, 0, 0.98)
-),
-url('/screen-shot-2021-02-23-at-11-20-13-pm.png') no-repeat 45% /
-cover;
-">
-<div class="date">
-   Dec 01, 2020
-</div>
-<div class="initial-content">
-   <a href="/projects/this-website/">
-      <div class="content-title">
-         This Website!
-      </div>
-      <div class="content-text">
-         This is my website, my little space on the internet to share my thoughts, my opinions, and proudly display my projects.
-      </div>
-   </a>
-</div>
-<a href="/projects/this-website/">
-   <div class="hover-contentB">
-      <div class="content-summary">
-         <div class="content-title">My website</div>
-         <div class="content-text">
-            Built with HTML, CSS, JS and caffeine, this website is one of my best looking projects, combining functionality with beautiful design
-         </div>
-      </div>
-   </div>
-</a>
-</div>
-         
-         <div class="blog-card card_B" style="
-background: linear-gradient(
-to bottom,
-rgba(0, 0, 0, 0),
-rgba(0, 0, 0, 0),
-rgba(0, 0, 0, 0.98)
-),
-url('/images/content/nuclear_weapons_thumbnail.jpg') no-repeat 45% /
-cover;
-">
-<div class="date">
-   Nov 10, 2016
-</div>
-<div class="initial-content">
-   <a href="/projects/project-2/">
-      <div class="content-title">
-         Minecraft: Nuclear Weapons Add-on
-      </div>
-      <div class="content-text">
-         I am......blurb
-      </div>
-   </a>
-</div>
-<a href="/projects/project-2/">
-   <div class="hover-contentB">
-      <div class="content-summary">
-         <div class="content-title">Testing</div>
-         <div class="content-text">
-            I am ....depth blurb
-         </div>
-      </div>
-   </div>
-</a>
-</div>
-         
-         
-      </div>
-   </div>
+    </div>
+  </div>
 </section>
 
 <footer class="bg-dark footer-section">
