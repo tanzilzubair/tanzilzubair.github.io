@@ -3,27 +3,37 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
-    <loc>/blog/</loc>
-    <lastmod>2021-02-01T07:00:19+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/how-do-i-make-x/</loc>
-    <lastmod>2021-02-01T07:00:19+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2021-02-01T07:00:19+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/projects/mobx-architecture-my-first-package/</loc>
-    <lastmod>2021-02-01T07:00:00+00:00</lastmod>
+    <loc>/projects/caelum-third-time-s-the-charm/</loc>
+    <lastmod>2021-05-17T07:00:00+00:00</lastmod>
   </url>
   
   <url>
     <loc>/projects/</loc>
+    <lastmod>2021-05-17T07:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2021-05-17T07:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/</loc>
+    <lastmod>2021-02-10T07:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/this-website-but-better/</loc>
+    <lastmod>2021-02-10T07:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/how-do-i-make-x/</loc>
+    <lastmod>2021-02-07T07:00:19+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/projects/mobx-architecture-my-first-package/</loc>
     <lastmod>2021-02-01T07:00:00+00:00</lastmod>
   </url>
   
