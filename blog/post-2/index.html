@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="HandheldFriendly" content="true">
-  <meta name="description" content="This article seeks to bridge a gap and provide newer coders with a high level overview of what exactly goes into making a Flutter app.">
+  <meta name="description" content="This series of posts seeks to bridge a gap and provide newer coders with a high level overview of what exactly goes into making a Flutter app.">
   <meta name="attribution" content='<a href="https://www.vecteezy.com/free-vector/t-logo">T Logo Vectors by Vecteezy</a>'>
   <meta name="theme-color" content="#ffffff">
 
   
   <meta name="author" content="Tanzil Zubair Bin Zaman">
   
-  <meta name="generator" content="Hugo 0.78.2" />
+  <meta name="generator" content="Hugo 0.79.1" />
 
   <!-- plugins -->
   
@@ -230,8 +230,8 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-9 text-center mb-4">
-          <img src="/images/content/test_post.jpg" alt="What goes into a Flutter app ( Part 3 )" class="img-fluid rounded mb-4">
-          <p class="font-secondary">Published on May 12, 2019 by 
+          <img src="/images/content/thumbnail-8.jpg" alt="What goes into a Flutter app ( Part 3 )" class="img-fluid rounded mb-4">
+          <p class="font-secondary">Published on Jun 03, 2021 by 
             <span class="text-primary">Tanzil Zubair Bin Zaman</span>
           </p>
         </div>
@@ -239,25 +239,32 @@
           <div class="content">
             <span> <h2 id="disclaimer">Disclaimer</h2>
 <p>This is <em>Part 3</em> and the final part of a series of articles that explore and seek to provide newcomers with a high-level overview of what all the parts of a Flutter app consist of and do, so that they can hit the ground running.</p>
-<p>While this series has been, to the best of my ability, unbiased in exploring the different components that make up a Flutter app, I think it wouldn&rsquo;t be too bad to share the solutions I personally use for my projects.</p>
-<p><strong>As a warning though,</strong> <strong>these solutions seem intuitive and work for <em>me,</em> it is not only possible but also likely that they may <em>not</em> seem intuitive to you and as such may not work for you. With that being said. let&rsquo;s begin.</strong></p>
+<p>While this series has been, to the best of my ability, unbiased in exploring the different components that make up a Flutter app, I think it wouldn&rsquo;t be too bad to now share the solutions I use for my own projects.</p>
+<p><strong>As a warning though,</strong> <strong>these solutions seem intuitive and work for <em>me,</em> it is not only possible but also likely that they may <em>not</em> seem intuitive to you and as such may not work for you. With that being said, let&rsquo;s begin.</strong></p>
 <hr>
 <h2 id="state-management">State Management</h2>
-<p>I use <strong>MobX</strong> as my state management library of choice, it&rsquo;s a slightly heavy-weight solution for smaller use-cases, but in my opinion it is in the middle, suitable for smaller cases and tested and powerful enough for handling the larger ones too. It also has code generation and minimal boilerplate, which are both really great bonuses for me.</p>
-<p>Furthermore, it was also the first state-management solution whose theory and working principles made sense to me, which is also one of the primary reasons for my bias towards it.</p>
+<p>I use <strong>MobX</strong> as my state management library of choice. It&rsquo;s a slightly heavy-weight solution for smaller use-cases, but in my opinion it is in the middle, suitable for smaller cases and tested and powerful enough for handling the larger ones too. It also has code generation and minimal boilerplate, which are both really great bonuses for me.</p>
+<p>Furthermore, it was also the first state-management solution whose theory and working principles really <strong><em>clicked</em></strong> with me, which is also one of the primary reasons for my bias towards it.</p>
 <h2 id="dependency-injection">Dependency Injection</h2>
-<p>I use a combination of <strong>Provider</strong> and <strong>Get It</strong> for my dependency injection, Provider to aid in the injection of MobX Stores wherever they are required, and Get It for the injection of my service classes wherever those are required</p>
-<p>Although I do believe either one could handle both, I am biased towards Get It, for the Build-context-less functionality it provides, but also reluctant to leave Provider behind due to it being the &ldquo;de-facto&rdquo; way Stores are injected into Widgets and such, as mentioned in the MobX docs for Flutter.</p>
+<p>I use a combination of <strong>Provider</strong> and <strong>Get It</strong> for my dependency injection, Provider to aid in the injection of MobX Stores wherever they are required, and Get It for the injection of my service classes wherever those are required.</p>
+<p>Although I do believe either one could handle both, I am biased towards <em>Get It</em>, for the Build-context-less functionality it provides, but also reluctant to leave Provider behind due to it being the &ldquo;de-facto&rdquo; way Stores are injected into Widgets and such, as mentioned in the <a href="https://mobx.netlify.app" title="MobX docs">MobX docs</a> for Flutter.</p>
 <p>And so I compromise, using Provider for Stores and Get It for everything else.</p>
 <h2 id="local-data-persistence">Local Data Persistence</h2>
 <p>My go-to choice for local data persistence is <strong>Hive,</strong> and for when I need a way to store more complex, relational data, <strong>Moor.</strong></p>
-<p>These libraries are  the best fit for my use-cases, <strong>Hive</strong> fulfilling the need of fast key-value storage of important things such as user preferences and other, smaller bits of data that are used in places where it would heavily affect the user experience if users had to wait, and <strong>Moor</strong> fulfilling the need of a tabular, medium-sized database that can store relational data and also supports <em>querying</em> that data by criteria.</p>
+<p>These libraries are the best fit for my use-cases, <strong>Hive</strong> fulfilling the need of fast key-value storage of important things such as user preferences and other, smaller bits of data that are used in places where it would heavily affect the user experience if users had to wait, and <strong>Moor</strong> fulfilling the need of a tabular, medium-sized database that can store relational data and also supports <em>querying</em> that data by criteria.</p>
 <h2 id="network-and-connectivity">Network and Connectivity</h2>
 <p>Full disclosure, I haven&rsquo;t required using the internet or an API in any of my apps <em>yet</em>, but my next app will have an API <em>and</em> a cloud database at it&rsquo;s heart, and, the research I&rsquo;ve done into which library I should use has largely lead me to consider <strong>Chopper</strong> for my use, due to the code generation it provides.</p>
 <h2 id="architecture-pattern">Architecture Pattern</h2>
 <p>The architecture I&rsquo;ve used for the three apps I have in various stages of development ( as of the time of writing this ) is <strong>MVVM,</strong> due to the easier way I personally think each of it&rsquo;s components translate to Flutter.</p>
-<p>However, I <em>also</em> think that it&rsquo;s components could translate to Flutter better, especially if I&rsquo;m using MobX as the state management library of choice. As such, I&rsquo;ve spent quite a bit of time developing a custom architecture solution for this, one that I intend to publish as a package on <a href="pub.dev">_pub.dev _</a>after it&rsquo;s stable and fulfills all of the basic requirements of an architectural pattern.</p>
+<p>However, I <em>also</em> think that it&rsquo;s components could translate to Flutter better, especially if I&rsquo;m using MobX as the state management library of choice. As such, I&rsquo;ve spent a bit of time developing a custom architecture solution for this, one that I intend to publish as a package on <a href="pub.dev" title="pub.dev">pub.dev</a> after it&rsquo;s stable and fulfills all of the basic requirements of an architectural pattern.</p>
 <p>The architecture will be a combination of <strong>MVVM</strong> and the <strong>WSS</strong> triad <a href="https://mobx.netlify.app/guides/stores">mentioned in the MobX docs</a> , and will provide a way to bind your MobX Stores to your UI more easily and in a more easily scalable and cleaner way.</p>
+<blockquote>
+<p><strong><em>Psst,</em></strong> It&rsquo;s Tanzil from the future, here to let you know that the package I mentioned is live now on pub.dev, and you can find it <a href="https://pub.dev/packages/mobx_architecture" title="here"><em>here</em></a></p>
+</blockquote>
+<h2 id="the-end">The End</h2>
+<p>And with that, we reach the end of the third and final post in this series. In this post, I shared with you the packages I use for my own Flutter projects, along with the reasons behind my decision and my thoughts on each.</p>
+<p>The post ends now, and so does this adventure, but like any good adventure, and any good story, it sets up the scene for the <strong><em>next</em></strong> great adventure, soon to begin, in each of our stories.</p>
+<p><strong><em>This is Tanzil Zubair, wishing you all the very best in your future endeavors. I thank you for reading this far, and sincerely hope you enjoyed this journey, and most importantly, learnt something new!</em></strong></p>
 <hr>
  </span>
           </div>

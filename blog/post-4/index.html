@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="HandheldFriendly" content="true">
-  <meta name="description" content="This article seeks to bridge a gap and provide newer coders with a high level overview of what exactly goes into making a Flutter app.">
+  <meta name="description" content="This series of posts seeks to bridge a gap and provide newer coders with a high level overview of what exactly goes into making a Flutter app.">
   <meta name="attribution" content='<a href="https://www.vecteezy.com/free-vector/t-logo">T Logo Vectors by Vecteezy</a>'>
   <meta name="theme-color" content="#ffffff">
 
   
   <meta name="author" content="Tanzil Zubair Bin Zaman">
   
-  <meta name="generator" content="Hugo 0.78.2" />
+  <meta name="generator" content="Hugo 0.79.1" />
 
   <!-- plugins -->
   
@@ -230,8 +230,8 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-9 text-center mb-4">
-          <img src="/images/content/test_post.jpg" alt="What goes into a Flutter app ( Part 1 )" class="img-fluid rounded mb-4">
-          <p class="font-secondary">Published on Dec 01, 2020 by 
+          <img src="/images/content/thumbnail-6.jpg" alt="What goes into a Flutter app ( Part 1 )" class="img-fluid rounded mb-4">
+          <p class="font-secondary">Published on May 18, 2021 by 
             <span class="text-primary">Tanzil Zubair Bin Zaman</span>
           </p>
         </div>
@@ -242,56 +242,63 @@
 <p>It discusses the core components of what comprises an app, and also tries to function as an appendix of sorts, giving a high level view of all the moving parts, but also providing the terms that can be used to easily find guides and detailed explanations of each part, for when you naturally stumble across the problem they are meant to solve, and need to find it again.</p>
 <p>Most of these are given in <em>italics</em>.</p>
 <p>This article will also be a part of a series, as the concepts it discusses are too big even for an introductory explanation to be given in one article.</p>
+<p>So, without further ado, let&rsquo;s get started!</p>
 <hr>
 <h2 id="cogs-in-the-machine">Cogs in the machine</h2>
-<p>The different parts of an app are:</p>
+<p>An app is a deceptively complex piece of software, especially for those just starting out. This is due to a variety of reasons, but without getting into the details, it is so because it requires a web of technologies working together to actually comprise an app, (not just your app framework, which is where Dart and Flutter come in) and when starting out all of this can feel extremely overwhelming.</p>
+<p><strong>My advice would be to take a deep breath, and realize that while it may seem complex now, consistent effort will go a long <em>long</em> way, in making it simpler, and no matter what, to never lose sight of the idea, passion or reason you set down this path in the first place.</strong></p>
+<p>Let that be your light in the dark, keeping you warm and guiding you to your destination.</p>
+<p>So, firstly, an app comprises of several different parts that all work together and intertwine to make the final product.</p>
+<p>This is not an exhaustive list, but the general, main parts of an app are:</p>
 <ul>
-<li>The <strong><em>UI</em></strong> ( Ex: Containers, RaisedButtons, Columns, Rows etc. )</li>
-<li>The <strong><em>State Management</em></strong> solution ( Ex: Bloc, Mobx, Provider, Redux etc. )</li>
-<li>The <strong><em>Dependency Injection</em></strong> solution ( Ex: Provider, GetIt, etc. )</li>
-<li>The <strong><em>Local Data Persistence</em></strong> solution ( Ex: Sqflite, Hive, etc. )</li>
-<li>The <strong><em>Network and Connectivity</em></strong> code/combo/framework ( Ex: Chopper, Dio, etc. )</li>
-<li>The <strong><em>Architecture Pattern</em></strong> ( Ex: MVVM, MVC, MVP etc. )</li>
+<li>The <strong><em>UI</em></strong></li>
+<li>The <strong><em>State Management</em></strong> solution</li>
+<li>The <strong><em>Dependency Injection</em></strong> solution</li>
+<li>The <strong><em>Local Data Persistence</em></strong> solution</li>
+<li>The <strong><em>Network and Connectivity</em></strong> code/combo/framework</li>
+<li>The <strong><em>Architecture Pattern</em></strong></li>
 </ul>
-<p>Note: The architecture isn’t really a component <em>per se</em>, but rather comprises of coding practices and such that hold together the rest of the components mentioned above.</p>
-<p>If we are to use the machine analogy, the architecture would be the lubricant used in-between the gears, or maybe the screw holding the gears in place, while the components are the gears themselves. Just as important, but not the same</p>
+<blockquote>
+<p><strong>Note:</strong> <em>The architecture isn’t really a component per se, but rather comprises of coding practices and such that hold together the rest of the components mentioned above.</em></p>
+<p><em>If we are to use the machine analogy, the architecture would be the lubricant used in-between the gears, or maybe the screw holding the gears in place, while the components are the gears themselves. Just as important, but not the same.</em></p>
+</blockquote>
 <p>………and thats about it! Everything seems better when its listed out in an organized way, doesn’t it?</p>
 <p>Now, lets provide some explanations and examples for each of these components</p>
 <h2 id="diving-off-the-deep-end">Diving off the deep-end</h2>
 <hr>
 <h3 id="the-ui">The UI</h3>
-<p>Perhaps the easiest part of the app amongst the six (at least in Flutter), the UI comprises of  the layout of the application, the buttons, cards, sliders etc, along with their shapes, colors, position etc. . It is of course made using widgets, such as Containers, Columns, Rows etc.</p>
+<p>Perhaps the easiest part of the app amongst the six (at least in Flutter), the UI comprises of  the layout of the application, the buttons, cards, sliders etc, along with their shapes, colors, position etc. It is of course made in Flutter using widgets, such as Containers, Columns, Rows etc.</p>
 <h3 id="state-management">State Management</h3>
 <p>Ohhh boy this is a biggie. State Management is a wildly, and I mean <em>wildly</em> heated topic in code in general, and no less in Flutter, with countless ways to manage it, and with people who swear by their method on each side.</p>
 <p><strong><em>Now before we get to a solution, it would be better to understand what exactly we are trying to solve.</em></strong></p>
 <p>The state of an app can be thought of as all of the data in an app <strong>that changes</strong> , and depending on which the UI also changes.</p>
-<p>For example, in  the default Counter app generated when a new Flutter app is created, the state would be the text that displays the count. It is data that <em>changes</em>, due to which the UI <em>also changes</em>.</p>
-<p>Now this change can be triggered by anything from the user pressing a button to a refresh that pulled in new data from a database somewhere.</p>
-<p>State is therefore data that changes during the lifecycle of an app, and since multiple parts of the app, located in various different, far away parts of the widget tree might need to share ( that is detect, read and most importantly <em>react to</em> ) the same data, it becomes important, and <em>exponentially more cumbersome</em> to pass data around, and react to it.</p>
-<p>*The purpose of state management is therefore to keep track of when state changes, across the app, and to then notify all the widgets that use that state that they need to rebuild.*</p>
-<p>Most apps, big or small, require state management to a certain degree. As said before , state management is a problem that has a <em>lot</em> of solutions. Also, due to how interconnected state and its management solution is with nearly every other part of an app,  it is also <em>very</em> closely tied to your approach to Dependency Injection, and the Architecture Pattern you implement, and affects them both.</p>
+<p>For example, in the default Counter app generated when a new Flutter app is created, the state would be the text that displays the count. It is data that <strong><em>changes</em></strong>, due to which the UI <strong><em>also changes</em></strong>.</p>
+<p>Now this change can be triggered by anything from the user pressing a button to an automatic periodic refresh that pulled in new data from a database somewhere.</p>
+<p>State is therefore data that changes during the lifecycle of an app, and since multiple parts of the app, located in various different, far away parts of the widget tree might need to share ( that is detect, read and most importantly <em>react/change to</em> ) the same data, it becomes important, and <em>exponentially more cumbersome</em> to pass data around, and react to it.</p>
+<p><em>The purpose of state management in Flutter is therefore to keep track of when state changes, across the app, and to then notify all the widgets that use that state that they need to rebuild.</em></p>
+<p>Most apps, big or small, require state management to a certain degree. As said before, state management is a problem that has a <em>lot</em> of solutions. Also, due to how interconnected state and its management solution is with nearly every other part of an app,  it is also <em>very</em> closely tied to your approach to dependency injection, and the architecture pattern you implement, and affects them both.</p>
 <p>Some of the more popular approaches to state management, separated by the scales of apps for which they are commonly used, are listed below:</p>
 <p><strong><em>For small-scale apps</em></strong></p>
 <ul>
-<li>Scoped Model</li>
+<li><a href="https://pub.dev/packages/scoped_model" title="Scoped Model">Scoped Model</a></li>
 <li>setState</li>
-<li>Provider</li>
-<li>Riverpod</li>
+<li><a href="https://pub.dev/packages/provider" title="Provider">Provider</a></li>
+<li><a href="https://pub.dev/packages/riverpod" title="Riverpod">Riverpod</a></li>
 </ul>
 <p><strong><em>For medium-sized apps</em></strong></p>
 <ul>
-<li>Provider</li>
-<li>Riverpod</li>
-<li>Mobx</li>
-<li>Scoped Model</li>
+<li><a href="https://pub.dev/packages/provider" title="Provider">Provider</a></li>
+<li><a href="https://pub.dev/packages/riverpod" title="Riverpod">Riverpod</a></li>
+<li><a href="https://pub.dev/packages/mobx" title="MobX">MobX</a></li>
+<li><a href="https://pub.dev/packages/scoped_model" title="Scoped Model">Scoped Model</a></li>
 </ul>
 <p><strong><em>For large-scale apps</em></strong></p>
 <ul>
-<li>Bloc</li>
-<li>Provider</li>
-<li>Riverpod</li>
-<li>Mobx</li>
-<li>Redux</li>
+<li><a href="https://pub.dev/packages/bloc" title="Bloc">Bloc</a></li>
+<li><a href="https://pub.dev/packages/provider" title="Provider">Provider</a></li>
+<li><a href="https://pub.dev/packages/riverpod" title="Riverpod">Riverpod</a></li>
+<li><a href="https://pub.dev/packages/mobx" title="MobX">MobX</a></li>
+<li><a href="https://pub.dev/packages/redux" title="Redux">Redux</a></li>
 </ul>
 <p><em>Note:</em> The in-built approach to state management in Flutter is the <strong><em>Inherited Widget</em></strong>, but it is very low-level in nature, and as such has lots of boilerplate associated with it, along with being hard to understand. As such, it is not explicitly mentioned here.</p>
 <p>It is however what Provider and some other state management approaches work with, under the hood.</p>
@@ -299,18 +306,20 @@
 <p>Ahh yes, Dependency Injection. This is one of the components with the most amount of theory behind it, but in effect, is quite simple.</p>
 <p>It is simply providing your classes/widgets/objects/instances with <em>other</em> classes/widgets/objects/instances that they use (and therefore, <strong><em>depend</em></strong> on).</p>
 <p>In fact, you may have already been doing this, with the constructors of your classes/widgets/objects/instances.</p>
-<p><strong><em>Well, then what problem does dependency injection solve ?</em></strong> Imagine you have your Widget tree, and you need to pass an object, of, say, type <em>DeviceData</em>,  that contains the sizing information and device orientation, from the topmost widget, to a widget <em>7 (widget) layers down</em>.</p>
+<p><strong><em>Well, what problem does dependency injection solve?</em></strong></p>
+<p>Imagine you have your Widget tree, and you need to pass an object, of, say, type <em>DeviceData</em>, that contains the sizing information and device orientation, from the topmost widget, to a widget <em>7 (widget) layers down</em>.</p>
 <p>This means that you would have to code in 7 separate constructors, with the widgets in the middle keeping the object solely to be able to pass it down to the next widget.</p>
-<p>This is not a sign of good code.</p>
+<p><em>This is not a sign of clean, maintainable code.</em></p>
 <p>Furthermore, when you get more advanced with a project, you might want to use abstractions more and more, so that you can switch out the concrete implementation of a class for one more suitable for testing, and that is simply not feasible here if you have to change 7 different constructors to switch out one implementation housed in one part of your code.</p>
 <p>This is the problem dependency injection solves. The idea being you can declare all objects or dependencies elsewhere in your code, possibly even using abstractions instead of concrete implementations (so as to accommodate switching out for mock classes), and then access them wherever you need to use them, without the hassle of passing them through constructors etc.</p>
-<p>Some of the more popular packages used for Dependency Injection are:</p>
+<p><strong><em>Some of the more popular packages used for Dependency Injection are:</em></strong></p>
 <ul>
-<li>GetIt ( Not strictly for dependency injection, but also a <em>service locator</em> )</li>
-<li>Provider ( Provider is useful for both dependency injection <em>and</em>  state management )</li>
+<li><a href="https://pub.dev/packages/get_it" title="GetIt">GetIt</a> ( Not strictly for dependency injection, but also a <em>service locator</em> )</li>
+<li><a href="https://pub.dev/packages/provider" title="Provider">Provider</a> ( Provider is useful for both dependency injection <em>and</em> state management )</li>
 </ul>
 <h2 id="the-end-for-now">The End (For now)</h2>
-<p>Well, I think I&rsquo;ve been rambling on for long enough. As mentioned near the beginning, this article will be part of a series, so while this is the end of this article, it is the beginning of a n adventure.</p>
+<p>Well, I think I&rsquo;ve been rambling on for long enough. As mentioned near the beginning, this article will be part of a series, so while this is the end of this article, it is the beginning of an adventure!</p>
+<p><strong><em>Thank you for reading this far, and I hope you learnt something new!</em></strong></p>
 <hr>
 <blockquote>
 <p><strong><em>Some things have been oversimplified for the sake of newcomers, and some I may have gotten wrong myself.</em></strong></p>

@@ -6,14 +6,14 @@
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="HandheldFriendly" content="true">
-  <meta name="description" content="This article seeks to bridge a gap and provide newer coders with a high level overview of what exactly goes into making a Flutter app.">
+  <meta name="description" content="This series of posts seeks to bridge a gap and provide newer coders with a high level overview of what exactly goes into making a Flutter app.">
   <meta name="attribution" content='<a href="https://www.vecteezy.com/free-vector/t-logo">T Logo Vectors by Vecteezy</a>'>
   <meta name="theme-color" content="#ffffff">
 
   
   <meta name="author" content="Tanzil Zubair Bin Zaman">
   
-  <meta name="generator" content="Hugo 0.78.2" />
+  <meta name="generator" content="Hugo 0.79.1" />
 
   <!-- plugins -->
   
@@ -230,59 +230,78 @@
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-9 text-center mb-4">
-          <img src="/images/content/test_post.jpg" alt="What goes into a Flutter app ( Part 2 )" class="img-fluid rounded mb-4">
-          <p class="font-secondary">Published on May 12, 2019 by 
+          <img src="/images/content/thumbnail-7.jpg" alt="What goes into a Flutter app ( Part 2 )" class="img-fluid rounded mb-4">
+          <p class="font-secondary">Published on May 26, 2021 by 
             <span class="text-primary">Tanzil Zubair Bin Zaman</span>
           </p>
         </div>
         <div class="col-lg-9">
           <div class="content">
             <span> <h2 id="disclaimer">Disclaimer</h2>
-<p>This is <em>Part 2</em> of a series of articles that explore and seek to provide newcomers with a high-level overview of what all the parts of an app consist of and do, so that they can hit the ground running.</p>
+<p>This is <em>Part 2</em> of a series of articles that explore and seek to provide newcomers with a high-level overview of what all the parts of an app consist of and do, so that they can hit the ground running.You can read <em>Part 1</em> <strong>here.</strong></p>
 <hr>
-<h2 id="local-data-persistence">Local Data Persistence</h2>
-<p><em>Local Data Persistence</em> is one of the more straightforward components that goes into making an app. <strong>For nearly every app, there will be some data that needs to be stored locally, on the user’s device</strong>. Unless of course, you have a cloud database , or very rarely, an app that does not need to store anything.</p>
+<h2 id="where-we-left-off">Where we left off</h2>
+<p>In the last post, we talked about <strong><em>3</em></strong> of the <strong><em>6</em></strong> broad aspects that need to be considered when developing an app. They were:</p>
+<ul>
+<li>The <strong><em>UI</em></strong></li>
+<li>The <strong><em>State Management</em></strong> solution</li>
+<li>The <strong><em>Dependency Injection</em></strong> solution</li>
+</ul>
+<p>In this post, we&rsquo;ll talk about the other 3, which are:</p>
+<ul>
+<li>The <strong><em>Local Data Persistence</em></strong> solution</li>
+<li>The <strong><em>Network and Connectivity</em></strong> code/combo/framework</li>
+<li>The <strong><em>Architecture Pattern</em></strong></li>
+</ul>
+<p>So, without further ado, let&rsquo;s get started!</p>
+<h2 id="diving-off-the-deep-end-again">Diving off the deep-end (Again)</h2>
+<h3 id="local-data-persistence">Local Data Persistence</h3>
+<p><em>Local Data Persistence</em> is one of the more straightforward components that goes into making an app.</p>
+<p><strong>For nearly every app, there will be some data that needs to be stored locally, on the user’s device</strong>.</p>
+<p>Unless of course, you have a cloud database, or very rarely, an app that does not need to store anything.</p>
 <p>Local data storage can be of two main types:</p>
 <ul>
 <li>Key-Value pairs</li>
 <li>Tabular / Relational Databases</li>
 </ul>
-<p><strong><em>Key-Value</em></strong> pair type storage is mainly for storing bits and pieces of data. It does not have any easy way to maintain the <em>relationships</em> between different data (For example, a value of 165 by itself is not useful unless there is a way for the program to realize that that is the height of a person in centimeters).</p>
-<p>Key-Value pairs can be used to store things such as names, boolean values  (or enums) to remember the user’s settings and preferences, etc. The only thing it cannot easily store is data that has relationships with other stored data.</p>
+<h5 id="key-value-pairs">Key-Value pairs</h5>
+<p><strong><em>Key-Value</em></strong> pair type storage is mainly for storing bits and pieces of data. It does not have any easy way to maintain the <em>relationships</em> between different data ( For example, a value of 165 by itself is not useful unless there is a way to easily <em>relate</em> that that is the height of a person in centimeters ).</p>
+<p>Key-Value pairs can be used to store things such as names, boolean values ( or enums ) to remember the user’s settings and preferences, etc. The only thing it cannot easily store is data that has relationships with other stored data.</p>
 <p>They are usually faster and more responsive than the second type of database.</p>
-<p><strong><em>Tabular / Relational Databases</em></strong> are traditional SQL databases, with tables containing data that shares relationships with other data. They can be used to store large amounts of data about users, user generated content, etc.</p>
-<p>They are usually slower than key—value pair storages.</p>
-<p>Some of the more popular packages used for key-value pair data storage are:</p>
+<p><strong><em>Some of the more popular packages used for key-value pair data storage are:</em></strong></p>
 <ul>
 <li>Hive</li>
 <li>Shared Preferences</li>
 </ul>
-<p>Some of the more popular packages used for Tabular / Relational Databases are:</p>
+<h5 id="relational-databases">Relational Databases</h5>
+<p><strong><em>Tabular / Relational Databases</em></strong> are traditional SQL databases, with tables containing rows and columns of data that are related to each other. They can be used to store large amounts of data about users, user generated content, etc.</p>
+<p>They are usually slower than key-value pair storages.</p>
+<p><strong><em>Some of the more popular packages used for Tabular / Relational Databases are:</em></strong></p>
 <ul>
 <li>Sqflite</li>
 <li>Moor</li>
 </ul>
 <p><em>Note: There are also NoSQL databases, and one for Flutter is Sembast.</em></p>
 <h2 id="network-and-connectivity">Network and Connectivity</h2>
-<p>Network and connectivity is a relatively straightforward concept, but sometimes can prove to be difficult in implementation, due to its <em>asynchronous</em> nature.</p>
-<p>Simply put, you cannot store all the data required or served by an app, or even very computation heavy functionality, such as data analysis or OCR / ML technology in an app, due to a plethora of reasons, going from performance all the way to file size.</p>
-<p>Furthermore, if your app serves up user generated content, then it <em>must</em> have a way to get new data to be able to display and serve it to the user.</p>
-<p>Networking code handles API calls and such, connecting servers with newly generated content or the ability to run computationally taxing workloads to the app, allowing the app to serve the user properly.</p>
-<p>Some of the more popular packages used for network and connectivity code are:</p>
+<p>Network and connectivity is one of the more complex aspect of apps that require it, as it can sometimes prove to be difficult to implement, due to its <em>asynchronous</em> nature.</p>
+<p>Simply put, you cannot store all the data required or served by an app locally, or even implement very computation heavy functionality, such as data analysis or OCR / ML technology locally in an app, due to a plethora of reasons, going from performance all the way to file size.</p>
+<p>Furthermore, if your app serves up user generated content, or any other form of real-time data ( such as, say, the weather ) then it <em>must</em> have a way to get new data to be able to display it to the user.</p>
+<p>Networking code handles the API calls and such required for this communication, connecting servers with newly generated content or real-time data, or servers with the ability to run computationally taxing workloads to the app, allowing the app to serve the user better.</p>
+<p><strong><em>Some of the more popular packages used for network and connectivity code are:</em></strong></p>
 <ul>
 <li>Dio</li>
 <li>Chopper</li>
 </ul>
 <h2 id="architecture-pattern">Architecture Pattern</h2>
-<p>The last part of the puzzle is the architecture, the framework, the rules, coding practices/conventions and <strong><em>ADD HERE</em></strong> that hold all of these components together, allowing data to flow between all of them in a predictable, testable, scalable and most importantly manageable manner.</p>
-<p>Firstly, regardless of what some sources may tell you, there is a thing called <em>over-engineering</em>, and there is a line, albeit blurry sometimes but definitely present line, separating foresight and leaving room to grow and scale, and using a solution designed for software that operates on a completely different scale, and comprises off and requires a much more extensive list of components, services etc. <strong><em>ADD HERE</em></strong></p>
+<p>The last part of the puzzle is the architecture, the framework or the rules, coding practices/conventions and <strong><em>ADD HERE</em></strong> that hold all of these other components together, allowing data to flow between all of them in a predictable, testable, scalable and most importantly manageable manner.</p>
+<p>Firstly, regardless of what some sources may tell you, there is a thing called <em>over-engineering</em>, and there is a line, an albeit blurry sometimes but definitely present line, separating foresight and leaving room to grow and scale, and using a solution designed for software that operates on a completely different scale, and comprises off and requires a much more extensive list of components, services etc. <strong><em>ADD HERE</em></strong></p>
 <p>The needs of software like the kind above mentioned will rarely align with anything else, and as such, the solutions used to solve their problems will most likely only increase the complexity of yours, <em>without</em> much to show for it.</p>
 <p>This does not mean that those solutions should never be used, it only means that adequate research should be done with the needs, both current <em>and</em> future of your app being kept in mind.</p>
 <p>With that being said, let&rsquo;s continue on to the functions of an architecture. An architecture works most closely with the state-management and dependency injection solutions of your app, as those are some of the primary things that benefit from the structure provided by an architecture pattern.</p>
 <p>At the most basic level, an architecture can even be as simple as arranging the various files that consist your app into self-explanatorily named folders and such, with the splitting of functionality into services and classes and functions that (depending on whether you feel the need to do so) are themselves split across several files.</p>
-<p>But this type of architecture is not the type we are interested in. We are interested in architecture for out <em>code</em>, not the files the code is kept in.</p>
-<p>Now, if you&rsquo;ve been following this articles ( or if you&rsquo;ve ever googled &ldquo;How to do/build X&rdquo; ) you must&rsquo;ve realized by now that there must be a plethora of architecture patters out there.There are here as well.</p>
-<p>Some of the more widely adopted architecture patterns that can be ( relatively ) easily implemented in Flutter are:</p>
+<p>But this type of architecture is not the type we are interested in. We are interested in architecture for our <em>code</em>, not the files the code is kept in.</p>
+<p>As with <em>state management,</em> architecture patters also come in a wide variety of shapes and sizes, and most of them work quite well, with the only reason someone might choose one over the other being personal preference.</p>
+<p><strong><em>Some of the more widely adopted architecture patterns that can be ( relatively ) easily implemented in Flutter are:</em></strong></p>
 <ul>
 <li>MVVM</li>
 <li>MVC</li>
@@ -290,6 +309,17 @@
 <li>MVU</li>
 </ul>
 <p>Explaining these architectural patterns, or going further in depth into the theory behind these patterns, which is largely the same for each pattern, is beyond the scope of this article.</p>
+<p>Just know that they all work by separating the code that handles the <strong><em>logic</em></strong> from the code that handles the <strong><em>UI</em></strong>, and by doing this, make the code more readable, manageable and scalable.</p>
+<h2 id="the-end-for-now">The End (For now)</h2>
+<p>And with that, we reach the end of another post. In this post, we covered the last 3 broad components that go into a Flutter app.</p>
+<p>In the next article, I&rsquo;ll share some of the packages <em>I</em> use for each of these components, along with my thoughts on each and <em>why</em> I selected that particular package.The post ends now, but the adventure continues!</p>
+<p><strong><em>Thank you for reading this far, and I hope you learnt something new!</em></strong></p>
+<hr>
+<blockquote>
+<p><strong><em>Some things have been oversimplified for the sake of newcomers, and some I may have gotten wrong myself.</em></strong></p>
+<p><strong><em>If you have found incorrect information, please do not hesitate to contact me, and I will update this or any other article to reflect the correct information.</em></strong></p>
+<p><strong><em>To err is human, after all</em></strong></p>
+</blockquote>
  </span>
           </div>
         </div>

@@ -3,6 +3,31 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   
   <url>
+    <loc>/blog/</loc>
+    <lastmod>2021-06-03T07:00:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/</loc>
+    <lastmod>2021-06-03T07:00:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/post-2/</loc>
+    <lastmod>2021-06-03T07:00:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/post-3/</loc>
+    <lastmod>2021-05-26T07:00:34+00:00</lastmod>
+  </url>
+  
+  <url>
+    <loc>/blog/post-4/</loc>
+    <lastmod>2021-05-18T07:00:00+00:00</lastmod>
+  </url>
+  
+  <url>
     <loc>/projects/caelum-third-time-s-the-charm/</loc>
     <lastmod>2021-05-17T07:00:00+00:00</lastmod>
   </url>
@@ -10,16 +35,6 @@
   <url>
     <loc>/projects/</loc>
     <lastmod>2021-05-17T07:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/</loc>
-    <lastmod>2021-05-17T07:00:00+00:00</lastmod>
-  </url>
-  
-  <url>
-    <loc>/blog/</loc>
-    <lastmod>2021-02-10T07:00:00+00:00</lastmod>
   </url>
   
   <url>
