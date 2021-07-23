@@ -1,0 +1,1 @@
+.project-grid{display:grid;height:100%;width:100%;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:clamp(55px,3vw,110px);padding-top:10vh;padding-bottom:10vh;padding-right:max(20px,5vw);padding-left:max(20px,5vw);background-color:var(--secondaryColor)}
