@@ -602,7 +602,7 @@
 <p>Other then just the day to day minor frustrations that naturally come with coding and random bugs popping up, this update went by rather smoothly actually, with no significant hiccups, unexpected timesinks or even extremely tough problems, things I suspect are result of the intensive planning I did before starting this project ( After <em>both</em> of my first two projects grew too much to ever allow me to complete them, for the most part due to a lack of proper planning and having a vision for what I wanted to achieve in each incremental update, I was <strong><em>not</em></strong> going to let it happen a third time ).</p>
 <h2 id="automation">Automation</h2>
 <p>While mostly unrelated to this particular update, this is the first project where I really integrated <strong>CI</strong> into the workflow, and it has already saved more headaches than it itself was to set up.</p>
-<p>As such, I&rsquo;m planning on including the Argentum to its Aurum, and incorporating <strong>CD</strong> into the workflow too, which, if I set up correctly, will automate a lot of the boring repetitive tasks associated with actually getting these articles from the Word like environment where I&rsquo;m currently writing them ( <a href="https://forestry.io" title="Forestry.io">Forestry.io</a> if you&rsquo;re interested ) out onto the site itself.</p>
+<p>As such, I&rsquo;m planning on including the Argentum to its Aurum, and incorporating <strong>CD</strong> into the workflow too, which, if I set up correctly, will automate a lot of the boring repetitive tasks associated with actually getting these articles from the Word like environment where I&rsquo;m currently writing them ( <a href="https://forestry.io"  title="Forestry.io"  target="_blank" >Forestry.io</a> if you&rsquo;re interested ) out onto the site itself.</p>
 <p>This currently takes several commands I type in manually in an IDE, <em>followed by</em> a script that automates the rest of it, so the entire process is actually quite lengthy, and would solve me a lot of time and headaches in the long run if automated.</p>
 <p>And if I <em>am</em> going through all the trouble of automating it, I plan to make it fully autonomous, running automatically, say, every day at 12am or 12pm, and getting the changes and sending them in to the production GitHub repository, of course, sending and merging nothing if there are no changes.</p>
 <p>A bit of googling shows that this is highly plausible (and completely free) through some mixture of GitHub Actions and Cron, or just GitHub Actions itself, so I plan to do that in the final stages of V4, perhaps earlier, or maybe even bundle up all of these QOL changes into a V5 and do it that way.</p>
@@ -681,6 +681,26 @@
     </button>
 </div>
 <div class="social-linkBox">
+    <div class="social-button social-button-background gh-grid-place">
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <span onclick="window.open('https:\/\/github.com\/tanzilzubair'); return false;"
+            onkeypress="window.open('https:\/\/github.com\/tanzilzubair'); return false;">
+            <svg class="social-icon github" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M10.026 0C4.517 0 0.052 4.465 0.052 9.974C0.052 14.38 2.909 18.119 6.873 19.439C7.372 19.529 7.552 19.222 7.552 18.958C7.552 18.721 7.544 18.093 7.541 17.262C4.766 17.864 4.18 15.924 4.18 15.924C3.728 14.772 3.073 14.465 3.073 14.465C2.168 13.846 3.142 13.86 3.142 13.86C4.144 13.93 4.669 14.888 4.669 14.888C5.559 16.412 7.005 15.972 7.571 15.717C7.662 15.072 7.922 14.632 8.206 14.383C5.992 14.132 3.664 13.276 3.664 9.453C3.664 8.366 4.053 7.474 4.688 6.778C4.587 6.525 4.242 5.51 4.787 4.138C4.787 4.138 5.624 3.869 7.529 5.159C8.327 4.938 9.178 4.827 10.025 4.823C10.874 4.827 11.726 4.938 12.521 5.159C14.427 3.868 15.263 4.138 15.263 4.138C15.808 5.51 15.466 6.525 15.362 6.778C16.002 7.474 16.386 8.365 16.386 9.453C16.386 13.286 14.056 14.128 11.834 14.375C12.189 14.683 12.509 15.291 12.509 16.221C12.509 17.555 12.497 18.631 12.497 18.958C12.497 19.225 12.675 19.535 13.184 19.437C17.146 18.115 20 14.379 20 9.974C20 4.465 15.535 0 10.026 0Z" />
+            </svg>
+        </span>
+    </div>
     <div class="social-button social-button-background ig-grid-place">
         <i></i>
         <i></i>
@@ -748,26 +768,7 @@
             </svg>
         </span>
     </div>
-    <div class="social-button social-button-background gh-grid-place">
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <span onclick="window.open('https:\/\/github.com\/tanzilzubair'); return false;"
-            onkeypress="window.open('https:\/\/github.com\/tanzilzubair'); return false;">
-            <svg class="social-icon github" width="20" height="20" viewBox="0 0 20 20" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M10.026 0C4.517 0 0.052 4.465 0.052 9.974C0.052 14.38 2.909 18.119 6.873 19.439C7.372 19.529 7.552 19.222 7.552 18.958C7.552 18.721 7.544 18.093 7.541 17.262C4.766 17.864 4.18 15.924 4.18 15.924C3.728 14.772 3.073 14.465 3.073 14.465C2.168 13.846 3.142 13.86 3.142 13.86C4.144 13.93 4.669 14.888 4.669 14.888C5.559 16.412 7.005 15.972 7.571 15.717C7.662 15.072 7.922 14.632 8.206 14.383C5.992 14.132 3.664 13.276 3.664 9.453C3.664 8.366 4.053 7.474 4.688 6.778C4.587 6.525 4.242 5.51 4.787 4.138C4.787 4.138 5.624 3.869 7.529 5.159C8.327 4.938 9.178 4.827 10.025 4.823C10.874 4.827 11.726 4.938 12.521 5.159C14.427 3.868 15.263 4.138 15.263 4.138C15.808 5.51 15.466 6.525 15.362 6.778C16.002 7.474 16.386 8.365 16.386 9.453C16.386 13.286 14.056 14.128 11.834 14.375C12.189 14.683 12.509 15.291 12.509 16.221C12.509 17.555 12.497 18.631 12.497 18.958C12.497 19.225 12.675 19.535 13.184 19.437C17.146 18.115 20 14.379 20 9.974C20 4.465 15.535 0 10.026 0Z" />
-            </svg>
-        </span>
-    </div>
+
 </div>
 
 <div class="designBox">

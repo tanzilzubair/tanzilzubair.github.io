@@ -630,7 +630,7 @@
 <p>Other than that, designing the UI was relatively easier this time around, as I had decided to make mockups of the UI I wanted beforehand (more on this later), even though it was a time consuming task and something I had always neglected before, thinking it a waste of time.Still, I wanted the UI to be beautiful, and while it did take some minor and a few major redesigns to some of its components to really get it <em>just right</em>, I do believe the end result is quite worth the effort.</p>
 <p>Having done the planning though, I can honestly say it saves <em>much</em> more time that it requires, making up for the effort required <em>ten times over</em> through the absence of a huge amount of headaches and confusion while actually coding the UI.</p>
 <h2 id="architecture">Architecture</h2>
-<p>Although not entirely required, this app also rigorously follows the MVVM architecture pattern, aided by <a href="https://pub.dev/packages/mobx_architecture" title="my own package">my own package</a> on <a href="pub.dev" title="pub.dev">pub.dev</a>.</p>
+<p>Although not entirely required, this app also rigorously follows the MVVM architecture pattern, aided by <a href="https://pub.dev/packages/mobx_architecture"  title="my own package"  target="_blank" >my own package</a> on <a href="pub.dev"  title="pub.dev" >pub.dev</a>.</p>
 <p>This had two purposes, one to make any future feature updates to this app trivial to implement and connect to the rest of the app, and two, so that I could get some actual experience properly implementing an architecture in an app being made for production.</p>
 <p>It also had the added (and unexpected) benefit of rigorously testing my own package, which did turn out some flaws in the code that I plan to fix in the next update for the package.</p>
 <p>This was also the first time I had to work with APIs and therefore also JSON in my code, having to write code for JSON serialization and deserialization, and effectively handling the additional application complexity that entails.</p>
@@ -641,7 +641,7 @@
 <p>There is also a whole host of other scenarios, all of which have safeguards built for, including Socket exceptions and endpoints returning errors and errors querying the data itself.</p>
 <p>The wide variety of possible errors and the multitude of ways they may be triggered made it quite difficult to properly test the code, especially when it came to edge cases, but through some tedious mocks and messing about with bandwidth throttlers, I did finally manage to overcome this problem.</p>
 <p>This backend system, starting from user input and extending till a formatted request is sent to the server, a response is received, and <em>that</em> is parsed and checked for 6 different branches of errors, is quite understandably very complex, but also rigorous in its methods and fallbacks (The app may have bugs and may have glitches, but one thing I decided early on is that the app must not, cannot and <strong><em>will not</em></strong> break in the hands of users).</p>
-<p>By the end, I therefore had a complex, rigorous, custom-built, efficient and most importantly, secure system for querying a plethora of API endpoints. So of course, the next natural step was ripping it out, generalizing some aspects and open sourcing it <a href="https://pub.dev/packages/open_weather_api_client" title="as a package on pub.dev">as a package on pub.dev</a>. :-)</p>
+<p>By the end, I therefore had a complex, rigorous, custom-built, efficient and most importantly, secure system for querying a plethora of API endpoints. So of course, the next natural step was ripping it out, generalizing some aspects and open sourcing it <a href="https://pub.dev/packages/open_weather_api_client"  title="as a package on pub.dev"  target="_blank" >as a package on pub.dev</a>. :-)</p>
 <p>As I talk about in the next section, a lot of what I implemented in my own app was aided by others who came before me generously open sourcing <em>their</em> solutions and <em>their</em> complex systems for dealing with these problems, even when they could have easily kept it to themselves, and in some cases even profit greatly from having done so.</p>
 <p>They however, did not do so, and the world is tangibly better for it, and I am standing here with a finished project because of it. This therefore, was my small way of saying thank you to them, and giving back to the community whose help I leveraged at every step.</p>
 <h2 id="on-the-shoulders-of-giants">On The Shoulders of Giants</h2>
@@ -792,6 +792,26 @@
     </button>
 </div>
 <div class="social-linkBox">
+    <div class="social-button social-button-background gh-grid-place">
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <span onclick="window.open('https:\/\/github.com\/tanzilzubair'); return false;"
+            onkeypress="window.open('https:\/\/github.com\/tanzilzubair'); return false;">
+            <svg class="social-icon github" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M10.026 0C4.517 0 0.052 4.465 0.052 9.974C0.052 14.38 2.909 18.119 6.873 19.439C7.372 19.529 7.552 19.222 7.552 18.958C7.552 18.721 7.544 18.093 7.541 17.262C4.766 17.864 4.18 15.924 4.18 15.924C3.728 14.772 3.073 14.465 3.073 14.465C2.168 13.846 3.142 13.86 3.142 13.86C4.144 13.93 4.669 14.888 4.669 14.888C5.559 16.412 7.005 15.972 7.571 15.717C7.662 15.072 7.922 14.632 8.206 14.383C5.992 14.132 3.664 13.276 3.664 9.453C3.664 8.366 4.053 7.474 4.688 6.778C4.587 6.525 4.242 5.51 4.787 4.138C4.787 4.138 5.624 3.869 7.529 5.159C8.327 4.938 9.178 4.827 10.025 4.823C10.874 4.827 11.726 4.938 12.521 5.159C14.427 3.868 15.263 4.138 15.263 4.138C15.808 5.51 15.466 6.525 15.362 6.778C16.002 7.474 16.386 8.365 16.386 9.453C16.386 13.286 14.056 14.128 11.834 14.375C12.189 14.683 12.509 15.291 12.509 16.221C12.509 17.555 12.497 18.631 12.497 18.958C12.497 19.225 12.675 19.535 13.184 19.437C17.146 18.115 20 14.379 20 9.974C20 4.465 15.535 0 10.026 0Z" />
+            </svg>
+        </span>
+    </div>
     <div class="social-button social-button-background ig-grid-place">
         <i></i>
         <i></i>
@@ -859,26 +879,7 @@
             </svg>
         </span>
     </div>
-    <div class="social-button social-button-background gh-grid-place">
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <i></i>
-        <span onclick="window.open('https:\/\/github.com\/tanzilzubair'); return false;"
-            onkeypress="window.open('https:\/\/github.com\/tanzilzubair'); return false;">
-            <svg class="social-icon github" width="20" height="20" viewBox="0 0 20 20" fill="none"
-                xmlns="http://www.w3.org/2000/svg">
-                <path fill-rule="evenodd" clip-rule="evenodd"
-                    d="M10.026 0C4.517 0 0.052 4.465 0.052 9.974C0.052 14.38 2.909 18.119 6.873 19.439C7.372 19.529 7.552 19.222 7.552 18.958C7.552 18.721 7.544 18.093 7.541 17.262C4.766 17.864 4.18 15.924 4.18 15.924C3.728 14.772 3.073 14.465 3.073 14.465C2.168 13.846 3.142 13.86 3.142 13.86C4.144 13.93 4.669 14.888 4.669 14.888C5.559 16.412 7.005 15.972 7.571 15.717C7.662 15.072 7.922 14.632 8.206 14.383C5.992 14.132 3.664 13.276 3.664 9.453C3.664 8.366 4.053 7.474 4.688 6.778C4.587 6.525 4.242 5.51 4.787 4.138C4.787 4.138 5.624 3.869 7.529 5.159C8.327 4.938 9.178 4.827 10.025 4.823C10.874 4.827 11.726 4.938 12.521 5.159C14.427 3.868 15.263 4.138 15.263 4.138C15.808 5.51 15.466 6.525 15.362 6.778C16.002 7.474 16.386 8.365 16.386 9.453C16.386 13.286 14.056 14.128 11.834 14.375C12.189 14.683 12.509 15.291 12.509 16.221C12.509 17.555 12.497 18.631 12.497 18.958C12.497 19.225 12.675 19.535 13.184 19.437C17.146 18.115 20 14.379 20 9.974C20 4.465 15.535 0 10.026 0Z" />
-            </svg>
-        </span>
-    </div>
+
 </div>
 
 <div class="designBox">

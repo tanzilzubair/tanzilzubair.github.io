@@ -9,28 +9,28 @@
     <lastBuildDate>Thu, 03 Jun 2021 07:00:34 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>What goes into a Flutter app (Part:3)</title>
-      <link>/blog/post-2/</link>
+      <link>/blog/what-goes-into-a-flutter-app-part-3/</link>
       <pubDate>Thu, 03 Jun 2021 07:00:34 +0000</pubDate>
       
-      <guid>/blog/post-2/</guid>
+      <guid>/blog/what-goes-into-a-flutter-app-part-3/</guid>
       <description>Disclaimer This is Part 3 and the final part of a series of articles that explore and seek to provide newcomers with a high-level overview of what all the parts of a Flutter app consist of and do, so that they can hit the ground running.</description>
     </item>
     
     <item>
       <title>What goes into a Flutter app (Part:2)</title>
-      <link>/blog/post-3/</link>
+      <link>/blog/what-goes-into-a-flutter-app-part-2/</link>
       <pubDate>Wed, 26 May 2021 07:00:34 +0000</pubDate>
       
-      <guid>/blog/post-3/</guid>
+      <guid>/blog/what-goes-into-a-flutter-app-part-2/</guid>
       <description>Disclaimer This is Part 2 of a series of articles that explore and seek to provide newcomers with a high-level overview of what all the parts of an app consist of and do, so that they can hit the ground running.</description>
     </item>
     
     <item>
       <title>What goes into a Flutter app (Part:1)</title>
-      <link>/blog/post-4/</link>
+      <link>/blog/what-goes-into-a-flutter-app-part-1/</link>
       <pubDate>Tue, 18 May 2021 07:00:00 +0000</pubDate>
       
-      <guid>/blog/post-4/</guid>
+      <guid>/blog/what-goes-into-a-flutter-app-part-1/</guid>
       <description>Disclaimer This article is meant to be a starting point for people new to coding and trying their hand at Dart and Flutter, much as I was and did.</description>
     </item>
     

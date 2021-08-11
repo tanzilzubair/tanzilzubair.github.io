@@ -3,13 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <title>MobX-Architecture, my first Flutter package!</title>
+  <title>What goes into a Flutter app (Part:2)</title>
 
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="HandheldFriendly" content="true">
   <meta name="description"
-    content="Hello! And welcome, to my little space on the internet.">
+    content="This series of posts seeks to bridge a gap and provide newer coders with a high level overview of what exactly goes into making a Flutter app.">
   <meta name="attribution"
     content='<a href="https://www.vecteezy.com/free-vector/t-logo">T Logo Vectors by Vecteezy</a>'>
   <meta name="theme-color" content="#ffffff">
@@ -18,7 +18,6 @@
   <meta name="author" content="Tanzil Zubair Bin Zaman">
   
   <meta name="generator" content="Hugo 0.79.1" />
-
   
   
   <link rel="stylesheet" href="/css/style.min.css" media="screen">
@@ -541,12 +540,13 @@
     </div>
 </header>
 	<div class="wrapper">
+
 <div class="article-page-header" id="parallax" style="background-image:linear-gradient(rgba(0, 0, 0, 0),
   rgba(0, 0, 0, 0),
-  rgba(0, 0, 0, 0.98)),url(https://i.ibb.co/cNfHd46/b01b79d3-1f29-4759-bd9e-2748aa1fb1a4.jpg)">
+  rgba(0, 0, 0, 0.98)),url(https://i.ibb.co/StzfWCw/5bb638e6-c945-40e0-a77e-d929af519460.jpg)">
   <div>
     <div class="article-page-header-primaryTextBox">
-      <h1 class="article-page-header-primaryTitleText">MobX-Architecture, my first Flutter package!</h1>
+      <h1 class="article-page-header-primaryTitleText">What goes into a Flutter app (Part:2)</h1>
     </div>
     <div class="article-page-header-secondaryTextBox">
       <h1 class="article-page-header-secondaryTitleText"> By Tanzil Zubair Bin Zaman</h1>
@@ -556,94 +556,15 @@
       <span></span>
       <span></span>
     </div>
-  </div>
-</div>
-<div class="info-grid">
-  <div class="info-item">
-    <i class="info-grid-icon">
-      <svg class="date-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-        style="fill:white;transform:;-ms-filter:">
-        <path fill="none" d="M4.998 8H19V20H4.998z"></path>
-        <path
-          d="M2.999,6v2v12c0,1.103,0.897,2,2,2h14c1.103,0,2-0.897,2-2V8V6c0-1.103-0.897-2-2-2h-2V2h-2v2h-6V2h-2v2h-2 C3.896,4,2.999,4.897,2.999,6z M19.001,20H4.999V8h14L19.001,20z">
-        </path>
-      </svg>
-    </i>
-    <div class="info-grid-itemTextBox">
-      <h1 class="info-grid-itemTitleText">Date</h1>
-      <h1 class="info-grid-itemInfoText">Feb 01, 2021</h1>
-    </div>
-  </div>
-  
-  <div class="info-item">
-    <i class="info-grid-icon">
-      <svg class="techStack-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-        style="fill:white;transform:;-ms-filter:">
-        <path
-          d="M8.293 6.293L2.586 12 8.293 17.707 9.707 16.293 5.414 12 9.707 7.707zM15.707 17.707L21.414 12 15.707 6.293 14.293 7.707 18.586 12 14.293 16.293z">
-        </path>
-      </svg>
-    </i>
-    <div class="info-grid-itemTextBox">
-      <h1 class="info-grid-itemTitleText">The Tech Stack</h1>
-      <h1 class="info-grid-itemInfoText">Flutter, Dart</h1>
-    </div>
-  </div>
-  
-  <div class="info-item">
-    <a href="https://pub.dev/packages/mobx_architecture" class="info-grid-icon"><i class="info-grid-icon">
-        <svg class="projectLink-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
-          style="fill:white;transform:;-ms-filter:">
-          <path
-            d="M8.465,11.293c1.133-1.133,3.109-1.133,4.242,0L13.414,12l1.414-1.414l-0.707-0.707c-0.943-0.944-2.199-1.465-3.535-1.465 S7.994,8.935,7.051,9.879L4.929,12c-1.948,1.949-1.948,5.122,0,7.071c0.975,0.975,2.255,1.462,3.535,1.462 c1.281,0,2.562-0.487,3.536-1.462l0.707-0.707l-1.414-1.414l-0.707,0.707c-1.17,1.167-3.073,1.169-4.243,0 c-1.169-1.17-1.169-3.073,0-4.243L8.465,11.293z">
-          </path>
-          <path
-            d="M12,4.929l-0.707,0.707l1.414,1.414l0.707-0.707c1.169-1.167,3.072-1.169,4.243,0c1.169,1.17,1.169,3.073,0,4.243 l-2.122,2.121c-1.133,1.133-3.109,1.133-4.242,0L10.586,12l-1.414,1.414l0.707,0.707c0.943,0.944,2.199,1.465,3.535,1.465 s2.592-0.521,3.535-1.465L19.071,12c1.948-1.949,1.948-5.122,0-7.071C17.121,2.979,13.948,2.98,12,4.929z">
-          </path>
-        </svg>
-      </i></a>
-    <div class="info-grid-itemTextBox">
-      <a href="https://pub.dev/packages/mobx_architecture" class="info-grid-itemTitleText" style="text-decoration: underline;">Project
-        Link</a>
+    <div class="article-page-header-tertiaryTextBox">
+      <h1 class="article-page-header-tertiaryTitleText">Published on May 26, 2021</h1>
     </div>
   </div>
 </div>
-
 
 <div class="article-content-wrapper">
-  <div class="article-content"><h2 id="the-inspiration">The Inspiration</h2>
-<p><span class="firstcharacter">T</span>he internet is a big place, and getting bigger everyday. As such, if you know what you&rsquo;re looking for, and if you look hard enough, 9 times out of 10 you&rsquo;re going to find what you&rsquo;re looking for, or at least a variation that works well enough with some modifications. Bridges built by others to traverse commonly faced problems.</p>
-<p>Rarely though, will you turn up with not even enough to build off of, and rarer still you then proceed to build what you wanted in the first place: too much work, not enough results, and that&rsquo;s without factoring in complexity. This would be the time to start considering alternatives, or workarounds. I&rsquo;ve done the same more times than I can remember.</p>
-<p><strong><em>This time though</em></strong>, when I couldn&rsquo;t turn up with anything when I searched for architectures regarding the excellent state management library <strong>MobX</strong>, and with a workaround or alternative not really being viable, I found myself with a rare choice, the choice to build a bridge for the next person, as well as solve my own problem. The project wasn&rsquo;t very large, at least for a passable first version, but would compensate that more than enough with complexity.</p>
-<p>I would be working with <em>generics</em> in this project, and have to design a public API that wouldn&rsquo;t face breaking changes with every update. I also had to extensively test the code I had written for bugs, and do something I had absolutely zero experience with: <strong>documentation</strong>.</p>
-<p>This code would have to be secure, relatively bug free, provide a clear, concise and most importantly consistent and intuitive public API, and also be well documented.</p>
-<p>Furthermore it would also have to be maintainable and modular by design, one because the package had to be redundant, with errors in one module not being able to affect the functionality of other modules, and second because no two projects share the same dependencies, requirements AND implementation except in extremely unlikely scenarios, which would naturally mean modules had to be interchangeable with third party ones better suited to the project in question.</p>
-<p>Modules would therefore have to be able to be switched out for third party ones with coding styles, guidelines and protocols that would be impossible to predict and prepare for on a per third party module basis. Fortunately, due to the limited scope of V1 of the package (an intentional decision, and a requirement learned the hard way from previous experience), modularity was not a big problem, and could easily be ignored, at least for now.</p>
-<h2 id="the-plan">The Plan</h2>
-<p>This project would be an <em>architecture framework,</em> helping mesh together MobX, the state management solution of the Flutter project, with the UI and integrating both into the <a href="https://en.wikipedia.org/wiki/Model%e2%80%93view%e2%80%93viewmodel"  title="MVVM"  target="_blank" >&lt;em&gt;MVVM&lt;/em&gt;</a> architecture pattern, a pattern that is quite intuitive, and plays well with mobile app projects.</p>
-<p>Under this architecture:</p>
-<ul>
-<li>The <strong>Model</strong> would be classes communicating with external APIs, sanitizing the data coming in, providing functionality, etc. similar if not exactly what the original pattern describes it to be</li>
-<li>The <strong>View Model</strong> would have some additional responsibilities, and be unified with MobX stores, therefore handling both the business logic <em>and</em> the state of the <strong>View</strong> it is bound to</li>
-<li>The <strong>View</strong> would be the UI of the Flutter project, and would also be similar if not exactly what the original pattern describes it to be, the only difference being it would have <em>Observer</em> widgets sprinkled in between, wherever needed, to react to state changes</li>
-</ul>
-<p>Along with the above principles, the main functionality provided by the package would be (at least in V1) simply providing an elegant, clean way to &ldquo;bind&rdquo; these View Models to the UI.</p>
-<h2 id="the-execution">The Execution</h2>
-<p>Although quite simple on paper, as is usually the case, when I started coding, I realized this &ldquo;simple&rdquo; functionality housed a fair bit of things in it. I would need 6 different types of widgets, to cover all the possible scenarios of View Model binding, a fair bit larger than the 2 widgets I originally thought.</p>
-<p>I also ended up needing to learn much more about Dart generics than I originally planned to, as I realized the functionality I required needed more complex manipulation of generics than I originally thought.</p>
-<p>Here, a narrow vision for V1 helped me out greatly, as the project had to grow to be able to accommodate the expanding feature set I realized was quite necessary for a minimum viable product, but the growth was <em>greatly</em> curbed by the original narrow scope of the first version.</p>
-<h2 id="the-current-state">The Current State</h2>
-<p>Currently, that&rsquo;s all the package does, but architectures aren&rsquo;t that simple, incorporating everything from data persistence and dependency injection to network and cloud database communication code.</p>
-<p>However, these aspects of projects tend to vary <em>widely</em>, and therein lies my problem: striking a balance between creating a maintainable and scaleable architecture (which by definition requires rigorous and strict practices in code implementation) and creating a flexible, adaptable architecture that can be fit into a wider range of projects.</p>
-<p>This is the primary reason the architecture must be designed with modularity as a core principle, with modules for, say, data persistence and dependency injection being swappable for other packages as otherwise the number of projects this package can benefit decreases <em>drastically.</em></p>
-<h2 id="the-end">The End</h2>
-<p>This project is and will be very much a work in progress, with new features being added whenever required, fixes for the inevitable bugs that will slip through, etc, and I intend for this to evolve into a production ready architecture framework than any developer using MobX in Flutter will love and enjoy to use.</p>
-<p><em>Check out the GitHub repo of version 1.0.0 of the project</em> <a href="https://github.com/tanzilzubair/mobx_architecture"  title="here"  target="_blank" >&lt;em&gt;here&lt;/em&gt;</a><em>!</em></p>
-<div class="quote">
-    <blockquote>
-        <p><strong><em>Psst,</em></strong> It&rsquo;s Tanzil from the future, here to let you know that version <strong>2.0.0</strong>, which is fully <em>null-safe</em>, is out now, and you can find it <a href="https://pub.dev/packages/mobx_architecture" title="here"><em>here</em></a></p>
-    </blockquote>
-</div>
+  <div class="article-content"><h2 id="disclaimer">Disclaimer</h2>
+<p><span class="firstcharacter">T</span>his is <em>Part 2</em> of a series of articles that explore and seek to provide newcomers with a high-level overview of what all the parts of an app consist of and do, so that they can hit the ground running.You can read <em>Part 1</em> <strong>here.</strong></p>
 <div class="divider-wrapper">
     <svg class="animatedline divider-child" viewBox="0 0 523.66 16.3" width="523.6599731445312"
         height="16.299999237060547">
@@ -656,6 +577,99 @@
             <ellipse class="pl-center" cx="262.22" cy="8.15" rx="7.48" ry="7.54" stroke-width="1.35"></ellipse>
         </g>
     </svg>
+</div>
+<h2 id="where-we-left-off">Where we left off</h2>
+<p>In the last post, we talked about <strong><em>3</em></strong> of the <strong><em>6</em></strong> broad aspects that need to be considered when developing an app. They were:</p>
+<ul>
+<li>The <strong><em>UI</em></strong></li>
+<li>The <strong><em>State Management</em></strong> solution</li>
+<li>The <strong><em>Dependency Injection</em></strong> solution</li>
+</ul>
+<p>In this post, we&rsquo;ll talk about the other 3, which are:</p>
+<ul>
+<li>The <strong><em>Local Data Persistence</em></strong> solution</li>
+<li>The <strong><em>Network and Connectivity</em></strong> code/combo/framework</li>
+<li>The <strong><em>Architecture Pattern</em></strong></li>
+</ul>
+<p>So, without further ado, let&rsquo;s get started!</p>
+<h2 id="local-data-persistence">Local Data Persistence</h2>
+<p><em>Local Data Persistence</em> is one of the more straightforward components that goes into making an app.</p>
+<p><strong>For nearly every app, there will be some data that needs to be stored locally, on the user’s device</strong>.</p>
+<p>Unless of course, you have a cloud database, or very rarely, an app that does not need to store anything.</p>
+<p>Local data storage can be of two main types:</p>
+<ul>
+<li>Key-Value pairs</li>
+<li>Tabular / Relational Databases</li>
+</ul>
+<h3 id="key-value-pairs">Key-Value pairs</h3>
+<p><strong><em>Key-Value</em></strong> pair type storage is mainly for storing bits and pieces of data. It does not have any easy way to maintain the <em>relationships</em> between different data ( For example, a value of 165 by itself is not useful unless there is a way to easily <em>relate</em> that that is the height of a person in centimeters ).</p>
+<p>Key-Value pairs can be used to store things such as names, boolean values ( or enums ) to remember the user’s settings and preferences, etc. The only thing it cannot easily store is data that has relationships with other stored data.</p>
+<p>They are usually faster and more responsive than the second type of database.</p>
+<p><strong><em>Some of the more popular packages used for key-value pair data storage are:</em></strong></p>
+<ul>
+<li>Hive</li>
+<li>Shared Preferences</li>
+</ul>
+<h3 id="relational-databases">Relational Databases</h3>
+<p><strong><em>Tabular / Relational Databases</em></strong> are traditional SQL databases, with tables containing rows and columns of data that are related to each other. They can be used to store large amounts of data about users, user generated content, etc.</p>
+<p>They are usually slower than key-value pair storages.</p>
+<p><strong><em>Some of the more popular packages used for Tabular / Relational Databases are:</em></strong></p>
+<ul>
+<li>Sqflite</li>
+<li>Moor</li>
+</ul>
+<p><em>Note: There are also NoSQL databases, and one for Flutter is Sembast.</em></p>
+<h2 id="network-and-connectivity">Network and Connectivity</h2>
+<p>Network and connectivity is one of the more complex aspect of apps that require it, as it can sometimes prove to be difficult to implement, due to its <em>asynchronous</em> nature.</p>
+<p>Simply put, you cannot store all the data required or served by an app locally, or even implement very computation heavy functionality, such as data analysis or OCR / ML technology locally in an app, due to a plethora of reasons, going from performance all the way to file size.</p>
+<p>Furthermore, if your app serves up user generated content, or any other form of real-time data ( such as, say, the weather ) then it <em>must</em> have a way to get new data to be able to display it to the user.</p>
+<p>Networking code handles the API calls and such required for this communication, connecting servers with newly generated content or real-time data, or servers with the ability to run computationally taxing workloads to the app, allowing the app to serve the user better.</p>
+<p><strong><em>Some of the more popular packages used for network and connectivity code are:</em></strong></p>
+<ul>
+<li>Dio</li>
+<li>Chopper</li>
+</ul>
+<h2 id="architecture-pattern">Architecture Pattern</h2>
+<p>The last part of the puzzle is the architecture, the framework or the rules, coding practices/conventions and <strong><em>ADD HERE</em></strong> that hold all of these other components together, allowing data to flow between all of them in a predictable, testable, scalable and most importantly manageable manner.</p>
+<p>Firstly, regardless of what some sources may tell you, there is a thing called <em>over-engineering</em>, and there is a line, an albeit blurry sometimes but definitely present line, separating foresight and leaving room to grow and scale, and using a solution designed for software that operates on a completely different scale, and comprises off and requires a much more extensive list of components, services etc. <strong><em>ADD HERE</em></strong></p>
+<p>The needs of software like the kind above mentioned will rarely align with anything else, and as such, the solutions used to solve their problems will most likely only increase the complexity of yours, <em>without</em> much to show for it.</p>
+<p>This does not mean that those solutions should never be used, it only means that adequate research should be done with the needs, both current <em>and</em> future of your app being kept in mind.</p>
+<p>With that being said, let&rsquo;s continue on to the functions of an architecture. An architecture works most closely with the state-management and dependency injection solutions of your app, as those are some of the primary things that benefit from the structure provided by an architecture pattern.</p>
+<p>At the most basic level, an architecture can even be as simple as arranging the various files that consist your app into self-explanatorily named folders and such, with the splitting of functionality into services and classes and functions that (depending on whether you feel the need to do so) are themselves split across several files.</p>
+<p>But this type of architecture is not the type we are interested in. We are interested in architecture for our <em>code</em>, not the files the code is kept in.</p>
+<p>As with <em>state management,</em> architecture patters also come in a wide variety of shapes and sizes, and most of them work quite well, with the only reason someone might choose one over the other being personal preference.</p>
+<p><strong><em>Some of the more widely adopted architecture patterns that can be ( relatively ) easily implemented in Flutter are:</em></strong></p>
+<ul>
+<li>MVVM</li>
+<li>MVC</li>
+<li>MVI</li>
+<li>MVU</li>
+</ul>
+<p>Explaining these architectural patterns, or going further in depth into the theory behind these patterns, which is largely the same for each pattern, is beyond the scope of this article.</p>
+<p>Just know that they all work by separating the code that handles the <strong><em>logic</em></strong> from the code that handles the <strong><em>UI</em></strong>, and by doing this, make the code more readable, manageable and scalable.</p>
+<h2 id="the-end-for-now">The End (For now)</h2>
+<p>And with that, we reach the end of another post. In this post, we covered the last 3 broad components that go into a Flutter app.</p>
+<p>In the next article, I&rsquo;ll share some of the packages <em>I</em> use for each of these components, along with my thoughts on each and <em>why</em> I selected that particular package.The post ends now, but the adventure continues!</p>
+<p><strong><em>Thank you for reading this far, and I hope you learnt something new!</em></strong></p>
+<div class="divider-wrapper">
+    <svg class="animatedline divider-child" viewBox="0 0 523.66 16.3" width="523.6599731445312"
+        height="16.299999237060547">
+        <g fill="none" stroke="#fff" stroke-miterlimit="10">
+            <path class="pl-stroke" stroke-width="0.91" d="M0 8.67h216.72M523.66 8.38H306.95"></path>
+            <ellipse class="pl-dot pl-dot--right" cx="288.8" cy="8.53" rx="2.42" ry="2.44" stroke-width="2.43">
+            </ellipse>
+            <ellipse class="pl-dot pl-dot--left" cx="234.86" cy="8.53" rx="2.42" ry="2.44" stroke-width="2.43">
+            </ellipse>
+            <ellipse class="pl-center" cx="262.22" cy="8.15" rx="7.48" ry="7.54" stroke-width="1.35"></ellipse>
+        </g>
+    </svg>
+</div>
+<div class="quote">
+    <blockquote>
+        <p><strong><em>Some things have been oversimplified for the sake of newcomers, and some I may have gotten wrong myself.</em></strong><br>
+<strong><em>If you have found incorrect information, please do not hesitate to contact me, and I will update this or any other article to reflect the correct information.</em></strong><br>
+<strong><em>To err is human, after all</em></strong></p>
+    </blockquote>
 </div>
 </div>
 </div><div class="ending-box">
