@@ -44,6 +44,15 @@
     </item>
     
     <item>
+      <title>This Website, but even better (The Third)</title>
+      <link>/blog/this-website-but-even-better-the-third/</link>
+      <pubDate>Sun, 02 May 2021 07:00:00 +0000</pubDate>
+      
+      <guid>/blog/this-website-but-even-better-the-third/</guid>
+      <description>Under The Hood Where to even start. This update, apart from being massive in both development time and lines of code edited (or even added) was also quite underwhelming in that a significant portion of the improvements have no visual footprint.</description>
+    </item>
+    
+    <item>
       <title>This Website, but better</title>
       <link>/blog/this-website-but-better/</link>
       <pubDate>Wed, 10 Feb 2021 07:00:00 +0000</pubDate>

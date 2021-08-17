@@ -1,0 +1,850 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+  <meta charset="utf-8">
+  <title>This Website, but even better (The Third)</title>
+
+  <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+  <meta name="HandheldFriendly" content="true">
+  <meta name="description"
+    content="Software constantly improves, and this website is no different. In this article, I document all of the changes made to the code in V3 of my website.">
+  <meta name="attribution"
+    content='<a href="https://www.vecteezy.com/free-vector/t-logo">T Logo Vectors by Vecteezy</a>'>
+  <meta name="theme-color" content="#ffffff">
+
+  
+  <meta name="author" content="Tanzil Zubair Bin Zaman">
+  
+  <meta name="generator" content="Hugo 0.79.1" />
+  
+  
+  <link rel="stylesheet" href="/css/style.min.css" media="screen">
+
+  <link href="http://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="/css/navigation.min.css" media="screen">
+
+  
+  <link rel="stylesheet" href="/css/article_page.min.css" media="screen">
+
+  
+
+  
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2">
+  <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2">
+  <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=2">
+  <link rel="manifest" href="/site.webmanifest?v=2">
+  <link rel="mask-icon" href="/safari-pinned-tab.svg?v=2" color="#000000">
+  <link rel="shortcut icon" href="/favicon.ico?v=2">
+  <meta name="msapplication-TileColor" content="#4983d8">
+  <meta name="theme-color" content="#ffffff">
+  
+</head>
+
+
+<body><style>
+  :root {
+    --bg: #e3e4e8;
+    --fg: #e3e4e8;
+    --dur: 8.5s;
+    --baseSizeCalc: calc(20px + (30 - 20) * (100vw - 320px) / (1280 - 320));
+  }
+
+  .hexagon {
+    margin-bottom: calc(1.5*var(--baseSizeCalc));
+    overflow: hidden;
+    position: relative;
+    width: calc(15*var(--baseSizeCalc));
+    height: calc(15*var(--baseSizeCalc));
+  }
+
+  .hexagon__group,
+  .hexagon__sector,
+  .hexagon__sector:before,
+  .hexagon__sector:after {
+    position: absolute;
+  }
+
+  .hexagon__group {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hexagon__group:nth-child(2) .hexagon__sector,
+  .hexagon__group:nth-child(2) .hexagon__sector:before,
+  .hexagon__group:nth-child(2) .hexagon__sector:after {
+    animation-delay: calc(var(--dur) * -1/6);
+  }
+
+  .hexagon__group:nth-child(3) .hexagon__sector,
+  .hexagon__group:nth-child(3) .hexagon__sector:before,
+  .hexagon__group:nth-child(3) .hexagon__sector:after {
+    animation-delay: calc(var(--dur) * -2/6);
+  }
+
+  .hexagon__group:nth-child(4) .hexagon__sector,
+  .hexagon__group:nth-child(4) .hexagon__sector:before,
+  .hexagon__group:nth-child(4) .hexagon__sector:after {
+    animation-delay: calc(var(--dur) * -3/6);
+  }
+
+  .hexagon__group:nth-child(5) .hexagon__sector,
+  .hexagon__group:nth-child(5) .hexagon__sector:before,
+  .hexagon__group:nth-child(5) .hexagon__sector:after {
+    animation-delay: calc(var(--dur) * -4/6);
+  }
+
+  .hexagon__group:nth-child(6) .hexagon__sector,
+  .hexagon__group:nth-child(6) .hexagon__sector:before,
+  .hexagon__group:nth-child(6) .hexagon__sector:after {
+    animation-delay: calc(var(--dur) * -5/6);
+  }
+
+  .hexagon__group:nth-child(odd) {
+    transform: rotate(30deg);
+  }
+
+  .hexagon__sector,
+  .hexagon__sector:before,
+  .hexagon__sector:after {
+    animation-duration: var(--dur);
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+     
+    width: calc(0.2*var(--baseSizeCalc));
+    height: calc(0.2*var(--baseSizeCalc));
+  }
+
+  .hexagon__sector {
+    animation-name: moveOut1;
+    top: calc(50% - calc(0.1*var(--baseSizeCalc)));
+    left: calc(50% - calc(0.1*var(--baseSizeCalc)));
+  }
+
+  .hexagon__sector:nth-child(2) {
+    animation-name: moveOut2;
+  }
+
+  .hexagon__sector:nth-child(3) {
+    animation-name: moveOut3;
+  }
+
+  .hexagon__sector:nth-child(4) {
+    animation-name: moveOut4;
+  }
+
+  .hexagon__sector:nth-child(5) {
+    animation-name: moveOut5;
+  }
+
+  .hexagon__sector:nth-child(6) {
+    animation-name: moveOut6;
+  }
+
+  .hexagon__sector:before,
+  .hexagon__sector:after {
+    animation-name: ripple;
+    background-color: #e3e4e8;
+    border-radius: calc(0.1*var(--baseSizeCalc));
+    content: "";
+    display: block;
+    top: 0;
+    left: 0;
+    transform-origin: calc(0.1*var(--baseSizeCalc)) calc(0.1*var(--baseSizeCalc));
+  }
+
+  .hexagon__sector:before {
+    transform: rotate(-30deg)
+  }
+
+  .hexagon__sector:after {
+    transform: rotate(-150deg)
+  }
+
+   
+  @keyframes moveOut1 {
+    from {
+      transform: translateY(0) scale(0);
+    }
+
+    3% {
+      transform: translateY(calc(0.2*var(--baseSizeCalc))) scale(1);
+    }
+
+    97% {
+      transform: translateY(calc(7.3*var(--baseSizeCalc))) scale(1);
+    }
+
+    to {
+      transform: translateY(calc(7.5*var(--baseSizeCalc))) scale(0);
+    }
+  }
+
+  @keyframes moveOut2 {
+    from {
+      transform: rotate(60deg) translateY(0) scale(0);
+    }
+
+    3% {
+      transform: rotate(60deg) translateY(calc(0.2*var(--baseSizeCalc))) scale(1);
+    }
+
+    97% {
+      transform: rotate(60deg) translateY(calc(7.3*var(--baseSizeCalc))) scale(1);
+    }
+
+    to {
+      transform: rotate(60deg) translateY(calc(7.5*var(--baseSizeCalc))) scale(0);
+    }
+  }
+
+  @keyframes moveOut3 {
+    from {
+      transform: rotate(120deg) translateY(0) scale(0);
+    }
+
+    3% {
+      transform: rotate(120deg) translateY(calc(0.2*var(--baseSizeCalc))) scale(1);
+    }
+
+    97% {
+      transform: rotate(120deg) translateY(calc(7.3*var(--baseSizeCalc))) scale(1);
+    }
+
+    to {
+      transform: rotate(120deg) translateY(calc(7.5*var(--baseSizeCalc))) scale(0);
+    }
+  }
+
+  @keyframes moveOut4 {
+    from {
+      transform: rotate(180deg) translateY(0) scale(0);
+    }
+
+    3% {
+      transform: rotate(180deg) translateY(calc(0.2*var(--baseSizeCalc))) scale(1);
+    }
+
+    97% {
+      transform: rotate(180deg) translateY(calc(7.3*var(--baseSizeCalc))) scale(1);
+    }
+
+    to {
+      transform: rotate(180deg) translateY(calc(7.5*var(--baseSizeCalc))) scale(0);
+    }
+  }
+
+  @keyframes moveOut5 {
+    from {
+      transform: rotate(240deg) translateY(0) scale(0);
+    }
+
+    3% {
+      transform: rotate(240deg) translateY(calc(0.2*var(--baseSizeCalc))) scale(1);
+    }
+
+    97% {
+      transform: rotate(240deg) translateY(calc(7.3*var(--baseSizeCalc))) scale(1);
+    }
+
+    to {
+      transform: rotate(240deg) translateY(calc(7.5*var(--baseSizeCalc))) scale(0);
+    }
+  }
+
+  @keyframes moveOut6 {
+    from {
+      transform: rotate(300deg) translateY(0) scale(0);
+    }
+
+    3% {
+      transform: rotate(300deg) translateY(calc(0.2*var(--baseSizeCalc))) scale(1);
+    }
+
+    97% {
+      transform: rotate(300deg) translateY(calc(7.3*var(--baseSizeCalc))) scale(1);
+    }
+
+    to {
+      transform: rotate(300deg) translateY(calc(7.5*var(--baseSizeCalc))) scale(0);
+    }
+  }
+
+  @keyframes ripple {
+
+    from,
+    to {
+      width: calc(0.2*var(--baseSizeCalc));
+    }
+
+    33% {
+      width: calc(2.4*var(--baseSizeCalc));
+    }
+  }
+
+  .preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000;
+    z-index: 999999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+<div class="preloader">
+  <div class="hexagon" aria-label="Animated hexagonal ripples">
+    <div class="hexagon__group">
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+    </div>
+    <div class="hexagon__group">
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+    </div>
+    <div class="hexagon__group">
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+    </div>
+    <div class="hexagon__group">
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+    </div>
+    <div class="hexagon__group">
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+    </div>
+    <div class="hexagon__group">
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+    </div>
+  </div>
+</div><header class="nav-header">
+    <div class="mobile-menu-area">
+        <svg class="hamburger ham ham6" viewBox="0 0 100 100" width="80" onclick="this.classList.toggle('active')">
+            <path class="line top"
+                d="m 30,33 h 40 c 13.100415,0 14.380204,31.80258 6.899646,33.421777 -24.612039,5.327373 9.016154,-52.337577 -12.75751,-30.563913 l -28.284272,28.284272" />
+            <path class="line middle"
+                d="m 70,50 c 0,0 -32.213436,0 -40,0 -7.786564,0 -6.428571,-4.640244 -6.428571,-8.571429 0,-5.895471 6.073743,-11.783399 12.286435,-5.570707 6.212692,6.212692 28.284272,28.284272 28.284272,28.284272" />
+            <path class="line bottom"
+                d="m 69.575405,67.073826 h -40 c -13.100415,0 -14.380204,-31.80258 -6.899646,-33.421777 24.612039,-5.327373 -9.016154,52.337577 12.75751,30.563913 l 28.284272,-28.284272" />
+        </svg>
+
+    </div>
+    <div class="menu">
+        <div class="menu__container small-menu-particles-bg">
+            <nav class="menu__nav">
+                <ul class="menu__list">
+                    <li class="menu__item js-span">Menu</li>
+                    <li class="menu__item">
+                        <a class="menu__link" href="/"> Home </a>
+                    </li>
+                    
+                    
+                    <li class="menu__item">
+                        <a class="menu__link" href="/about">About</a>
+                    </li>
+                    
+                    <li class="menu__item">
+                        <a class="menu__link" href="/projects">Projects</a>
+                    </li>
+                    
+                    <li class="menu__item">
+                        <a class="menu__link" href="/blog">Blog</a>
+                    </li>
+                    
+                    <li class="menu__item">
+                        <a class="menu__link" href="/contact">Contact</a>
+                    </li>
+                    
+                </ul>
+            </nav>
+            <nav class="menu__nav">
+                <ul class="menu__list">
+                    <li class="menu__item js-span">Coming Soon!</li>
+
+                </ul>
+                <div class="social-menu-box">
+                    <div class="social-menu-item">
+                        <div class="social-button-menu social-button-background">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <span onclick="window.location.href='https:\/\/google.com'">
+                                <svg class="social-icon instagram" width="323" height="313" viewBox="0 0 323 313"
+                                    fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M99.7687 156.5C99.7687 123.496 127.375 96.7085 161.487 96.7085C195.571 96.7085 223.204 123.496 223.204 156.5C223.204 189.518 195.571 216.305 161.487 216.305C127.375 216.305 99.7687 189.518 99.7687 156.5ZM120.558 156.513C120.558 178.427 138.898 196.177 161.487 196.177C184.075 196.177 202.388 178.427 202.388 156.513C202.388 134.586 184.075 116.849 161.487 116.849C138.898 116.849 120.558 134.586 120.558 156.513Z"
+                                        stroke="white" />
+                                    <path
+                                        d="M240.189 93.9913C240.189 101.465 233.932 107.55 226.181 107.55C218.429 107.55 212.173 101.465 212.173 93.9913C212.173 86.5176 218.429 80.4324 226.181 80.4324C233.932 80.4324 240.189 86.5176 240.189 93.9913Z"
+                                        stroke="white" />
+                                    <path
+                                        d="M211.463 40.3941L211.463 40.3942L211.474 40.3944C221.486 40.602 231.377 42.4308 240.731 45.8412C256.872 51.8836 269.617 64.2495 275.875 79.8816C279.459 89.0578 281.332 98.7927 281.506 108.62L281.506 108.631L281.507 108.641C282.259 121.104 282.26 125.132 282.26 156.996C282.26 188.853 282.085 192.822 281.506 205.357L281.506 205.357L281.506 205.37C281.305 215.066 279.419 224.632 275.902 233.706C269.643 249.338 256.899 261.691 240.758 267.759C231.389 271.157 221.499 272.998 211.501 273.193L211.492 273.193L211.483 273.193C198.647 273.91 194.449 273.91 161.581 273.91C128.719 273.91 124.622 273.74 111.671 273.193L111.666 273.193C101.628 272.881 91.7369 270.884 82.4209 267.356L82.4193 267.356C66.2641 261.301 53.5186 248.934 47.2598 233.315C43.742 224.228 41.8561 214.662 41.6555 204.966L41.6553 204.956L41.6547 204.946C40.9021 192.483 40.9019 188.442 40.9019 156.591C40.9019 124.734 41.0768 120.765 41.655 108.23L41.6552 108.23L41.6555 108.217C41.8561 98.521 43.7421 88.9548 47.2599 79.8808C53.505 64.249 66.2496 51.8833 82.4038 45.841C91.7579 42.4177 101.648 40.589 111.633 40.3945L111.642 40.3943L111.651 40.3938C124.487 39.6904 128.686 39.6903 161.554 39.6903C194.416 39.6903 198.513 39.8468 211.463 40.3941ZM256.229 226.203C258.882 219.251 260.289 211.922 260.439 204.524H260.573L260.595 204.047C261.174 191.568 261.174 188.138 261.174 156.387V156.37C261.174 124.59 261.026 121.094 260.447 108.687C260.325 101.197 258.887 93.7739 256.23 86.7587L256.226 86.7502C252.068 76.3529 243.604 68.14 232.896 64.1401L232.891 64.1381C225.641 61.525 217.999 60.1458 210.263 60.0527C197.244 59.3353 193.857 59.3353 161.086 59.3353H161.069C128.274 59.3353 124.668 59.4917 111.865 60.0527C104.155 60.1586 96.4851 61.5377 89.2481 64.1379L89.2433 64.1397C78.4961 68.126 69.9766 76.3254 65.8179 86.7506L65.8178 86.7506L65.8151 86.7576C63.1036 93.8653 61.6931 101.353 61.5969 108.92C60.8834 121.562 60.8834 124.832 60.8834 156.586V156.604C60.8834 188.37 61.018 191.879 61.5969 204.274C61.7199 211.764 63.1576 219.187 65.8146 226.202L65.8179 226.211C69.9766 236.622 78.4959 244.835 89.2438 248.808L89.2473 248.81C96.4837 251.423 104.153 252.802 111.862 252.895C124.895 253.613 128.268 253.613 161.051 253.613H161.069C193.85 253.613 197.471 253.469 210.261 252.895C217.997 252.789 225.64 251.423 232.891 248.81L232.896 248.808C243.604 244.821 252.068 236.608 256.226 226.211L256.229 226.203Z"
+                                        stroke="white" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="social-menu-item">
+                        <div class="social-button-menu social-button-background">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <span onclick="window.location.href='https:\/\/google.com'">
+                                <svg class="social-icon twitter" width="20" height="16" viewBox="0 0 20 16" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M17.633 3.997C17.646 4.172 17.646 4.346 17.646 4.52C17.646 9.845 13.593 15.981 6.186 15.981C3.904 15.981 1.784 15.32 0 14.172C0.324 14.209 0.636 14.222 0.973 14.222C2.856 14.222 4.589 13.586 5.974 12.501C4.203 12.464 2.719 11.304 2.207 9.708C2.456 9.745 2.706 9.77 2.968 9.77C3.329 9.77 3.692 9.72 4.029 9.633C2.182 9.259 0.799 7.638 0.799 5.68V5.63C1.336 5.929 1.959 6.116 2.619 6.141C1.534 5.419 0.823 4.184 0.823 2.787C0.823 2.039 1.022 1.353 1.371 0.755C3.354 3.198 6.335 4.795 9.677 4.97C9.615 4.67 9.577 4.359 9.577 4.047C9.577 1.827 11.373 0.0190001 13.605 0.0190001C14.765 0.0190001 15.812 0.505 16.548 1.291C17.458 1.116 18.33 0.779 19.104 0.318C18.805 1.253 18.168 2.039 17.333 2.538C18.144 2.45 18.93 2.226 19.652 1.914C19.104 2.712 18.419 3.423 17.633 3.997Z" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="social-menu-item">
+                        <div class="social-button-menu social-button-background">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <span onclick="window.location.href='https:\/\/google.com'">
+                                <svg class="social-icon facebook" width="10" height="18" viewBox="0 0 10 18" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path
+                                        d="M6.397 17.997V9.801H9.162L9.573 6.592H6.397V4.548C6.397 3.622 6.655 2.988 7.984 2.988H9.668V0.127C8.849 0.0390003 8.025 -0.00299976 7.201 2.35814e-07C4.757 2.35814e-07 3.079 1.492 3.079 4.231V6.586H0.332V9.795H3.085V17.997H6.397Z" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                    <div class="social-menu-item">
+                        <div class="social-button-menu social-button-background">
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <i></i>
+                            <span onclick="window.location.href='https:\/\/github.com\/tanzilzubair'">
+                                <svg class="social-icon github" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                                    xmlns="http://www.w3.org/2000/svg">
+                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                        d="M10.026 0C4.517 0 0.052 4.465 0.052 9.974C0.052 14.38 2.909 18.119 6.873 19.439C7.372 19.529 7.552 19.222 7.552 18.958C7.552 18.721 7.544 18.093 7.541 17.262C4.766 17.864 4.18 15.924 4.18 15.924C3.728 14.772 3.073 14.465 3.073 14.465C2.168 13.846 3.142 13.86 3.142 13.86C4.144 13.93 4.669 14.888 4.669 14.888C5.559 16.412 7.005 15.972 7.571 15.717C7.662 15.072 7.922 14.632 8.206 14.383C5.992 14.132 3.664 13.276 3.664 9.453C3.664 8.366 4.053 7.474 4.688 6.778C4.587 6.525 4.242 5.51 4.787 4.138C4.787 4.138 5.624 3.869 7.529 5.159C8.327 4.938 9.178 4.827 10.025 4.823C10.874 4.827 11.726 4.938 12.521 5.159C14.427 3.868 15.263 4.138 15.263 4.138C15.808 5.51 15.466 6.525 15.362 6.778C16.002 7.474 16.386 8.365 16.386 9.453C16.386 13.286 14.056 14.128 11.834 14.375C12.189 14.683 12.509 15.291 12.509 16.221C12.509 17.555 12.497 18.631 12.497 18.958C12.497 19.225 12.675 19.535 13.184 19.437C17.146 18.115 20 14.379 20 9.974C20 4.465 15.535 0 10.026 0Z" />
+                                </svg>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+            </nav>
+            <div class="menu__sidebar">
+                <div class="menu__flip">
+                    <div class="menu__copy">
+                        <span>
+                            © 2021 Tanzil Zubair Bin Zaman</span>
+                        <span>Designed and built with love, by yours truly</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <nav id="nav-bar">
+        <div class="logo-area">
+            
+            <a href="/">
+                <h1 class="logo-text">Tanzil Zubair Bin Zaman</h1>
+            </a>
+            <a href="/">
+                <div class="logo-icon">
+                    <a href="/" class="logo-icon-text">T</a>
+                </div>
+            </a>
+        </div>
+        <div class="link-area">
+            <div class="navbar-item">
+                <a class="nav-link" href="/"> Home </a>
+            </div>
+            
+            <div class="navbar-item">
+                <a class="nav-link" href="/about">About</a>
+            </div>
+            
+            <div class="navbar-item">
+                <a class="nav-link" href="/projects">Projects</a>
+            </div>
+            
+            <div class="navbar-item">
+                <a class="nav-link" href="/blog">Blog</a>
+            </div>
+            
+            <div class="navbar-item">
+                <a class="nav-link" href="/contact">Contact</a>
+            </div>
+            
+        </div>
+    </nav>
+    <div class="progress-container">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
+</header>
+	<div class="wrapper">
+
+<div class="article-page-header" id="parallax" style="background-image:linear-gradient(rgba(0, 0, 0, 0),
+  rgba(0, 0, 0, 0),
+  rgba(0, 0, 0, 0.98)),url(https://i.ibb.co/12TYc0h/88885b04-66d7-4942-9d45-a5c4a9ffd03c.jpg)">
+  <div>
+    <div class="article-page-header-primaryTextBox">
+      <h1 class="article-page-header-primaryTitleText">This Website, but even better (The Third)</h1>
+    </div>
+    <div class="article-page-header-secondaryTextBox">
+      <h1 class="article-page-header-secondaryTitleText"> By Tanzil Zubair Bin Zaman</h1>
+    </div>
+    <div class="scroll-indicator">
+      <span></span>
+      <span></span>
+      <span></span>
+    </div>
+    <div class="article-page-header-tertiaryTextBox">
+      <h1 class="article-page-header-tertiaryTitleText">Published on May 02, 2021</h1>
+    </div>
+  </div>
+</div>
+
+<div class="article-content-wrapper">
+  <div class="article-content"><h2 id="under-the-hood">Under The Hood</h2>
+<p><span class="firstcharacter">W</span>here to even start. This update, apart from being massive in both development time and lines of code edited (or even added) was also quite underwhelming in that a significant portion of the improvements have no visual footprint.</p>
+<p>This is because much of the development time and code written was to make the website be better able to function “under the hood” so-to-speak, and since as a result there weren’t many visual changes, it’s hard to properly communicate exactly what the changes were (but, and I feel immensely proud being able to say this, I assure you that you <em>will</em> feel them)</p>
+<p>In the previous article, I mentioned how I planned V3 to have visual changes and V4 and a potential V5 of the site having optimizations only. Well that didn’t <em>exactly</em> pan out, and this update contains a ragtag mixture of all 3 of them.</p>
+<p>So buckle up and grab some coffee, cause we&rsquo;re going to go through <em>all</em> of the them here, starting with&hellip;.</p>
+<h2 id="first-impressions">First Impressions</h2>
+<p>First impressions. They matter. <strong>A lot</strong>. So, naturally, I wanted the landing page of my website to be as beautiful, smooth, performant, beautiful, stunning, and did I mention beautiful? as I could possibly make it.</p>
+<p>And while its not yet done yet, it’s at a place where I’m finally beginning to feel proud of it.</p>
+<p>This update, the landing page was completely stripped down to a blank HTML file and fully rewritten, and is, hopefully, a joy to look at. This rewrite, although time consuming, was quite necessary, and gave me some <em>obscenely</em> improved performance metrics I go in-depth on further below, and made the site actually quite efficient now (previously kicking the fans on my laptop to high gear and now barely forcing them above a whisper).</p>
+<p>Most of this page’s elements are also animated now, from the initial welcoming text to the little blurbs for my projects. All of these animations are also bound to the scroll, so they are gradually &ldquo;revealed&rdquo; as you scroll down, contributing to the more personalized, dynamic feel that I wanted to incorporate into the site.</p>
+<p>I had a vision of sorts, for the landing page, making the transition from loading screen to when you&rsquo;re &ldquo;dropped&rdquo; onto the page and it becomes interactive similar to the transition between cut-scene and game world in <em>God of War</em>, which is to say, completely seamless, and while it’s not <em>quite</em> there yet, this update&rsquo;s laid the foundation for it and brought it ever closer to that elusive goal.</p>
+<p>I talked about performance before, but even percentage stats can only come so close to giving an accurate idea of how <em>smooth</em> it feels to traverse the site now, and how this rewrite caused so many of the animations to go from jarring but cool additions to slick and beautiful parts of a cohesive whole, enhancing and enriching the experience of visitors on my site.</p>
+<p>Personally though, the moment <em>I</em> realized and felt the effects of these significant performance improvements was when I noticed, while messing around on a dev version of the fully updated site testing for bugs, that my laptop <em>didn&rsquo;t</em> feel like it had something to prove to the sun about who was hotter.</p>
+<p>The previous jankiness of the scrolling, a complaint i got from several of the people who visited the site, has also been addressed, and now regardless of whether your zipping through to the end of a page at breakneck speeds or slowly exploring every nook and cranny, stuttering will <em>not</em> be an issue.</p>
+<h2 id="the-end-of-the-page">The End (Of The Page)</h2>
+<p>Speaking of the end of the page though, there is now a beautiful, fully animated, completely responsive, <em>informative</em> footer with links to contact me, my socials, etc.</p>
+<p>This footer took a very large amount of time to design, mock out and then actually code up, and I am quite proud of how it turned out. I spent <em>days</em> designing it, making it responsive, and changing the layout to make it capable of adapting to different screen sizes, and days more fiddling with the smallest of its features, getting them <em>just right</em>, and even though when you work with something so closely you lose an objective sense of how it really is, I still think it looks very beautiful and well thought out.</p>
+<p>I drew inspiration from quite a few sites across the web when designing the 3ish layouts for the footer (one each for different screen size ranges), all the way from rigid boxy footers designed with links galore for corporate websites, to the more open, experimental, <em>artistic</em> footers characteristic of smaller companies or individuals.</p>
+<p>Thus, my footer contains a blend of both, with the aim of striking a balance between the number of links and buttons, and some artistic exploration.</p>
+<h2 id="lighting-fast-all-the-way">Lighting Fast All The Way</h2>
+<p>As I mentioned before, along with containing overhauled visual effects and animations, as well as newer additions such as the footer, the site has also been obsessively optimized this update (I spent literal days throttling my internet and comparing kilobyte payloads to get it right) and in my opinion the hard-work was well worth the effort.</p>
+<p>The landing page, the most optimized page on the entire site (I spent the most time on this since it’s what anyone visiting my site will see first) saw a cool <strong><em>870%</em></strong> overall increase in performance, responsiveness and <em>snappiness,</em> with a decrease in average load times of about <strong><em>13 seconds</em></strong>, (with the fastest load among about 100 tests being <strong><em>sub-second</em></strong>, a feat I am immensely proud of).</p>
+<p>The metrics were calculated by a combination of Lighthouse and a few other scripts I wrote on my downtime (combined with mind numbingly tedious network throttling, naturally). The total payload size was also reduced by a cool <strong><em>88%</em></strong>  this time around, going from a gargantuan 25 megabytes to just under 3, through some <em>hyper</em> aggressive image optimization and compression, and tedious image resolution changes.</p>
+<p>While this is impressive of course, this was only possible because the first few versions of my site were terrible (but good looking if I do say so myself) unoptimized messes with little regard for efficiency or performance.</p>
+<p>You can’t shave off 13 seconds from your load times if it’s only a few to begin with, after all.</p>
+<p>This process began (after about 2 failed attempts at a more delicate and surgical approach) by just ripping out the lines linking jQuery, Bootstrap and a few other libraries to my project and slowly writing custom, leaner HTML, CSS and JS to replace it.</p>
+<p>This was frustrating, especially just after I removed the libraries, when components across my website, even the few I thought were safe just <em>broke</em> with no indication as to where the problem was.</p>
+<p>While fixing some of these I eventually I decided that rewriting would be easier than just hunting for that one line of CSS among thousands that was causing the problem, and so in this update a lot of the components of my website, such as the cards, the sliders, and the nav bar, were all rewritten from scratch, this time much faster and much, <em>much</em> more efficient. And hopefully for the last time. Fingers crossed.</p>
+<p>One other reason for the massive reduction in payload size though, is due to a system for lazy loading images, which has, in hindsight, singlehandedly taken my website from loading relatively quick to loading <em>lighting</em> fast.</p>
+<p>It wouldn&rsquo;t have been included at all, actually, had I not noticed, while finishing up the other performance improvements, that the site still felt very slow even after most of the optimizations were done.</p>
+<p>After a fair amount of frustration and a bit of digging around in the network traffic during site load though, I realized it was because, for every page, the site tried to load <em>every</em> image on the entire page, <em>at once</em>, on page visit.</p>
+<p>Now this might not initially seem like an issue, but most of the images used on my site are either 4K, <strong><em>or above</em></strong>, so you can probably guess how this would get <em>real</em> problematic, <em>real</em> fast.</p>
+<p>A little googling, and a little frustration at the state of native lazy-loading support in browsers later, I implemented Lozad.js to lazy load images, and that was that, with the performance metrics for my site proceeding to <em>skyrocket</em> after it was done.</p>
+<p>The <em>Total Blocking Time</em> for example, a metric which measures how soon the site becomes interactive when first visited, dropped from 6 seconds to 4 <em>milliseconds</em> after this change. That was how impressive it was.</p>
+<p>This massive improvement did not just help the load times of the site though, it made the entire site feel more responsive, made the more subtle animations and changes to the site feel smoother, and overall made the entire experience more tight-knit, responsive, smooth, and most importantly, <em>fast</em>.</p>
+<p>There are of course no measurable metrics for something <em>feeling</em> good, but it is perhaps the most important thing to get right either way, and I&rsquo;m glad I could at least increase that feeling to some extent.</p>
+<h2 id="typography-a-delicate-balance">Typography, A Delicate Balance</h2>
+<p>One of the more subtle changes to the site this time around, came in the form of revamped typography and redesigned article pages.</p>
+<p>Work on this started in effect immediately after V2 of the site dropped, as I had been reading up on design principles and typography ever since that duct taped solution I’d implemented for this in that update, and I used every bit of what I had learned over this time here, and came up with a structure and final product that I’m immensely proud of.</p>
+<p>The layout of the article pages have themselves been completely overhauled, now featuring a parallax animated full screen view of the thumbnail for the article before scrolling down to reveal the text of the body, spruced up with every bit of design knowledge I’d gathered the past few months and been able to scour from the web.</p>
+<p>The layout of the page is not only lean and sleek though, but also <strong>fully responsive</strong>, dynamically adjusting and shuffling its content to fit and look good on almost <em>every</em> single screen size out there.</p>
+<p>But all of this would have meant little, if the typography itself was unpleasant to read. So, there have also been a plethora of improvements on that side.</p>
+<p>The paragraphs, for example, are no longer mysteriously uncomfortable to read, as they follow the design principle of only being 45 to 80 characters long, a length I learned is the sweet spot for maximizing reading comfort.</p>
+<p>The text is more spacious this time around, and as a result more relaxed and inviting for the longer articles, allowing readers to be comfortable reading for longer periods of time, and the this time educated font family choices (of which there are 3) allow for a wide range of creative freedom in the text itself, while still feeling tightly knit and complimentary to each other.</p>
+<p>The dividers separating sections of text have also been redesigned, and are animated and scroll aware now, as when I was finishing up the changes to the site I realized I had made the article pages a little <em>too</em> static, and this allowed for some fun animations to break up a long haul reading session.</p>
+<p>There&rsquo;s also a horizontal progress indicator that docks to the nav-bar and appears whenever you’re reading articles (like this one, look to the top to see it in action!) that signifies the percentage of the article you&rsquo;ve already read through, and is fully reactive to the unique length of each separate article, ending right as you reach the end.</p>
+<p>Another animated change to the article pages was a beautiful, movie like, SVG that appears at the bottom of each article, signifying its end. This, I must admit, took a disproportionately long time to get right, and still isn&rsquo;t quite pixel perfect on all browsers, but I absolutely adore it, and plan to progressively fix the parts of it that are broken in future updates.</p>
+<h2 id="svgs-svgs-everywhere">SVGs, SVGs Everywhere!</h2>
+<p>Speaking of SVGs (<strong><em>S</em></strong><em>caleable</em> <strong><em>V</em></strong><em>ector</em> <strong><em>G</em></strong><em>raphics</em>) though, with the article pages being the sole exception, most of the text you see on my site is no longer actually text, but are rather SVGs, a change necessary to be able to animate them in the myriad of ways that I do (and plan to!), since these complex animations require nuanced control over each individual letter, something normal text does not allow.</p>
+<p>Also Safari isn&rsquo;t as inconsistent with other browsers with rendering SVGs as it is text, so there&rsquo;s that.</p>
+<p>I&rsquo;ve actually been learning about SVGs for a while now, and including them here was a natural (and much easier!) next step in honing my skill with manipulating and creating them.</p>
+<p>Their properties and the benefits they bring to the table, not to mention how <em>intuitive and easy</em> they are to learn make them a joy to pick up and use. It&rsquo;s also incredibly easy to manipulate each and every one of their properties in code (since fundamentally they are code themselves), and this makes them the perfect companion for coding projects, and helps bridge the gap I always felt between where pre-made assets and code connected.</p>
+<h2 id="major-changes">Major Changes</h2>
+<p>I also finally got around to implementing quite a few of the bigger planned changes to the site in this update, such as finally designing and implementing a proper contact page, complete with a beautiful contact form and social icons sprinkled throughout the site.</p>
+<p>Speaking of, the newly designed footers also now have prompts for contacting me for anything from collaborations to questions, and they&rsquo;re all configured to lead here too.</p>
+<p>Parallax animations, if you can’t already tell, made a significant impression on me when I was browsing the web for sources of inspiration for this update, and I&rsquo;ve used them absolutely <em>everywhere</em>, from the landing page to the contact page, and from the larger, orchestrated animations to the smaller, more subtle ones.</p>
+<p>There is a very real possibility I&rsquo;ve overused them, and if so I will probably remove a few in future updates, but I&rsquo;ve fallen in love with the perspective <em>shift</em> an unexpected parallax animation gives, which is why you can see so many of them here.</p>
+<p>As I mentioned before, most of the site was also rewritten in this update, either to fix layout issues or bugs, with the added benefit of becoming much much more performant, and so, while I was doing it, I also took the opportunity to use CSS grids for most of the layouts, simplifying the code greatly and also making it much more responsive and maintainable in the long run.</p>
+<p>As a result, the website now <em>fully</em> supports devices of basically every screen resolution, from the tiny iPhone SE all the way to a 55inch TV I hooked the laptop I use to.</p>
+<h2 id="about-me">About Me</h2>
+<p>By far the most taxing and largest change to the site as a whole though, has to be the <em>About Me</em> page. Much like the others, the entirety of this page had <em>also</em> been stripped down, but unlike the others, what replaced it was <em>much, much larger</em> in scope, and had a mix of both quite a lot of code <em>and</em> quite a lot of literature, with the complexity that that entailed leading to it inevitably requiring <em>several</em> redesigns and having to be repeatedly implemented to be able to achieve the effect I was going for.</p>
+<p>But first, why I felt it was necessary. The previous page had had 3 short paragraphs, and a photo of me to go with it, but ever since the beginning, it had been bothering me that in comparison to the direction I was going with the rest of my site, the About page looked woefully bland, and also couldn&rsquo;t really capture the real <em>essence</em> of why I love code and tech as much as I do, which was, of course, its only goal.</p>
+<p>To complicate things further, this page also wasn&rsquo;t easily extensible either, being essentially bound to be the same length as the three short paragraphs about myself I had written hastily so long ago when I was working on getting the very first version of the site up.</p>
+<p>After quite a bit of back and forth trying to approach this problem from different angles though, it suddenly hit me: I loved stories. Reading them especially but as I was also beginning to realize, telling them too. So, I thought, instead of trying to &ldquo;sum up&rdquo; years worth of feelings and experiences and trying to bottle up and serve all of the wonder and sense of amazement that had driven me all these years, why didn&rsquo;t I let it run free, and tell a <em>story</em> instead of a summary, in the process also being more authentic to what I really felt?</p>
+<p>This, in hindsight, had been a choice I was subconsciously avoiding, as the work it entailed would only further stress the already strenuous deadline I had, but toying with the idea I soon realized, that, despite its cons, it would actually be able to solve all of the problems I was facing with the About page.</p>
+<p>The larger size a story would naturally be would allow me to experiment and add many more animations and cool things to the page without it feeling bloated or little more than a flurry of colors; a web page would also be the perfect medium for a story like this, allowing me to reinforce and better convey the emotions and feelings I intended for different parts of the story to imbue, through images and animations, when I knew text alone would not be enough.</p>
+<p>I had also wanted to do something like this from the very beginning, but had never really started since I could never find a place for it to fit, but now since a spot had just opened up, why not?</p>
+<p>And lastly because, of course, what better way could there be to tell my tale, one of technology and code and all the ways I fell in love with them, if not through those very mediums?</p>
+<p>So I grabbed some coffee and went right to the drawing board, and started sketching out a plan.</p>
+<p>The page easily took me the longest to plan, and to make, not just because of the complexity of the code (though of course there was plenty of that to go around) but also because it took me several rewrites and endless long nights of editing to be able to write a story that I felt could do justice in conveying that boundless, childish wonder of looking up at a world filled to the brim with, for all intents and purposes, magic, where <em>anything</em> was possible, the same childish wonder that remains to this day the reason I love technology so much.</p>
+<p>I&rsquo;ll let the story speak for itself, but as for the webpage, it contains animations at every step, most of them being parallax ones (naturally), quite a few of those ultra high resolution images I mentioned, and several SVGs, all of which tie into and serve to better illustrate my dive into the world of programming, how I began, how I became so very fascinated with it and how I slowly went from hunting bugs in games on my old GameBoy, all the way to reaching one of the key milestones in every aspiring programmer&rsquo;s career: making mods for Minecraft!</p>
+<p>Of course, I&rsquo;m not done with it yet, as I had to eventually cut out a fair amount of the things I wanted to add to the page if I was to have even a sliver of hope of being able to ship it within my own self imposed deadline.</p>
+<p>As a result, while it does look good in my opinion, it could be much better, and <em>much, much</em> less buggy, as it has several layout issues and is only compatible with very specific screen size ranges, which is actually why I left space in the design and connectors in the code, as I plan to fix what&rsquo;s broken and add the features I had to cut out, in subsequent updates.</p>
+<p>Still, I&rsquo;m proud that it works, and I believe that, in the end, that&rsquo;s what matters most.</p>
+<h2 id="minor-changes">Minor Changes</h2>
+<p>Big flashy things may please the eye, but its the little things that make it stay for longer, and so, I also focused on quite a few of the little things this time around, from small inconsistencies in the hierarchy of the code to scrolling that would stutter, clipped elements, missing transitions, etc.</p>
+<p>The loading indicator for the site, for example, has been switched out (again, and hopefully for the last time) with a more efficient and optimized one complete with inline styles and very other optimization trick I knew, because while I did love the previous one, it was not only not performant, but also impossible to scale down or up and still look good, so alas, it had to go.</p>
+<p>I also fixed a ton, and I mean a <em>ton</em> of minor layout issues, from text getting cutoff in certain orientations on certain devices, unintentional clipping of elements on the screen with positional animations, cards out of bounds on some very specific screen resolutions, etc.</p>
+<p>Some of the smaller interaction animations, such as the ones when selecting things or interacting with buttons and forms on the site, have also been revamped, to give visitors a smoother, more frictionless experience.</p>
+<p>Links on my site now also have an all new, unique, physics based hover animation to them, which adds some flair to the site, something I absolutely love.</p>
+<p>Quite a few of the animations I implemented the last time have also been fixed up this time around, from smoothing jarring transitions to changing up the colors a bit to give a more cohesive experience, to making the animations more performant where I could.</p>
+<h2 id="config-changes">Config Changes</h2>
+<p>One of the most flashy aspects of configuration was also setup this time around, and now my site resides at a custom <strong>.tech</strong> domain.</p>
+<p>Besides that though, there have also been a significant number of less visually striking config changes this time around, from the website&rsquo;s build settings to the <strong>CI/CD</strong> pipeline to how <a href="https://forestry.io"  title="Forestry"  target="_blank" >Forestry</a> (the CMS for my site) interfaces with the <a href="https://github.com"  title="GitHub"  target="_blank" >GitHub</a> repository where the files are stored.</p>
+<p>While making all of these changes has been a slow and tedious process, this overhaul to my entire build pipeline and maintenance workflow&rsquo;s made writing and uploading these articles an absolute breeze, with basically every task I had to do related to uploading these and getting them onto the actual site, along with all the routine maintenance tasks I had to do manually having been completely automated and set to run on a schedule, and requiring absolutely no interventions.</p>
+<p>I cannot emphasize how awesome this new system is, and how much I&rsquo;ve fallen in love with it and automation as a whole. Practically all of the boring repetitive tasks I had are gone now, handled automatically (and for free) by <a href="https://github.com/features/actions"  title="GitHub Actions"  target="_blank" >GitHub Actions</a>.</p>
+<p>Setting up this pipeline also gave me some valuable experience with automation using CI/CD (not just running a few basic tests) and with how <em>easy</em> it&rsquo;s made my life now, I plan to slowly start using it more and more in my other projects, and gradually (hopefully) dabble more into Devops, especially since <a href="https://www.docker.com"  title="Docker"  target="_blank" >Docker</a> and <a href="https://kubernetes.io"  title="Kubernetes"  target="_blank" >Kubernetes</a> have interested me for quite some time now.</p>
+<h2 id="reality-strikes-again">Reality Strikes Again!</h2>
+<p>And a terrible blow it was.</p>
+<p>Truth be told, I wanted to accomplish a <em>lot</em> more in this update. I planned to implement the main animation that I designed for the landing page, and the page transition animations that have been a part of my vision for this site since the very beginning.</p>
+<p>I wanted to implement some <em>beautiful</em> text animations I&rsquo;d choreographed and then coded, I planned to add two more grids showcasing the less software related stuff I&rsquo;ve been working on, and I really, <em>really</em> wanted to change the cursor, the scroll indicator and the logo of my site to animated ones.</p>
+<p>And that&rsquo;s not even the half of it. But alas, the time I&rsquo;d given myself to complete V3 has come to an end, and if any of the deadlines I impose on myself should have even a shred of significance, it is a must that all of them do too. Otherwise of course, the human mind is all too ready to justify exceptions.</p>
+<p>And so, the work on V3 ends here. It was productive, but I can&rsquo;t help but wish I had done more.</p>
+</div>
+</div><div class="ending-box">
+    <svg class="ending-text" width="108" height="57" viewBox="0 0 108 57" fill="none"
+        xmlns="http://www.w3.org/2000/svg">
+        <path
+            d="M59.7249 10.4C51.6449 6.4 45.1449 4.4 40.2249 4.4C35.3049 4.4 31.1849 5.8 27.8649 8.6C24.7049 11.28 23.1249 14.16 23.1249 17.24C23.1249 18.84 23.7049 20 24.8649 20.72C26.4249 21.6 27.9049 22.04 29.3049 22.04C29.8249 22.04 30.3449 21.98 30.8649 21.86C32.7049 21.42 34.2649 20.68 35.5449 19.64C36.8249 18.6 37.4649 17.76 37.4649 17.12C37.4649 16.48 37.6449 16.04 38.0049 15.8C38.4049 15.56 38.6049 15.64 38.6049 16.04C38.6049 16.28 38.5449 16.56 38.4249 16.88C37.5849 19.72 35.6249 21.66 32.5449 22.7C31.2249 23.14 29.8649 23.36 28.4649 23.36C27.0649 23.36 25.6849 22.94 24.3249 22.1C21.7649 20.66 20.4849 18.46 20.4849 15.5C20.4849 11.94 22.1249 8.7 25.4049 5.78C28.6849 2.86 32.6849 1.4 37.4049 1.4C39.7249 1.4 42.0649 1.74 44.4249 2.42C50.3449 4.02 55.7049 6.34 60.5049 9.38C61.7449 8.02 63.0249 7.34 64.3449 7.34C65.8249 7.34 66.5849 7.84 66.6249 8.84C66.6649 9.28 66.5249 9.48 66.2049 9.44C66.0049 9.4 65.7849 9.24 65.5449 8.96C65.2249 8.84 64.9249 8.78 64.6449 8.78C63.7649 8.78 62.8649 9.22 61.9449 10.1C64.9049 11.58 68.3849 12.84 72.3849 13.88C73.9449 14.24 75.1849 14.42 76.1049 14.42C77.0249 14.42 77.7249 14.4 78.2049 14.36C79.9649 14.16 81.1049 13.5 81.6249 12.38C81.9049 11.78 82.1449 11.42 82.3449 11.3C82.5849 11.14 82.7249 11.2 82.7649 11.48C82.7649 11.6 82.7649 11.76 82.7649 11.96C82.7649 13.6 81.9249 14.84 80.2449 15.68C79.2049 16.2 78.2249 16.46 77.3049 16.46C76.3849 16.46 75.3849 16.38 74.3049 16.22C73.2249 16.02 71.8249 15.64 70.1049 15.08C68.3849 14.52 66.9849 14 65.9049 13.52C64.8249 13.04 63.7649 12.54 62.7249 12.02L61.0449 11.18C58.9649 13.54 56.7449 17.6 54.3849 23.36C53.6249 25.28 53.1849 26.38 53.0649 26.66C55.3849 26.98 57.5249 27.14 59.4849 27.14C61.4449 27.14 62.9849 27.12 64.1049 27.08C65.2649 27 65.8649 27.12 65.9049 27.44C65.9449 28.32 62.9649 28.76 56.9649 28.76C55.0449 28.76 53.5049 28.68 52.3449 28.52C49.8649 35.32 47.3849 40.36 44.9049 43.64C43.8649 45 42.5649 46.42 41.0049 47.9C39.4449 49.42 37.7849 50.64 36.0249 51.56C32.0649 53.72 27.6449 54.8 22.7649 54.8C17.8849 54.8 13.7449 53.72 10.3449 51.56C5.18492 48.36 2.60492 43.74 2.60492 37.7C2.60492 35.66 2.94492 33.48 3.62492 31.16C4.10492 29.64 4.98492 28.3 6.26492 27.14C7.58492 25.98 8.68492 25.28 9.56492 25.04C10.4449 24.76 10.8449 24.7 10.7649 24.86C10.7249 25.02 10.0449 25.56 8.72492 26.48C6.12492 28.36 4.58492 30.68 4.10492 33.44C3.90492 34.44 3.80492 35.6 3.80492 36.92C3.80492 38.24 4.10492 39.68 4.70492 41.24C6.34492 45.48 9.74492 48.6 14.9049 50.6C17.3449 51.52 19.9649 51.98 22.7649 51.98C25.5649 51.98 28.3449 51.42 31.1049 50.3C33.8649 49.18 36.4249 47.5 38.7849 45.26C43.3849 40.9 47.1849 35.26 50.1849 28.34L46.3449 28.28C41.6649 28.28 38.5849 29.36 37.1049 31.52C36.7449 31.96 36.4449 32.08 36.2049 31.88C36.0049 31.64 35.9849 31.34 36.1449 30.98C37.0249 29.06 38.2649 27.68 39.8649 26.84C41.4649 26 43.0449 25.58 44.6049 25.58C46.2049 25.58 48.3449 25.76 51.0249 26.12C52.2649 23.08 53.8249 19.92 55.7049 16.64C57.6249 13.36 58.9649 11.28 59.7249 10.4Z"
+            fill="black" />
+        <path
+            d="M78.5677 23.66C78.0077 24.14 77.3877 24.38 76.7077 24.38C76.0277 24.38 75.4877 24.14 75.0877 23.66C74.6877 23.18 74.5277 22.6 74.6077 21.92C74.7277 21.24 75.0677 20.66 75.6277 20.18C76.1877 19.7 76.8077 19.46 77.4877 19.46C78.1677 19.46 78.7077 19.7 79.1077 20.18C79.5477 20.66 79.7077 21.24 79.5877 21.92C79.4677 22.6 79.1277 23.18 78.5677 23.66ZM72.6877 45.68C73.4477 45.68 74.2477 45.3 75.0877 44.54C76.5677 43.06 78.4477 40.04 80.7277 35.48C81.0077 34.88 81.2877 34.7 81.5677 34.94C81.6477 35.02 81.6877 35.16 81.6877 35.36C81.6877 35.52 81.5277 35.96 81.2077 36.68C80.8877 37.36 80.5877 37.98 80.3077 38.54C80.0677 39.1 79.5677 40.02 78.8077 41.3C78.0877 42.54 77.4277 43.5 76.8277 44.18C75.1877 46.06 73.6277 47 72.1477 47C70.7077 47 69.6677 46.56 69.0277 45.68C68.3877 44.8 68.0677 43.82 68.0677 42.74C68.0677 41.66 68.3277 40.48 68.8477 39.2L72.6877 29.42C72.7677 29.18 72.8077 28.86 72.8077 28.46C72.8077 28.06 72.5677 27.54 72.0877 26.9L75.3877 26.84C76.3077 26.84 76.8477 27.02 77.0077 27.38C77.1677 27.7 77.0477 28.22 76.6477 28.94L71.8477 40.16C71.1677 41.64 70.8277 42.9 70.8277 43.94C70.8277 45.1 71.4477 45.68 72.6877 45.68Z"
+            fill="black" />
+        <path
+            d="M98.8974 27.32C93.9774 35.96 91.5174 41.6 91.5174 44.24C91.5174 45.28 91.8974 45.8 92.6574 45.8C94.6974 45.8 97.4374 42.34 100.877 35.42C101.117 34.86 101.357 34.64 101.597 34.76C101.837 34.88 101.957 35.04 101.957 35.24C101.957 35.44 101.877 35.68 101.717 35.96C99.5974 40.24 97.7974 43.2 96.3174 44.84C94.8774 46.44 93.4174 47.24 91.9374 47.24C90.4974 47.24 89.3974 46.68 88.6374 45.56C88.2374 45.04 88.0374 44.34 88.0374 43.46C88.0374 42.54 88.2374 41.44 88.6374 40.16C89.0374 38.88 90.1374 36.8 91.9374 33.92C92.3774 33.2 92.5974 32.64 92.5974 32.24C92.5974 31.8 92.2574 31.58 91.5774 31.58C90.8974 31.58 89.5974 32.48 87.6774 34.28C84.7974 36.92 82.0174 40.88 79.3374 46.16C79.0974 46.56 78.8174 46.82 78.4974 46.94C78.2174 47.02 77.6374 47.08 76.7574 47.12C75.8774 47.16 75.2974 47.26 75.0174 47.42C75.6574 46.14 76.9174 43.52 78.7974 39.56C82.1574 32.56 84.3574 28.56 85.3974 27.56C85.8774 27.08 86.5374 26.84 87.3774 26.84C87.5374 26.84 87.9374 26.9 88.5774 27.02C89.2574 27.14 89.7574 27.16 90.0774 27.08C88.5974 27.88 86.1774 31.64 82.8174 38.36C84.6974 36.04 86.3974 34.2 87.9174 32.84C89.4774 31.44 91.3374 30.16 93.4974 29C95.6574 27.8 97.2374 27.2 98.2374 27.2C98.4774 27.2 98.6974 27.24 98.8974 27.32Z"
+            fill="black" />
+        <path class="mask-f-longStroke-1 ending-text-child"
+            d="M45.5 8L34.5 22L23.5 21L22 11L30.5 4L43 3L50.5 5L54.5 6L56.5 8L57.5 9" stroke="#f0f8ff" stroke-width="5"
+            stroke-linecap="square" stroke-linejoin="round" pathLength="1" />
+        <path class="mask-f-longStroke-2 ending-text-child" d="M63 12L64.5 13.5L67 14L72 14.5L77 16L82.5 12"
+            stroke="#f0f8ff" stroke-width="4" stroke-linecap="square" stroke-linejoin="round" pathLength="1" />
+        <path class="mask-in-dot ending-text-child" d="M73.5 22H78.5" stroke="#f0f8ff" stroke-width="6.5"
+            stroke-linecap="square" stroke-linejoin="round" pathLength="1" />
+        <path class="mask-in ending-text-child"
+            d="M105 30L100.5 37.5L96 45L92.5 47.5L90.5 45.5L89.5 43L92 37L98 28L92 31.5L90.5 33L87.5 36L85 38.5L78 48.5L89 25L73.5 48.5L69 43.5L74 31L76 28L73.5 27.5"
+            stroke="#f0f8ff" stroke-width="4.5" stroke-linecap="square" stroke-linejoin="round" pathLength="1" />
+        <path class="mask-f-shortStroke-2 ending-text-child" d="M69.5 25L63 28L60 27.5H57.5L55.5 28.5L54 28"
+            stroke="#f0f8ff" stroke-width="3.3" stroke-linecap="square" stroke-linejoin="round" pathLength="1" />
+        <path class="mask-f-shortStroke-1 ending-text-child"
+            d="M48.8 27L47.5 26.5H47L46 27L45 26.5L40.5 27.5L38 29.5L36 32.5L34.5 35.5" stroke="#f0f8ff"
+            stroke-width="3.7" stroke-linecap="square" stroke-linejoin="round" pathLength="1" />
+        <path class="mask-f-stalk ending-text-child"
+            d="M13.5 23L6.5 27.5L3 34.5L5.5 45L11.5 51L21 54.5L29.5 52L38.5 48L47 38L54.5 21L62 9L71.5 6.5"
+            stroke="#f0f8ff" stroke-width="5.15" stroke-linecap="square" stroke-linejoin="round" pathLength="1" />
+    </svg>
+
+
+</div>
+	</div>
+	<footer>
+<div class="contact-footerBox-1">
+    <h1 class="contact-footer-text-1">Wanna collab?</h1>
+</div>
+<div class="contact-footerBox-2">
+    <h1 class="contact-footer-text-2">...or perhaps, just say hi?</h1>
+    <h1 class="contact-footer-text-2-alt">...or maybe, just say hi?</h1>
+</div>
+<div class="contact-buttonBox">
+    <button class="fancy">
+        <span class="top-key"></span>
+        <a href='/contact' class="contact-buttonText">Contact</a>
+        <span class="bottom-key-1"></span>
+        <span class="bottom-key-2"></span>
+    </button>
+</div>
+<div class="social-linkBox">
+    <div class="social-button social-button-background gh-grid-place">
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <span onclick="window.open('https:\/\/github.com\/tanzilzubair'); return false;"
+            onkeypress="window.open('https:\/\/github.com\/tanzilzubair'); return false;">
+            <svg class="social-icon github" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                    d="M10.026 0C4.517 0 0.052 4.465 0.052 9.974C0.052 14.38 2.909 18.119 6.873 19.439C7.372 19.529 7.552 19.222 7.552 18.958C7.552 18.721 7.544 18.093 7.541 17.262C4.766 17.864 4.18 15.924 4.18 15.924C3.728 14.772 3.073 14.465 3.073 14.465C2.168 13.846 3.142 13.86 3.142 13.86C4.144 13.93 4.669 14.888 4.669 14.888C5.559 16.412 7.005 15.972 7.571 15.717C7.662 15.072 7.922 14.632 8.206 14.383C5.992 14.132 3.664 13.276 3.664 9.453C3.664 8.366 4.053 7.474 4.688 6.778C4.587 6.525 4.242 5.51 4.787 4.138C4.787 4.138 5.624 3.869 7.529 5.159C8.327 4.938 9.178 4.827 10.025 4.823C10.874 4.827 11.726 4.938 12.521 5.159C14.427 3.868 15.263 4.138 15.263 4.138C15.808 5.51 15.466 6.525 15.362 6.778C16.002 7.474 16.386 8.365 16.386 9.453C16.386 13.286 14.056 14.128 11.834 14.375C12.189 14.683 12.509 15.291 12.509 16.221C12.509 17.555 12.497 18.631 12.497 18.958C12.497 19.225 12.675 19.535 13.184 19.437C17.146 18.115 20 14.379 20 9.974C20 4.465 15.535 0 10.026 0Z" />
+            </svg>
+        </span>
+    </div>
+    <div class="social-button social-button-background ig-grid-place">
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <span onclick="window.open('https:\/\/google.com'); return false;"
+            onkeypress="window.open('https:\/\/google.com'); return false;">
+            <svg class="social-icon instagram" width="323" height="313" viewBox="0 0 323 313" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M99.7687 156.5C99.7687 123.496 127.375 96.7085 161.487 96.7085C195.571 96.7085 223.204 123.496 223.204 156.5C223.204 189.518 195.571 216.305 161.487 216.305C127.375 216.305 99.7687 189.518 99.7687 156.5ZM120.558 156.513C120.558 178.427 138.898 196.177 161.487 196.177C184.075 196.177 202.388 178.427 202.388 156.513C202.388 134.586 184.075 116.849 161.487 116.849C138.898 116.849 120.558 134.586 120.558 156.513Z"
+                    stroke="white" />
+                <path
+                    d="M240.189 93.9913C240.189 101.465 233.932 107.55 226.181 107.55C218.429 107.55 212.173 101.465 212.173 93.9913C212.173 86.5176 218.429 80.4324 226.181 80.4324C233.932 80.4324 240.189 86.5176 240.189 93.9913Z"
+                    stroke="white" />
+                <path
+                    d="M211.463 40.3941L211.463 40.3942L211.474 40.3944C221.486 40.602 231.377 42.4308 240.731 45.8412C256.872 51.8836 269.617 64.2495 275.875 79.8816C279.459 89.0578 281.332 98.7927 281.506 108.62L281.506 108.631L281.507 108.641C282.259 121.104 282.26 125.132 282.26 156.996C282.26 188.853 282.085 192.822 281.506 205.357L281.506 205.357L281.506 205.37C281.305 215.066 279.419 224.632 275.902 233.706C269.643 249.338 256.899 261.691 240.758 267.759C231.389 271.157 221.499 272.998 211.501 273.193L211.492 273.193L211.483 273.193C198.647 273.91 194.449 273.91 161.581 273.91C128.719 273.91 124.622 273.74 111.671 273.193L111.666 273.193C101.628 272.881 91.7369 270.884 82.4209 267.356L82.4193 267.356C66.2641 261.301 53.5186 248.934 47.2598 233.315C43.742 224.228 41.8561 214.662 41.6555 204.966L41.6553 204.956L41.6547 204.946C40.9021 192.483 40.9019 188.442 40.9019 156.591C40.9019 124.734 41.0768 120.765 41.655 108.23L41.6552 108.23L41.6555 108.217C41.8561 98.521 43.7421 88.9548 47.2599 79.8808C53.505 64.249 66.2496 51.8833 82.4038 45.841C91.7579 42.4177 101.648 40.589 111.633 40.3945L111.642 40.3943L111.651 40.3938C124.487 39.6904 128.686 39.6903 161.554 39.6903C194.416 39.6903 198.513 39.8468 211.463 40.3941ZM256.229 226.203C258.882 219.251 260.289 211.922 260.439 204.524H260.573L260.595 204.047C261.174 191.568 261.174 188.138 261.174 156.387V156.37C261.174 124.59 261.026 121.094 260.447 108.687C260.325 101.197 258.887 93.7739 256.23 86.7587L256.226 86.7502C252.068 76.3529 243.604 68.14 232.896 64.1401L232.891 64.1381C225.641 61.525 217.999 60.1458 210.263 60.0527C197.244 59.3353 193.857 59.3353 161.086 59.3353H161.069C128.274 59.3353 124.668 59.4917 111.865 60.0527C104.155 60.1586 96.4851 61.5377 89.2481 64.1379L89.2433 64.1397C78.4961 68.126 69.9766 76.3254 65.8179 86.7506L65.8178 86.7506L65.8151 86.7576C63.1036 93.8653 61.6931 101.353 61.5969 108.92C60.8834 121.562 60.8834 124.832 60.8834 156.586V156.604C60.8834 188.37 61.018 191.879 61.5969 204.274C61.7199 211.764 63.1576 219.187 65.8146 226.202L65.8179 226.211C69.9766 236.622 78.4959 244.835 89.2438 248.808L89.2473 248.81C96.4837 251.423 104.153 252.802 111.862 252.895C124.895 253.613 128.268 253.613 161.051 253.613H161.069C193.85 253.613 197.471 253.469 210.261 252.895C217.997 252.789 225.64 251.423 232.891 248.81L232.896 248.808C243.604 244.821 252.068 236.608 256.226 226.211L256.229 226.203Z"
+                    stroke="white" />
+            </svg>
+        </span>
+    </div>
+    <div class="social-button social-button-background tw-grid-place">
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <span onclick="window.open('https:\/\/google.com'); return false;"
+            onkeypress="window.open('https:\/\/google.com'); return false;">
+            <svg class="social-icon twitter" width="20" height="16" viewBox="0 0 20 16" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M17.633 3.997C17.646 4.172 17.646 4.346 17.646 4.52C17.646 9.845 13.593 15.981 6.186 15.981C3.904 15.981 1.784 15.32 0 14.172C0.324 14.209 0.636 14.222 0.973 14.222C2.856 14.222 4.589 13.586 5.974 12.501C4.203 12.464 2.719 11.304 2.207 9.708C2.456 9.745 2.706 9.77 2.968 9.77C3.329 9.77 3.692 9.72 4.029 9.633C2.182 9.259 0.799 7.638 0.799 5.68V5.63C1.336 5.929 1.959 6.116 2.619 6.141C1.534 5.419 0.823 4.184 0.823 2.787C0.823 2.039 1.022 1.353 1.371 0.755C3.354 3.198 6.335 4.795 9.677 4.97C9.615 4.67 9.577 4.359 9.577 4.047C9.577 1.827 11.373 0.0190001 13.605 0.0190001C14.765 0.0190001 15.812 0.505 16.548 1.291C17.458 1.116 18.33 0.779 19.104 0.318C18.805 1.253 18.168 2.039 17.333 2.538C18.144 2.45 18.93 2.226 19.652 1.914C19.104 2.712 18.419 3.423 17.633 3.997Z" />
+            </svg>
+        </span>
+    </div>
+    <div class="social-button social-button-background fb-grid-place">
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <i></i>
+        <span onclick="window.open('https:\/\/google.com'); return false;"
+            onkeypress="window.open('https:\/\/google.com'); return false;">
+            <svg class="social-icon facebook" width="10" height="18" viewBox="0 0 10 18" fill="none"
+                xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M6.397 17.997V9.801H9.162L9.573 6.592H6.397V4.548C6.397 3.622 6.655 2.988 7.984 2.988H9.668V0.127C8.849 0.0390003 8.025 -0.00299976 7.201 2.35814e-07C4.757 2.35814e-07 3.079 1.492 3.079 4.231V6.586H0.332V9.795H3.085V17.997H6.397Z" />
+            </svg>
+        </span>
+    </div>
+
+</div>
+
+<div class="designBox">
+    <h1 class="designBox-text">Designed and built with love, by yours truly</h1>
+</div>
+<div class="copyrightBox">
+    <h1 class="copyright-text">© 2021 Tanzil Zubair Bin Zaman</h1>
+</div>
+<div class="version-tracker">
+    <h1 class="version-tracker-text">Version Stamp: 3.7.1+13</h1>
+</div>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"
+  integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+  integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+  crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script src="https://cdn.jsdelivr.net/gh/warengonzaga/daisy.js/daisy.min.js"></script>
+
+
+<script src="/js/article_page.min.js"></script>
+
+
+	</footer>
+</body>
+<style>
+	.wrapper {
+		transform-origin: center bottom 0px;
+		transition: all 0.5s ease 0s;
+		box-shadow: 0px 22px 54px rgba(0, 0, 0, 0.5);
+		background: var(--clr3);
+	}
+
+	body.tight .wrapper {
+		transform: translateY(-65px) scale(0.9);
+	}
+</style>
+<script>
+	$(document).ready(function ($) {
+		$(window).on('scroll', function () {
+			if ($(window).scrollTop() + $(window).height() > $('.wrapper').outerHeight()) {
+				$('body').addClass('tight');
+				
+			} else {
+				$('body').removeClass('tight');
+				
+			}
+		});
+	});
+</script>
+
+</html>
