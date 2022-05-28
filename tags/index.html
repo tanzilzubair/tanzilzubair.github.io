@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<body><style>
+  :root {
+    --bg: #e3e4e8;
+    --fg: #e3e4e8;
+    --dur: 8.5s;
+    --baseSizeCalc: calc(20px + (30 - 20) * (100vw - 320px) / (1280 - 320));
+  }
+
+  .hexagon {
+    margin-bottom: calc(1.5*var(--baseSizeCalc));
+    overflow: hidden;
+    position: relative;
+    width: calc(15*var(--baseSizeCalc));
+    height: calc(15*var(--baseSizeCalc));
+  }
+
+  .hexagon__group,
+  .hexagon__sector,
+  .hexagon__sector:before,
+  .hexagon__sector:after {
+    position: absolute;
+  }
+
+  .hexagon__group {
+    width: 100%;
+    height: 100%;
+  }
+
+  .hexagon__group:nth-child(2) .hexagon__sector,
+  .hexagon__group:nth-child(2) .hexagon__sector:before,
+  .hexagon__group:nth-child(2) .hexagon__sector:after {
+    animation-delay: calc(var(--dur) * -1/6);
+  }
+
+  .hexagon__group:nth-child(3) .hexagon__sector,
+  .hexagon__group:nth-child(3) .hexagon__sector:before,
+  .hexagon__group:nth-child(3) .hexagon__sector:after {
+    animation-delay: calc(var(--dur) * -2/6);
+  }
+
+  .hexagon__group:nth-child(4) .hexagon__sector,
+  .hexagon__group:nth-child(4) .hexagon__sector:before,
+  .hexagon__group:nth-child(4) .hexagon__sector:after {
+    animation-delay: calc(var(--dur) * -3/6);
+  }
+
+  .hexagon__group:nth-child(5) .hexagon__sector,
+  .hexagon__group:nth-child(5) .hexagon__sector:before,
+  .hexagon__group:nth-child(5) .hexagon__sector:after {
+    animation-delay: calc(var(--dur) * -4/6);
+  }
+
+  .hexagon__group:nth-child(6) .hexagon__sector,
+  .hexagon__group:nth-child(6) .hexagon__sector:before,
+  .hexagon__group:nth-child(6) .hexagon__sector:after {
+    animation-delay: calc(var(--dur) * -5/6);
+  }
+
+  .hexagon__group:nth-child(odd) {
+    transform: rotate(30deg);
+  }
+
+  .hexagon__sector,
+  .hexagon__sector:before,
+  .hexagon__sector:after {
+    animation-duration: var(--dur);
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+     
+    width: calc(0.2*var(--baseSizeCalc));
+    height: calc(0.2*var(--baseSizeCalc));
+  }
+
+  .hexagon__sector {
+    animation-name: moveOut1;
+    top: calc(50% - calc(0.1*var(--baseSizeCalc)));
+    left: calc(50% - calc(0.1*var(--baseSizeCalc)));
+  }
+
+  .hexagon__sector:nth-child(2) {
+    animation-name: moveOut2;
+  }
+
+  .hexagon__sector:nth-child(3) {
+    animation-name: moveOut3;
+  }
+
+  .hexagon__sector:nth-child(4) {
+    animation-name: moveOut4;
+  }
+
+  .hexagon__sector:nth-child(5) {
+    animation-name: moveOut5;
+  }
+
+  .hexagon__sector:nth-child(6) {
+    animation-name: moveOut6;
+  }
+
+  .hexagon__sector:before,
+  .hexagon__sector:after {
+    animation-name: ripple;
+    background-color: #e3e4e8;
+    border-radius: calc(0.1*var(--baseSizeCalc));
+    content: "";
+    display: block;
+    top: 0;
+    left: 0;
+    transform-origin: calc(0.1*var(--baseSizeCalc)) calc(0.1*var(--baseSizeCalc));
+  }
+
+  .hexagon__sector:before {
+    transform: rotate(-30deg)
+  }
+
+  .hexagon__sector:after {
+    transform: rotate(-150deg)
+  }
+
+   
+  @keyframes moveOut1 {
+    from {
+      transform: translateY(0) scale(0);
+    }
+
+    3% {
+      transform: translateY(calc(0.2*var(--baseSizeCalc))) scale(1);
+    }
+
+    97% {
+      transform: translateY(calc(7.3*var(--baseSizeCalc))) scale(1);
+    }
+
+    to {
+      transform: translateY(calc(7.5*var(--baseSizeCalc))) scale(0);
+    }
+  }
+
+  @keyframes moveOut2 {
+    from {
+      transform: rotate(60deg) translateY(0) scale(0);
+    }
+
+    3% {
+      transform: rotate(60deg) translateY(calc(0.2*var(--baseSizeCalc))) scale(1);
+    }
+
+    97% {
+      transform: rotate(60deg) translateY(calc(7.3*var(--baseSizeCalc))) scale(1);
+    }
+
+    to {
+      transform: rotate(60deg) translateY(calc(7.5*var(--baseSizeCalc))) scale(0);
+    }
+  }
+
+  @keyframes moveOut3 {
+    from {
+      transform: rotate(120deg) translateY(0) scale(0);
+    }
+
+    3% {
+      transform: rotate(120deg) translateY(calc(0.2*var(--baseSizeCalc))) scale(1);
+    }
+
+    97% {
+      transform: rotate(120deg) translateY(calc(7.3*var(--baseSizeCalc))) scale(1);
+    }
+
+    to {
+      transform: rotate(120deg) translateY(calc(7.5*var(--baseSizeCalc))) scale(0);
+    }
+  }
+
+  @keyframes moveOut4 {
+    from {
+      transform: rotate(180deg) translateY(0) scale(0);
+    }
+
+    3% {
+      transform: rotate(180deg) translateY(calc(0.2*var(--baseSizeCalc))) scale(1);
+    }
+
+    97% {
+      transform: rotate(180deg) translateY(calc(7.3*var(--baseSizeCalc))) scale(1);
+    }
+
+    to {
+      transform: rotate(180deg) translateY(calc(7.5*var(--baseSizeCalc))) scale(0);
+    }
+  }
+
+  @keyframes moveOut5 {
+    from {
+      transform: rotate(240deg) translateY(0) scale(0);
+    }
+
+    3% {
+      transform: rotate(240deg) translateY(calc(0.2*var(--baseSizeCalc))) scale(1);
+    }
+
+    97% {
+      transform: rotate(240deg) translateY(calc(7.3*var(--baseSizeCalc))) scale(1);
+    }
+
+    to {
+      transform: rotate(240deg) translateY(calc(7.5*var(--baseSizeCalc))) scale(0);
+    }
+  }
+
+  @keyframes moveOut6 {
+    from {
+      transform: rotate(300deg) translateY(0) scale(0);
+    }
+
+    3% {
+      transform: rotate(300deg) translateY(calc(0.2*var(--baseSizeCalc))) scale(1);
+    }
+
+    97% {
+      transform: rotate(300deg) translateY(calc(7.3*var(--baseSizeCalc))) scale(1);
+    }
+
+    to {
+      transform: rotate(300deg) translateY(calc(7.5*var(--baseSizeCalc))) scale(0);
+    }
+  }
+
+  @keyframes ripple {
+
+    from,
+    to {
+      width: calc(0.2*var(--baseSizeCalc));
+    }
+
+    33% {
+      width: calc(2.4*var(--baseSizeCalc));
+    }
+  }
+
+  .preloader {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100vh;
+    width: 100vw;
+    background-color: #000000;
+    z-index: 999999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+</style>
+<div class="preloader">
+  <div class="hexagon" aria-label="Animated hexagonal ripples">
+    <div class="hexagon__group">
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+    </div>
+    <div class="hexagon__group">
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+    </div>
+    <div class="hexagon__group">
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+    </div>
+    <div class="hexagon__group">
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+    </div>
+    <div class="hexagon__group">
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+    </div>
+    <div class="hexagon__group">
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+      <div class="hexagon__sector"></div>
+    </div>
+  </div>
+</div>
+	<div class="wrapper">
+
+
+<section class="section">
+  <div class="container">
+    <div class="row">
+    </div>
+  </div>
+</section>
+
+
+
+	</div>
+	<footer>
+	</footer>
+</body>
+<style>
+	.wrapper {
+		transform-origin: center bottom 0px;
+		transition: all 0.5s ease 0s;
+		box-shadow: 0px 22px 54px rgba(0, 0, 0, 0.5);
+		background: var(--clr3);
+	}
+
+	body.tight .wrapper {
+		transform: translateY(-65px) scale(0.9);
+	}
+</style>
+<script>
+	$(document).ready(function ($) {
+		$(window).on('scroll', function () {
+			if ($(window).scrollTop() + $(window).height() > $('.wrapper').outerHeight()) {
+				$('body').addClass('tight');
+				
+			} else {
+				$('body').removeClass('tight');
+				
+			}
+		});
+	});
+</script>
+
+</html>
