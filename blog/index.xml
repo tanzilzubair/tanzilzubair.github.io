@@ -5,16 +5,6 @@
     <link>/blog/</link>
     <description>Recent content in Blog on Tanzil Zubair Bin Zaman</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language>
-    <lastBuildDate>Sun, 07 Feb 2021 07:00:19 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>How do I make X ?</title>
-      <link>/blog/how-do-i-make-x/</link>
-      <pubDate>Sun, 07 Feb 2021 07:00:19 +0000</pubDate>
-      
-      <guid>/blog/how-do-i-make-x/</guid>
-      <description>Preambles Ideas are a fickle, elusive thing. They come to us in droves, or sometimes not at all.</description>
-    </item>
-    
+    <language>en-us</language><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>
