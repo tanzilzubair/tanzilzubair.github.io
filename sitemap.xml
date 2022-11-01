@@ -2,6 +2,54 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/blog/being-valedictorian-my-thoughts/</loc>
+    <lastmod>2021-06-18T07:00:30+00:00</lastmod>
+  </url><url>
+    <loc>/blog/</loc>
+    <lastmod>2021-06-18T07:00:30+00:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2021-06-18T07:00:30+00:00</lastmod>
+  </url><url>
+    <loc>/blog/what-goes-into-a-flutter-app-part-3/</loc>
+    <lastmod>2021-06-03T07:00:34+00:00</lastmod>
+  </url><url>
+    <loc>/blog/what-goes-into-a-flutter-app-part-2/</loc>
+    <lastmod>2021-05-26T07:00:34+00:00</lastmod>
+  </url><url>
+    <loc>/projects/an-openweather-api-interface-my-second-package/</loc>
+    <lastmod>2021-05-23T07:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/projects/</loc>
+    <lastmod>2021-05-23T07:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/what-goes-into-a-flutter-app-part-1/</loc>
+    <lastmod>2021-05-18T07:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/projects/caelum-third-time-s-the-charm/</loc>
+    <lastmod>2021-05-17T07:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/this-website-but-even-better-the-third/</loc>
+    <lastmod>2021-05-02T07:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/how-do-i-make-x-part-2/</loc>
+    <lastmod>2021-02-22T11:34:42+00:00</lastmod>
+  </url><url>
+    <loc>/blog/this-website-but-better/</loc>
+    <lastmod>2021-02-10T07:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/how-do-i-make-x-part-1/</loc>
+    <lastmod>2021-02-07T07:00:19+00:00</lastmod>
+  </url><url>
+    <loc>/projects/minecraft-nuclear-weapons-add-on/</loc>
+    <lastmod>2021-02-01T07:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/projects/mobx-architecture-my-first-package/</loc>
+    <lastmod>2021-02-01T07:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/projects/this-website/</loc>
+    <lastmod>2020-12-01T08:00:00+00:00</lastmod>
+  </url><url>
     <loc>/about/part-1/</loc>
   </url><url>
     <loc>/about/part-2/</loc>
@@ -22,16 +70,10 @@
   </url><url>
     <loc>/about/</loc>
   </url><url>
-    <loc>/blog/</loc>
-  </url><url>
     <loc>/categories/</loc>
   </url><url>
     <loc>/contact/</loc>
   </url><url>
-    <loc>/projects/</loc>
-  </url><url>
     <loc>/tags/</loc>
-  </url><url>
-    <loc>/</loc>
   </url>
 </urlset>

@@ -5,6 +5,79 @@
     <link>/blog/</link>
     <description>Recent content in Blog on Tanzil Zubair Bin Zaman</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Fri, 18 Jun 2021 07:00:30 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Being Valedictorian - My Thoughts</title>
+      <link>/blog/being-valedictorian-my-thoughts/</link>
+      <pubDate>Fri, 18 Jun 2021 07:00:30 +0000</pubDate>
+      
+      <guid>/blog/being-valedictorian-my-thoughts/</guid>
+      <description>On the 15th of June, this year, as Valedictorian, I gave a speech on the graduation ceremony of my batch, addressing my friends, my teachers, our supervisors, and everyone else present.</description>
+    </item>
+    
+    <item>
+      <title>What goes into a Flutter app (Part:3)</title>
+      <link>/blog/what-goes-into-a-flutter-app-part-3/</link>
+      <pubDate>Thu, 03 Jun 2021 07:00:34 +0000</pubDate>
+      
+      <guid>/blog/what-goes-into-a-flutter-app-part-3/</guid>
+      <description>Disclaimer This is Part 3 and the final part of a series of articles that explore and seek to provide newcomers with a high-level overview of what all the parts of a Flutter app consist of and do, so that they can hit the ground running.</description>
+    </item>
+    
+    <item>
+      <title>What goes into a Flutter app (Part:2)</title>
+      <link>/blog/what-goes-into-a-flutter-app-part-2/</link>
+      <pubDate>Wed, 26 May 2021 07:00:34 +0000</pubDate>
+      
+      <guid>/blog/what-goes-into-a-flutter-app-part-2/</guid>
+      <description>Disclaimer This is Part 2 of a series of articles that explore and seek to provide newcomers with a high-level overview of what all the parts of an app consist of and do, so that they can hit the ground running.</description>
+    </item>
+    
+    <item>
+      <title>What goes into a Flutter app (Part:1)</title>
+      <link>/blog/what-goes-into-a-flutter-app-part-1/</link>
+      <pubDate>Tue, 18 May 2021 07:00:00 +0000</pubDate>
+      
+      <guid>/blog/what-goes-into-a-flutter-app-part-1/</guid>
+      <description>Disclaimer This article is meant to be a starting point for people new to coding and trying their hand at Dart and Flutter, much as I was and did.</description>
+    </item>
+    
+    <item>
+      <title>This Website, but even better (The Third)</title>
+      <link>/blog/this-website-but-even-better-the-third/</link>
+      <pubDate>Sun, 02 May 2021 07:00:00 +0000</pubDate>
+      
+      <guid>/blog/this-website-but-even-better-the-third/</guid>
+      <description>Under The Hood Where to even start. This update, apart from being massive in both development time and lines of code edited (or even added) was also quite underwhelming in that a significant portion of the improvements have no visual footprint.</description>
+    </item>
+    
+    <item>
+      <title>How to make X: Part 2</title>
+      <link>/blog/how-do-i-make-x-part-2/</link>
+      <pubDate>Mon, 22 Feb 2021 11:34:42 +0000</pubDate>
+      
+      <guid>/blog/how-do-i-make-x-part-2/</guid>
+      <description>Codename VT-7274 So, before we begin, let me lay out my idea for the project that we&amp;rsquo;ll be using as an example for how to flesh out ideas.</description>
+    </item>
+    
+    <item>
+      <title>This Website, but better</title>
+      <link>/blog/this-website-but-better/</link>
+      <pubDate>Wed, 10 Feb 2021 07:00:00 +0000</pubDate>
+      
+      <guid>/blog/this-website-but-better/</guid>
+      <description>The Sparkly One Update 2.0 of my site brings about a huge number of visual upgrades to the site, overhauls the site traversal menu (turning it into menus) and sets the groundwork for both Update 3.</description>
+    </item>
+    
+    <item>
+      <title>How do I make X ?</title>
+      <link>/blog/how-do-i-make-x-part-1/</link>
+      <pubDate>Sun, 07 Feb 2021 07:00:19 +0000</pubDate>
+      
+      <guid>/blog/how-do-i-make-x-part-1/</guid>
+      <description>Preambles Ideas are a fickle, elusive thing. They come to us in droves, or sometimes not at all.</description>
+    </item>
+    
   </channel>
 </rss>

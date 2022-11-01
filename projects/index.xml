@@ -5,6 +5,52 @@
     <link>/projects/</link>
     <description>Recent content in Projects on Tanzil Zubair Bin Zaman</description>
     <generator>Hugo -- gohugo.io</generator>
-    <language>en-us</language><atom:link href="/projects/index.xml" rel="self" type="application/rss+xml" />
+    <language>en-us</language>
+    <lastBuildDate>Sun, 23 May 2021 07:00:00 +0000</lastBuildDate><atom:link href="/projects/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>An OpenWeather API Interface, my second package!</title>
+      <link>/projects/an-openweather-api-interface-my-second-package/</link>
+      <pubDate>Sun, 23 May 2021 07:00:00 +0000</pubDate>
+      
+      <guid>/projects/an-openweather-api-interface-my-second-package/</guid>
+      <description>Re-Inventing The Wheel There’s a saying well known by most programmers “Don’t reinvent the wheel’.</description>
+    </item>
+    
+    <item>
+      <title>Caelum: Beautiful Weather</title>
+      <link>/projects/caelum-third-time-s-the-charm/</link>
+      <pubDate>Mon, 17 May 2021 07:00:00 +0000</pubDate>
+      
+      <guid>/projects/caelum-third-time-s-the-charm/</guid>
+      <description>Familiar Faces The heading here might not make sense, but stick with me here, and I promise it will by the end.</description>
+    </item>
+    
+    <item>
+      <title>Minecraft: Nuclear Weapons Addon</title>
+      <link>/projects/minecraft-nuclear-weapons-add-on/</link>
+      <pubDate>Mon, 01 Feb 2021 07:00:00 +0000</pubDate>
+      
+      <guid>/projects/minecraft-nuclear-weapons-add-on/</guid>
+      <description>The Beginning Ahh, my first coding project. Minecraft is something that I’ve loved all my life, the joy, the freedom, the boundless possibilities spreading out before you every time you open a world….</description>
+    </item>
+    
+    <item>
+      <title>MobX-Architecture, my first Flutter package!</title>
+      <link>/projects/mobx-architecture-my-first-package/</link>
+      <pubDate>Mon, 01 Feb 2021 07:00:00 +0000</pubDate>
+      
+      <guid>/projects/mobx-architecture-my-first-package/</guid>
+      <description>The Inspiration The internet is a big place, and getting bigger everyday.</description>
+    </item>
+    
+    <item>
+      <title>This Website!</title>
+      <link>/projects/this-website/</link>
+      <pubDate>Tue, 01 Dec 2020 08:00:00 +0000</pubDate>
+      
+      <guid>/projects/this-website/</guid>
+      <description>This Website! Yes, this website!. Built using HTML, Javascript and CSS (along with libraries to ease the pain of boilerplate code) , with Hugo as the CMS and Forestry mixed in for a little GUI convenience, this is my little space on the internet.</description>
+    </item>
+    
   </channel>
 </rss>
