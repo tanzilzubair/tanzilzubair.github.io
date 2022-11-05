@@ -17,7 +17,16 @@
     </item>
     
     <item>
-      <title>What goes into a Flutter app (Part:3)</title>
+      <title>Architecting a Flutter app…and it’s importance</title>
+      <link>/blog/architecting-a-flutter-app-and-why-it-s-important/</link>
+      <pubDate>Sat, 05 Jun 2021 07:00:00 +0000</pubDate>
+      
+      <guid>/blog/architecting-a-flutter-app-and-why-it-s-important/</guid>
+      <description>Disclaimer This article is written to discuss and provide a beginner friendly perspective on architecture, why it’s important, and how to implement it.</description>
+    </item>
+    
+    <item>
+      <title>Flutter Apps :3</title>
       <link>/blog/what-goes-into-a-flutter-app-part-3/</link>
       <pubDate>Thu, 03 Jun 2021 07:00:34 +0000</pubDate>
       
@@ -26,7 +35,7 @@
     </item>
     
     <item>
-      <title>What goes into a Flutter app (Part:2)</title>
+      <title>Flutter Apps :2</title>
       <link>/blog/what-goes-into-a-flutter-app-part-2/</link>
       <pubDate>Wed, 26 May 2021 07:00:34 +0000</pubDate>
       
@@ -44,7 +53,7 @@
     </item>
     
     <item>
-      <title>What goes into a Flutter app (Part:1)</title>
+      <title>Flutter Apps :1</title>
       <link>/blog/what-goes-into-a-flutter-app-part-1/</link>
       <pubDate>Tue, 18 May 2021 07:00:00 +0000</pubDate>
       
@@ -68,6 +77,15 @@
       
       <guid>/blog/this-website-but-even-better-the-third/</guid>
       <description>Under The Hood Where to even start. This update, apart from being massive in both development time and lines of code edited (or even added) was also quite underwhelming in that a significant portion of the improvements have no visual footprint.</description>
+    </item>
+    
+    <item>
+      <title>A Ghost In The Shell</title>
+      <link>/blog/an-ode-to-titanfall-2/</link>
+      <pubDate>Tue, 23 Feb 2021 16:18:54 +0000</pubDate>
+      
+      <guid>/blog/an-ode-to-titanfall-2/</guid>
+      <description>Humans are&amp;hellip;.. impressionable beings by nature, a trait caused by the immense adaptability we are gifted with, the very thing that took us from hunter gatherers to the dominant lifeforms on this planet, from rubbing rocks together to make fire to terraforming the planet to our needs.</description>
     </item>
     
     <item>

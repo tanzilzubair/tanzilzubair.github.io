@@ -3,13 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Flutter Apps :3</title>
+  <title>Architecting a Flutter app…and it’s importance</title>
 
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="HandheldFriendly" content="true">
   <meta name="description"
-    content="A servies giving a high level overview of what exactly goes into making Flutter apps">
+    content="This article provides a bird&#39;s eye view of architecture in Flutter, in a beginner-friendly way, explaining the why, the what and the how.">
   <meta name="attribution"
     content='<a href="https://www.vecteezy.com/free-vector/t-logo">T Logo Vectors by Vecteezy</a>'>
   <meta name="theme-color" content="#ffffff">
@@ -543,10 +543,10 @@
 
 <div class="article-page-header" id="parallax" style="background-image:linear-gradient(rgba(0, 0, 0, 0),
   rgba(0, 0, 0, 0),
-  rgba(0, 0, 0, 0.98)),url(https://i.ibb.co/Z6cGpR9/e699a03b-d4c5-460e-aeb1-9ce97daa79e8.jpg)">
+  rgba(0, 0, 0, 0.98)),url(https://i.ibb.co/m0CjQYn/83162c07-0c97-4f20-a855-6abd05997f1d.jpg)">
   <div>
     <div class="article-page-header-primaryTextBox">
-      <h1 class="article-page-header-primaryTitleText">Flutter Apps :3</h1>
+      <h1 class="article-page-header-primaryTitleText">Architecting a Flutter app…and it’s importance</h1>
     </div>
     <div class="article-page-header-secondaryTextBox">
       <h1 class="article-page-header-secondaryTitleText"> By Tanzil Zubair Bin Zaman</h1>
@@ -557,16 +557,24 @@
       <span></span>
     </div>
     <div class="article-page-header-tertiaryTextBox">
-      <h1 class="article-page-header-tertiaryTitleText">Published on Jun 03, 2021</h1>
+      <h1 class="article-page-header-tertiaryTitleText">Published on Jun 05, 2021</h1>
     </div>
   </div>
 </div>
 
 <div class="article-content-wrapper">
   <div class="article-content"><h2 id="disclaimer">Disclaimer</h2>
-<p><span class="firstcharacter">T</span>his is <em>Part 3</em> and the final part of a series of articles that explore and seek to provide newcomers with a high-level overview of what all the parts of a Flutter app consist of and do, so that they can hit the ground running.</p>
-<p>While this series has been, to the best of my ability, unbiased in exploring the different components that make up a Flutter app, I think it wouldn&rsquo;t be too bad to now share the solutions I use for my own projects.</p>
-<p><strong>As a warning though,</strong> <strong>these solutions seem intuitive and work for <em>me,</em> it is not only possible but also likely that they may <em>not</em> seem intuitive to you and as such may not work for you. With that being said, let&rsquo;s begin.</strong></p>
+<p>This article is written to discuss and provide a beginner friendly perspective on architecture, why it’s important, and how to implement it.</p>
+<p>It is also meant to provide a starting point for people, especially by using keywords that people can then search up and learn more about each separate aspect discussed here, letting this article also function as an appendix of sorts, allowing beginners to have a high level overview of all the components that go into an architecture.</p>
+<p>Also, while the focus of this article is architecture for a Flutter app, the concepts discussed (or more likely, just mentioned), are applicable across most languages or frameworks.</p>
+<p>In case Flutter is not where you mean to apply an architecture, or if you want to learn more about the principles behind an architecture, along with all the components that go into one, you should check out these concepts/ideas:</p>
+<ul>
+<li>The SOLID principles</li>
+<li>Architecture Patterns</li>
+<li>Dependency Inversion</li>
+<li>Services</li>
+<li>State / State Management</li>
+</ul>
 <div class="divider-wrapper">
     <svg class="animatedline divider-child" viewBox="0 0 523.66 16.3" width="523.6599731445312"
         height="16.299999237060547">
@@ -580,31 +588,69 @@
         </g>
     </svg>
 </div>
-<h2 id="state-management">State Management</h2>
-<p>I use <strong>MobX</strong> as my state management library of choice. It&rsquo;s a slightly heavy-weight solution for smaller use-cases, but in my opinion it is in the middle, suitable for smaller cases and tested and powerful enough for handling the larger ones too. It also has code generation and minimal boilerplate, which are both really great bonuses for me.</p>
-<p>Furthermore, it was also the first state-management solution whose theory and working principles really <strong><em>clicked</em></strong> with me, which is also one of the primary reasons for my bias towards it.</p>
-<h2 id="dependency-injection">Dependency Injection</h2>
-<p>I use a combination of <strong>Provider</strong> and <strong>Get It</strong> for my dependency injection, Provider to aid in the injection of MobX Stores wherever they are required, and Get It for the injection of my service classes wherever those are required.</p>
-<p>Although I do believe either one could handle both, I am biased towards <em>Get It</em>, for the Build-context-less functionality it provides, but also reluctant to leave Provider behind due to it being the &ldquo;de-facto&rdquo; way Stores are injected into Widgets and such, as mentioned in the <a href="https://mobx.netlify.app"  title="MobX docs"  target="_blank" >MobX docs</a> for Flutter.</p>
-<p>And so I compromise, using Provider for Stores and Get It for everything else.</p>
-<h2 id="local-data-persistence">Local Data Persistence</h2>
-<p>My go-to choice for local data persistence is <strong>Hive,</strong> and for when I need a way to store more complex, relational data, <strong>Moor.</strong></p>
-<p>These libraries are the best fit for my use-cases, <strong>Hive</strong> fulfilling the need of fast key-value storage of important things such as user preferences and other, smaller bits of data that are used in places where it would heavily affect the user experience if users had to wait, and <strong>Moor</strong> fulfilling the need of a tabular, medium-sized database that can store relational data and also supports <em>querying</em> that data by criteria.</p>
-<h2 id="network-and-connectivity">Network and Connectivity</h2>
-<p>Full disclosure, I haven&rsquo;t required using the internet or an API in any of my apps <em>yet</em>, but my next app will have an API <em>and</em> a cloud database at it&rsquo;s heart, and, the research I&rsquo;ve done into which library I should use has largely lead me to consider <strong>Chopper</strong> for my use, due to the code generation it provides.</p>
-<h2 id="architecture-pattern">Architecture Pattern</h2>
-<p>The architecture I&rsquo;ve used for the three apps I have in various stages of development ( as of the time of writing this ) is <strong>MVVM,</strong> due to the easier way I personally think each of it&rsquo;s components translate to Flutter.</p>
-<p>However, I <em>also</em> think that it&rsquo;s components could translate to Flutter better, especially if I&rsquo;m using MobX as the state management library of choice. As such, I&rsquo;ve spent a bit of time developing a custom architecture solution for this, one that I intend to publish as a package on <a href="pub.dev"  title="pub.dev" >pub.dev</a> after it&rsquo;s stable and fulfills all of the basic requirements of an architectural pattern.</p>
-<p>The architecture will be a combination of <strong>MVVM</strong> and the <strong>WSS</strong> triad <a href="https://mobx.netlify.app/guides/stores"  target="_blank" >mentioned in the MobX docs</a> , and will provide a way to bind your MobX Stores to your UI more easily and in a more easily scalable and cleaner way.
-<div class="quote">
-    <blockquote>
-        <p><strong><em>Psst,</em></strong> It&rsquo;s Tanzil from the future, here to let you know that the package I mentioned is live now on pub.dev, and you can find it <a href="https://pub.dev/packages/mobx_architecture"  title="here"  target="_blank" >&lt;em&gt;here&lt;/em&gt;</a></p>
-    </blockquote>
-</div></p>
-<h2 id="the-end">The End</h2>
-<p>And with that, we reach the end of the third and final post in this series. In this post, I shared with you the packages I use for my own Flutter projects, along with the reasons behind my decision and my thoughts on each.</p>
-<p>The post ends now, and so does this adventure, but like any good adventure, and any good story, it sets up the scene for the <strong><em>next</em></strong> great adventure, soon to begin, in each of our stories.</p>
-<p><strong><em>This is Tanzil Zubair, wishing you all the very best in your future endeavors. I thank you for reading this far, and sincerely hope you enjoyed this journey, and most importantly, learnt something new!</em></strong></p>
+<h2 id="why-">Why ?</h2>
+<p><span class="firstcharacter">A</span>rchitecture is an especially important part of software development in general, as it helps organize code in an orderly and predictable manner, so as to <del>keep your sanity</del> keep code readable and allow for the modularization of your code, and its importance, along with the reasons why developers go to the trouble of implementing one, only get more numerous as a project grows.</p>
+<p>The most important reason by far for using an architecture, however, is to separate the <strong><em>business logic</em></strong> from the <strong><em>presentation code</em></strong>. The benefits this provides are immense, and include easier:</p>
+<ul>
+<li>Manageability of code</li>
+<li>Scalability of code</li>
+<li>Testability of code</li>
+<li>Readability of code</li>
+</ul>
+<p>The <strong><em>presentation code</em></strong> is code that handles the UI, for example the code that determines the color, shape or border radius of a button.</p>
+<p>The <strong><em>business logic</em></strong> is code that handles the logic, for example what to do when the user presses a button.</p>
+<p>Dart and Flutter allow for business logic to be mixed in with the presentation code, which, while fine for small projects or prototypes, cause problems that only compound as the size of your project grows.</p>
+<h2 id="ok-but-how">Ok, but how?</h2>
+<p>For the most part, an architecture starts out by following certain rules when coding.</p>
+<p>Splitting up large chunks of code into separate files or classes (or in the case of Flutter, Widgets), dependency injection (in any of a variety of methods), modularizing functionality into services, managing state etc.</p>
+<p>Do these consistently, and with a pattern to its naming and implementation, and boom, you got yourself an architecture, one that is a custom fit for your needs too.</p>
+<p>This is however, usually not how its done, with most people opting for an already existing architecture pattern, so as to not have to re-invent the wheel.</p>
+<h2 id="arc">Arc</h2>
+<p>An architecture is most closely tied to the following parts of your app, but they affect and are in turn affected by nearly <em>every</em> part of your app:</p>
+<ul>
+<li>Your <em>State Management</em> solution</li>
+<li>Your chosen method of <em>Dependency Injection</em></li>
+<li>Your <em>Network &amp; Connectivity</em> code (API calls, code handling online Database CRUD operations, etc)</li>
+<li>Your <em>Data Persistence</em> solution (The type of database you use will determine how you handle, format, cleanup (if needed) and overall prepare the data to be represented in your UI)</li>
+</ul>
+<p>As mentioned above, an architecture holds together</p>
+<p>Now architectures are usually separated into <em>patterns</em>,  such as these:</p>
+<ul>
+<li>MVVM (Model—View—View Model)</li>
+<li>MVC (Model—View—Controller)</li>
+<li>MVP (Model—View—Presenter)</li>
+</ul>
+<p>Now right of the bat, you can clearly see similarities in their abbreviations, quite rightly indicating that, underneath it all, <strong><em>they share nearly identical theories and concepts, and were, for the most part, born of the same need.</em></strong></p>
+<p>Explaining the theory behind each, and the reason for so many of them is, frankly speaking, beyond the scope of this article.</p>
+<p>However, we will go over the concepts they share, in an effort to better prepare you for which ever architecture you end up choosing.</p>
+<blockquote>
+<p><strong>Hint:</strong> <em>Like with most technologies, for the most part the decision boils down to two things: <strong>prior familiarity</strong>, and <strong>ease of use</strong>, and you can&rsquo;t really go wrong choosing one over the other, especially among the battle-tested, long-living architecture patterns mentioned above (of which there are many more).<br>
+So, my advice would be to browse just a bit, then settle on which ever feels relatively more intuitive</em></p>
+</blockquote>
+<h2 id="the-forest-not-the-trees">The Forest, Not The Trees</h2>
+<p>The best way to picture the above mentioned ( or for the most part, <em>any</em> architecture pattern ) is <em>vertically</em>, with the top most part being what is seen by the user, with incrementally increasing business logic being mixed in as we traverse down the layers (of which there are usually 3 or 4), until we reach the bottommost layer, which consists entirely of your services, network code, API calls and core logic.</p>
+<blockquote>
+<p><em>A quick definition for beginners, a <strong>&lsquo;service&rsquo;</strong> is nothing more than a class that wraps commonly linked functionality.</em></p>
+<p>For example, the <em>DriveVehicle</em> service can be one of the services used by our app, and it can have the <em>forward( ) , backward( ), parallelPark( )</em> and, most importantly, the <em>drift( )</em> methods_._</p>
+<p>So, any class that <em>does</em> anything can be thought of as a service.</p>
+</blockquote>
+<p>It is extremely wise to, from the get-go, separate your business logic from you presentation logic, as that allows for cleaner, more intuitive looking code (Remember, even for most personal projects, rarely will you write code that will never be seen by anyone else, and you may forget what a function or method did yourself, and <em>even if none of these seem like problems you&rsquo;ll face</em>, it is still better to write cleaner code, if not for anything else other than practice.</p>
+<h2 id="the-grass">The Grass</h2>
+<p>At the lowest level, we have the core logic of our app, surrounded ( and wrapped ) by our services, along with the authentication and data input from any external databases or APIs we use , coupled with (ideally) error handling for these.</p>
+<p>Here is also where we perform the first round of &ldquo;sanitization&rdquo; on our data (I write this during the all encompassing chaos that is the &lsquo;Rona, and when that word has seen record use, and I cannot help but smile), to properly format it to our needs, before passing it up to the next level.</p>
+<h2 id="the-shrub">The Shrub</h2>
+<p>This is the in-between layer in our 3 layer architecture, and in 4 layer architectures, would usually be divided into two parts, serving as a continuation of the bottom layer, preparing data and passing it up, or handling lower level essential functionality.</p>
+<p>In a 3 layer application, it would be where a lot of the heavy lifting takes place, from data formatting for presentation to the user, to handling user input, button presses, to things such as screen navigation, animation logic, etc.</p>
+<p>This, while also handling more functions, serves as a gateway of sorts, parsing data into visuals presented to the user, and parsing user input into commands, requests and data carried out and manipulated by your services or other logic.</p>
+<h2 id="the-tree-top">The Tree-top</h2>
+<p>This is your presentation layer. It is where you design out your UI. It comprises your buttons, sliders, containers, columns, rows etc., anything visual should ideally be here.</p>
+<p>It should include only the widgets that actually render on screen, with functionality being provided ideally solely by function calls that defer business logic to the layer underneath.</p>
+<h2 id="the-end-of-the-beginning">The End Of The Beginning</h2>
+<p>This article is a starting point of sorts, merely scratching the surface of a vast and <em>very</em> important aspect of software development.</p>
+<p>If you have gotten this far, you should most likely have the basics of why an architecture is important and a general idea of how it all works down, and now comes the fun part.</p>
+<p>Go out and research a bit more, find an architecture pattern that clicks, or one that seems less confusing then the rest, and start learning it&rsquo;s nuances.</p>
+<p><strong><em>I wish you all the very best in implementing this in your app!</em></strong></p>
+<p><strong><em>Till next time!</em></strong></p>
 <div class="divider-wrapper">
     <svg class="animatedline divider-child" viewBox="0 0 523.66 16.3" width="523.6599731445312"
         height="16.299999237060547">
@@ -618,6 +664,11 @@
         </g>
     </svg>
 </div>
+<blockquote>
+<p><strong><em>Some things have been oversimplified for the sake of newcomers, and some I may have gotten wrong myself.</em></strong></p>
+<p><strong><em>If you have found incorrect information, please do not hesitate to contact me, and I will update this or any other article to reflect the correct information.</em></strong></p>
+<p><strong><em>To err is human, after all</em></strong></p>
+</blockquote>
 </div>
 </div><div class="ending-box">
     <svg class="ending-text" width="108" height="57" viewBox="0 0 108 57" fill="none"
