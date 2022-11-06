@@ -469,8 +469,8 @@
               <i></i>
               <i></i>
               <i></i>
-              <span onclick="window.open('https:\/\/google.com'); return false;"
-                onkeypress="window.open('https:\/\/google.com'); return false;">
+              <span onclick="window.open('https:\/\/twitter.com\/tanzil7274'); return false;"
+                onkeypress="window.open('https:\/\/twitter.com\/tanzil7274'); return false;">
                 <svg class="social-icon twitter" width="20" height="16" viewBox="0 0 20 16" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -491,8 +491,8 @@
               <i></i>
               <i></i>
               <i></i>
-              <span onclick="window.open('https:\/\/google.com'); return false;"
-                onkeypress="window.open('https:\/\/google.com'); return false;">
+              <span onclick="window.open('https:\/\/www.facebook.com\/profile.php?id=100010015394729'); return false;"
+                onkeypress="window.open('https:\/\/www.facebook.com\/profile.php?id=100010015394729'); return false;">
                 <svg class="social-icon facebook" width="10" height="18" viewBox="0 0 10 18" fill="none"
                   xmlns="http://www.w3.org/2000/svg">
                   <path
@@ -674,8 +674,8 @@
 
 
 <div class="section-area">
-   <div class="section-name">
-      <h1>About Me</h1>
+   <div class="section-name" id="ml-1">
+      <h1 class="ml-1">About Me</h1>
    </div>
    <div class="know-more-boxWrapper">
       <div class="know-more-textBox">
@@ -690,8 +690,8 @@
 
 
 <div class="section-area" style="  background-color: #FFFFFF;">
-   <div class="section-name">
-      <h1>My Projects</h1>
+   <div class="section-name"  id="ml-2">
+      <h1 class="ml-2">My Projects</h1>
    </div>
    <div class="project-grid">
       
@@ -858,8 +858,8 @@
 
 
 <div class="section-area" style="  background-color: #FFFFFF; padding-bottom: 250px;">
-   <div class="section-name">
-      <h1>My Blog</h1>
+   <div class="section-name"  id="ml-3">
+      <h1 class="ml-3">My Blog</h1>
    </div>
    <div class="blog-slider">
       <div class="blog-slider__wrp swiper-wrapper">
@@ -872,7 +872,7 @@
             <div class="blog-slider__content">
                <span class="blog-slider__code">Jun 18, 2021</span>
                <div class="blog-slider__title">Being Valedictorian - My Thoughts</div>
-               <div class="blog-slider__text">This year, as Valedictorian, I gave a speech on the graduation ceremony of my batch, and suffice to say, it has been one of the most perspective-shifting experiences of my life. Here&rsquo;s my thoughs on it all.</div>
+               <div class="blog-slider__text">This year, as Valedictorian, I gave a speech on the graduation ceremony of my batch, one of the most perspective-shifting experiences of my life. Here&rsquo;s my thoughs on it all.</div>
                <div class="button-wrap"><a href="/blog/being-valedictorian-my-thoughts/" class="button">Learn More<span
                         class="button__hover"></span></a></div>
             </div>
@@ -990,8 +990,8 @@
         <i></i>
         <i></i>
         <i></i>
-        <span onclick="window.open('https:\/\/google.com'); return false;"
-            onkeypress="window.open('https:\/\/google.com'); return false;">
+        <span onclick="window.open('https:\/\/twitter.com\/tanzil7274'); return false;"
+            onkeypress="window.open('https:\/\/twitter.com\/tanzil7274'); return false;">
             <svg class="social-icon twitter" width="20" height="16" viewBox="0 0 20 16" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -1010,8 +1010,8 @@
         <i></i>
         <i></i>
         <i></i>
-        <span onclick="window.open('https:\/\/google.com'); return false;"
-            onkeypress="window.open('https:\/\/google.com'); return false;">
+        <span onclick="window.open('https:\/\/www.facebook.com\/profile.php?id=100010015394729'); return false;"
+            onkeypress="window.open('https:\/\/www.facebook.com\/profile.php?id=100010015394729'); return false;">
             <svg class="social-icon facebook" width="10" height="18" viewBox="0 0 10 18" fill="none"
                 xmlns="http://www.w3.org/2000/svg">
                 <path
@@ -1031,13 +1031,39 @@
 <div class="version-tracker">
     <h1 class="version-tracker-text">Version Stamp: 4.3.7+12</h1>
 </div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
+   integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
+   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+<script>
+   var textWrapper1 = document.querySelector('.ml-1');
+   textWrapper1.innerHTML = textWrapper1.textContent.replace(/\S/g, "<span class='letterml-1' style='display: inline-block;'>$&</span>");
+   var textWrapper2 = document.querySelector('.ml-2');
+   textWrapper2.innerHTML = textWrapper2.textContent.replace(/\S/g, "<span class='letterml-2' style='display: inline-block;'>$&</span>");
+   var textWrapper3 = document.querySelector('.ml-3');
+   textWrapper3.innerHTML = textWrapper3.textContent.replace(/\S/g, "<span class='letterml-3' style='display: inline-block;'>$&</span>");
+   var observerC = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+         console.log(`${entry.target.id} .letter${entry.target.id}`);
+         anime.timeline({ loop: false })
+            .add({
+               targets: `.${entry.target.id} .letter${entry.target.id}`,
+               translateX: [40, 0],
+               translateZ: 0,
+               opacity: [0, 1],
+               easing: "easeOutExpo",
+               duration: 1200,
+               delay: (el, i) => 500 + 30 * i
+            });
+      })
+   });
+   observerC.observe(document.querySelector('#ml-1'));
+   observerC.observe(document.querySelector('#ml-2'));
+   observerC.observe(document.querySelector('#ml-3'));
+</script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"
    integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/gh/warengonzaga/daisy.js/daisy.min.js"></script>
 <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"
-   integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
-   crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
 <script src="/js/landing_page.min.js"></script>
