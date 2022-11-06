@@ -2,6 +2,18 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
+    <loc>/blog/</loc>
+    <lastmod>2022-11-01T07:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/github-copilot-higher-aspirations/</loc>
+    <lastmod>2022-11-01T07:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/</loc>
+    <lastmod>2022-11-01T07:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/soul-of-the-silicon/</loc>
+    <lastmod>2022-11-01T07:00:00+00:00</lastmod>
+  </url><url>
     <loc>/projects/chroma-mind-spaces/</loc>
     <lastmod>2022-10-18T07:00:00+00:00</lastmod>
   </url><url>
@@ -11,16 +23,10 @@
     <loc>/projects/</loc>
     <lastmod>2022-10-18T07:00:00+00:00</lastmod>
   </url><url>
-    <loc>/</loc>
-    <lastmod>2022-10-18T07:00:00+00:00</lastmod>
-  </url><url>
     <loc>/projects/morbus/</loc>
     <lastmod>2022-02-27T07:00:00+00:00</lastmod>
   </url><url>
     <loc>/blog/being-valedictorian-my-thoughts/</loc>
-    <lastmod>2021-06-18T07:00:30+00:00</lastmod>
-  </url><url>
-    <loc>/blog/</loc>
     <lastmod>2021-06-18T07:00:30+00:00</lastmod>
   </url><url>
     <loc>/blog/architecting-a-flutter-app-and-why-it-s-important/</loc>
