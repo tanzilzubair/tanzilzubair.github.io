@@ -650,7 +650,7 @@
 <div class="hero-area " id="particle-bg-2">
   <div class="banner-box">
     <div class="banner-textBox">
-      <h1 class="banner-header-text ml12">My Projects</h1>
+      <h1 class="banner-header-text ml12">Projects</h1>
     </div>
     <div class="banner-text-1">
       <p><span style="background-color:#FFFFFF ;">The time each of us has is limited; its preciousness gives each
@@ -671,207 +671,2763 @@
   </div>
 </div>
 
-<div class="project-grid">
+<style>
+  .item {
+    height: 380px;
+    width: 100%;
+    border-style: solid;
+    border-width: 0.3px;
+    border-color: #000000;
+    position: relative;
+    color: #000000;
+    background-color: #ffffff;
+    transition-duration: 0.15s;
+  }
 
+  .item:hover {
+    color: #ffffff;
+    background-color: #000000;
+    border-color: #FFFFFF;
+
+  }
+
+  .item-item {
+    height: 190px;
+    width: 100%;
+    border-right: 0;
+    position: relative;
+    background-color: white;
+    border-style: solid;
+    border-width: 0.3px;
+    border-color: #000000;
+  }
+
+  .item-item:hover {
+    color: #ffffff;
+    background-color: #000000;
+    border-color: #FFFFFF;
+  }
+</style>
+<style>
+  @media (max-width:499px) {
+
+    .large-grid {
+      display: none;
+    }
+
+    .project-grid {
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(auto-fit, 380px);
+    }
+
+    .item-1 {
+      grid-column: 1 / 2;
+    }
+
+    .item-2 {
+      grid-column: 1 / 2;
+      height: 260px;
+      background-color: #000000;
+    }
+
+    .filler-text {
+      color: #FFFFFF;
+      margin: 0;
+      font-size: clamp(45px, 4.5vw, 60px);
+      font-family: 'Ppneuemachina', sans-serif;
+      font-weight: 800;
+      background: url(https://images.unsplash.com/photo-1603050785682-e8304e078c39?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
+      -webkit-background-clip: text;
+      background-clip: text;
+      background-size: 40%;
+      background-position: 50% 50%;
+      color: rgba(0, 0, 0, 0.08);
+      animation: zoomout 10s ease 500ms alternate infinite;
+    }
+
+    @keyframes zoomout {
+      from {
+        background-size: 40%;
+      }
+
+      to {
+        background-size: 10%;
+      }
+    }
+
+    .item-3 {
+      grid-column: 1 / 2;
+    }
+
+    .item-4 {
+      grid-column: 1 / 3;
+    }
+
+    .item-5 {
+      grid-column: 1 / 3;
+      height: 110px;
+    }
+
+    .item-6 {
+      grid-column: 1 / 3;
+    }
+
+    .item-7 {
+      grid-column: 1 / 3;
+    }
+
+    .item-8 {
+      display: none;
+    }
+
+    .item-9 {
+      grid-column: 1 / 3;
+    }
+
+    .item-10 {
+      grid-column: 1 / 3;
+    }
+
+    .item-11 {
+      grid-column: 1 / 3;
+    }
+
+    .item-12 {
+      grid-column: 1 / 3;
+      height: 150px;
+    }
+  }
+
+  @media (min-width: 500px) and (max-width:999px) {
+    .small-grid {
+      display: none;
+    }
+
+    .project-grid {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(auto-fit, 380px);
+    }
+
+    .item-1 {
+      grid-column: 1 / 3;
+    }
+
+    .item-2 {
+      background-color: #000000;
+
+    }
+
+    .filler-text {
+      color: #FFFFFF;
+      margin: 0;
+      font-size: clamp(35px, 3.75vw, 45px);
+      font-family: 'Ppneuemachina', sans-serif;
+      font-weight: 800;
+      background: url(https://images.unsplash.com/photo-1603050785682-e8304e078c39?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
+      -webkit-background-clip: text;
+      background-clip: text;
+      background-size: 40%;
+      background-position: 50% 50%;
+      color: rgba(0, 0, 0, 0.08);
+      animation: zoomout 10s ease 500ms alternate infinite;
+    }
+
+    @media (min-width: 600px) and (max-width:750px) {
+      .filler-text {
+        font-size: clamp(40px, 4.0vw, 55px);
+      }
+    }
+
+    @media (min-width: 750px) and (max-width:850px) {
+      .filler-text {
+        font-size: clamp(45px, 4.0vw, 55px);
+      }
+    }
+
+    @media (min-width: 850px) and (max-width:999px) {
+      .filler-text {
+        font-size: clamp(50px, 4.0vw, 60px);
+      }
+    }
+
+    @keyframes zoomout {
+      from {
+        background-size: 40%;
+      }
+
+      to {
+        background-size: 10%;
+      }
+    }
+
+    .item-2:hover {
+      border-color: #000000;
+
+    }
+
+    .item-3 {}
+
+    .item-4 {
+      grid-column: 1 / 3;
+    }
+
+    .item-5 {
+      grid-column: 1 / 3;
+      height: 110px;
+    }
+
+    .item-6 {
+      grid-column: 1 / 3;
+    }
+
+    .item-7 {
+      grid-column: 1 / 3;
+    }
+
+    .item-8 {
+      display: none;
+    }
+
+    .item-9 {
+      grid-column: 1 / 3;
+    }
+
+    .item-10 {
+      grid-column: 1 / 3;
+    }
+
+    .item-11 {
+      grid-column: 1 / 3;
+    }
+
+    .item-12 {
+      grid-column: 1 / 3;
+      height: 150px;
+    }
+  }
+
+  @media (min-width: 1000px) {
+    .small-grid {
+      display: none;
+    }
+
+    .project-grid {
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(auto-fit, 1fr);
+    }
+
+    .item-1 {
+      grid-column: 1 / 3;
+    }
+
+    .item-2 {
+      background-color: #000000;
+
+    }
+
+    .item-2:hover {
+      border-color: #000000;
+
+    }
+
+    .filler-text {
+      color: #FFFFFF;
+      margin: 0;
+      font-size: clamp(45px, 4.5vw, 60px);
+      font-family: 'Ppneuemachina', sans-serif;
+      font-weight: 800;
+      background: url(https://images.unsplash.com/photo-1603050785682-e8304e078c39?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=774&q=80);
+      -webkit-background-clip: text;
+      background-clip: text;
+      background-size: 40%;
+      background-position: 50% 50%;
+      color: rgba(0, 0, 0, 0.08);
+      animation: zoomout 10s ease 500ms alternate infinite;
+    }
+
+    @keyframes zoomout {
+      from {
+        background-size: 40%;
+      }
+
+      to {
+        background-size: 10%;
+      }
+    }
+
+    .item-3 {}
+
+    .item-4 {
+      grid-column: 2 / 4;
+    }
+
+    .item-5 {
+      grid-column: 1 / 4;
+      height: 110px;
+    }
+
+    .item-6 {
+      grid-column: 1 / 3;
+    }
+
+    .item-7 {}
+
+    .item-8 {
+      background-color: #000000;
+    }
+
+    .item-8:hover {
+      border-color: #000000;
+
+    }
+
+    .item-9 {
+      grid-column: 2 / 4;
+    }
+
+    .item-10 {
+      grid-column: 1 / 3;
+    }
+
+    .item-11 {}
+
+    .item-12 {
+      grid-column: 1 / 4;
+      height: 150px;
+    }
+  }
+
+  .item-5 {
+    overflow: hidden;
+    height: 80px;
+  }
+
+  .item-5:hover {
+    background-color: #FFFFFF;
+  }
+</style>
+<div class="project-grid large-grid">
+  
+  
+  <div class="item-1">
+    <a href="/projects/caelum-beautiful-weather/">
+    <style>
+        .post-long-right {
+            display: grid;
+            grid-template-columns: repeat(15, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        .post-long-right-img {
+            grid-column: 1 / 10;
+            grid-row: 1 / 3;
+        }
+
+        .post-long-right-content {
+            grid-column: 10 / 16;
+            grid-row: 1 / 3;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 1fr);
+        }
+        @media (min-width: 400px) and (max-width:700px) {
+            .post-long-right-img {
+                grid-column: 1 / 8;
+                grid-row: 1 / 3;
+            }
+    
+            .post-long-right-content {
+                grid-column: 8 / 16;
+                grid-row: 1 / 3;
+            }  
+        }
+        @media (min-width: 700px) and (max-width:1000px) {
+            .post-long-right-img {
+                grid-column: 1 / 9;
+                grid-row: 1 / 3;
+            }
+    
+            .post-long-right-content {
+                grid-column: 9 / 16;
+                grid-row: 1 / 3;
+            }  
+        }
+
+        .post-long-right-content-title-box {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            position: relative;
+        }
+
+        .post-long-right-content-title {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 1.5vw;
+            padding-right: 1.5vw;
+        }
+
+        .post-long-right-content-title-font {
+            margin: 0;
+            font-size: clamp(27.5px, 2.2vw, 32px);
+            line-height: 1.4;
+            font-family: 'Ppneuemachina', sans-serif;
+            font-weight: 800;
+        }
+
+        .post-long-right-content-date {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 95%;
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            padding-right: 2vw;
+        }
+
+        .post-long-right-content-date-font {
+            margin: 0;
+            font-size: 17px;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .post-long-right-content-description {
+            grid-column: 1/2;
+            grid-row: 2/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 1.5vw;
+            padding-right: 1.5vw;
+            font-size: clamp(14.5px, 17px, 18px);
+        }
+    </style>
+    <div class="item post-long-right">
+
+        <div class="post-long-right-img">
+            <img src="https://i.ibb.co/R2tkWvG/f3823141-2e3a-46aa-991c-02636414a336.jpg" alt="" style="width:100%; height: 100%; object-fit:cover;" loading="lazy">
+        </div>
+
+        <div class="post-long-right-content">
+            <div class="post-long-right-content-title-box">
+                <div class="post-long-right-content-title">
+                    <h1 class="post-long-right-content-title-font">Caelum: Beautiful Weather</h1>
+                </div>
+                <div class="post-long-right-content-date">
+                    <p class="post-long-right-content-date-font">May 17, 2021</p>
+                </div>
+            </div>
+            <div class="post-long-right-content-description">
+                <p>Caelum is a weather app combining beautiful, intuitive and responsive UI with powerful features to provide you with up to date, accurate weather forecasts.</p>
+            </div>
+
+        </div>
+    </div>
+</a>
+  </div>
+
+  
+
+  
+  <div class="item item-2">
+    <div style="display:flex;justify-content:center;align-items:center; height:100%; width:100%;">
+
+      <h1 class="filler-text"> <em>lessons;<br> problems;<br>even code!</em></h1>
+
+    </div>
+
+
+  </div>
 
   
   
-  <div style="display: flex; align-items:center; justify-content:center; width:100%;height:100%;">
-   <a href="/projects/an-openweather-api-interface-my-second-package/">
-      <div class="lozad project-card" style="
-      background:no-repeat 45% / cover;
-      background-color:black;
-      " data-background-image='https://i.ibb.co/3f5BPxD/366bb76f-799a-4368-958c-b7b430c6cf7c.jpg'>
-         <div style="position:absolute;top:0;left:0;height: 100%; width:100%; z-index:10; background-image:linear-gradient(
-               to bottom,
-               rgba(0, 0, 0, 0),
-               rgba(0, 0, 0, 0),
-               rgba(0, 0, 0, 0.98)
-               );">
-         </div>
-         <div class="date">
-            May 23, 2021
-         </div>
-         <div class="initial-content">
+  <div class="item-3">
+    <a href="/projects/minecraft-nuclear-weapons-add-on/">
 
-            <div class="content-title">
-               An OpenWeather API Interface, my second package!
-            </div>
-            <div class="content-text">
-               My second attempt at open-source, but slightly diffeent: I&rsquo;m cutting out, improving and turning part of the engine-code lying at the heart of Caelum into its own project hosted on pub.dev, that anyone can use and improve on
-            </div>
+  <div class="item" style="position: relative;">
+    <style>
+      .post-square {
+        position: absolute;
+        top: 0%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
 
-         </div>
-         <div class="hover-contentB">
-            <div class="content-summary">
-               <div class="content-title-hover">On The Shoulders Of Giants</div>
-               <div class="content-text-hover">
-                  Hover Blurb
-               </div>
-            </div>
-         </div>
+      .post-square-content {
+        height: 50%;
+        transition-duration: 0.15s;
+        background-color: #FFFFFF;
+      }
 
+      .post-square-content:hover {
+        background-color: #000000;
+      }
+
+      .post-square-content-title-font {
+        position: absolute;
+        top: 50%;
+        bottom:25%;
+        left: 0;
+        height: 20%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5px;
+        padding-left: 1.5vw;
+        padding-right:1.5vw;
+        margin: 0;
+        font-size: clamp(28.5px, 2.3vw, 35px);
+        font-family: 'Ppneuemachina', sans-serif;
+        font-weight: 800;
+      }
+
+      .post-square-content-date {
+        position: absolute;
+        top: 70%;
+        right: 0px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding-right: 2vw;
+      }
+
+      .post-square-content-date-font {
+        margin: 0;
+        margin-top: -5px;
+        font-size: 17px;
+        font-style: italic;
+        font-weight: 300;
+      }
+
+      .post-square-content-description {
+        position: absolute;
+        top: 70%;
+        left: 0;
+        height: 30%;
+        width: 100%;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-bottom: 8px;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .post-square-content-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 50%;
+        width: 100%;
+        z-index: 5;
+      }
+
+      @media (max-width: 499px) {
+        .post-square-content-title-font {
+          padding-top: 15px;
+          padding-left: 4vw;
+          padding-right: 4vw;
+          font-size: 23px;
+        }
+
+        .post-square-content-date-font {
+          font-size: 18px;
+          padding-right: 4vw;
+        }
+
+        .post-square-content-description {
+          margin-top: 8px;
+          margin-bottom: 16px;
+          padding-left: 4vw;
+          padding-right: 4vw;
+          font-size: 13.5px;
+        }
+      }
+    </style>
+    <div class="post-square">
+      <div class="post-square-content"></div>
+      <h1 class="post-square-content-title-font">My First Minecraft Mod!</h1>
+      <div class="post-square-content-date">
+        <p class="post-square-content-date-font">Nov 12, 2016</p>
       </div>
-   </a>
-</div>
+
+      <p class="post-square-content-description">This is my first attempt at making packages, smaller, bundled up software that other developers can use in their own projects to help them out!</p>
+    </div>
+    <div class="post-square-content-img"><img src="https://i.ibb.co/cNfHd46/b01b79d3-1f29-4759-bd9e-2748aa1fb1a4.jpg" alt=""
+        style="height: 100%; width:100%; object-fit: cover; z-index:5;" loading="lazy"></div>
+  </div>
+</a>
+  </div>
+
   
-  <div style="display: flex; align-items:center; justify-content:center; width:100%;height:100%;">
-   <a href="/projects/caelum-third-time-s-the-charm/">
-      <div class="lozad project-card" style="
-      background:no-repeat 45% / cover;
-      background-color:black;
-      " data-background-image='https://i.ibb.co/R2tkWvG/f3823141-2e3a-46aa-991c-02636414a336.jpg'>
-         <div style="position:absolute;top:0;left:0;height: 100%; width:100%; z-index:10; background-image:linear-gradient(
-               to bottom,
-               rgba(0, 0, 0, 0),
-               rgba(0, 0, 0, 0),
-               rgba(0, 0, 0, 0.98)
-               );">
-         </div>
-         <div class="date">
-            May 17, 2021
-         </div>
-         <div class="initial-content">
 
-            <div class="content-title">
-               Caelum: Beautiful Weather
+  
+  
+  <div class="item-4">
+    <a href="/projects/morbus/">
+    <style>
+        .post-long-right {
+            display: grid;
+            grid-template-columns: repeat(15, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        .post-long-right-img {
+            grid-column: 1 / 10;
+            grid-row: 1 / 3;
+        }
+
+        .post-long-right-content {
+            grid-column: 10 / 16;
+            grid-row: 1 / 3;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 1fr);
+        }
+        @media (min-width: 400px) and (max-width:700px) {
+            .post-long-right-img {
+                grid-column: 1 / 8;
+                grid-row: 1 / 3;
+            }
+    
+            .post-long-right-content {
+                grid-column: 8 / 16;
+                grid-row: 1 / 3;
+            }  
+        }
+        @media (min-width: 700px) and (max-width:1000px) {
+            .post-long-right-img {
+                grid-column: 1 / 9;
+                grid-row: 1 / 3;
+            }
+    
+            .post-long-right-content {
+                grid-column: 9 / 16;
+                grid-row: 1 / 3;
+            }  
+        }
+
+        .post-long-right-content-title-box {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            position: relative;
+        }
+
+        .post-long-right-content-title {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 1.5vw;
+            padding-right: 1.5vw;
+        }
+
+        .post-long-right-content-title-font {
+            margin: 0;
+            font-size: clamp(27.5px, 2.2vw, 32px);
+            line-height: 1.4;
+            font-family: 'Ppneuemachina', sans-serif;
+            font-weight: 800;
+        }
+
+        .post-long-right-content-date {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 95%;
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            padding-right: 2vw;
+        }
+
+        .post-long-right-content-date-font {
+            margin: 0;
+            font-size: 17px;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .post-long-right-content-description {
+            grid-column: 1/2;
+            grid-row: 2/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 1.5vw;
+            padding-right: 1.5vw;
+            font-size: clamp(14.5px, 17px, 18px);
+        }
+    </style>
+    <div class="item post-long-right">
+
+        <div class="post-long-right-img">
+            <img src="https://i.ibb.co/12TYc0h/88885b04-66d7-4942-9d45-a5c4a9ffd03c.jpg" alt="" style="width:100%; height: 100%; object-fit:cover;" loading="lazy">
+        </div>
+
+        <div class="post-long-right-content">
+            <div class="post-long-right-content-title-box">
+                <div class="post-long-right-content-title">
+                    <h1 class="post-long-right-content-title-font">Morbus, my 1st prize winning game!</h1>
+                </div>
+                <div class="post-long-right-content-date">
+                    <p class="post-long-right-content-date-font">Feb 27, 2022</p>
+                </div>
             </div>
-            <div class="content-text">
-               Caelum is a weather app combining beautiful, intuitive and responsive UI with powerful features to provide you with up to date, accurate weather forecasts.
+            <div class="post-long-right-content-description">
+                <p>Writing takes time, and I have exams! Article on this coming soon I promise.</p>
             </div>
 
-         </div>
-         <div class="hover-contentB">
-            <div class="content-summary">
-               <div class="content-title-hover">Third Time&rsquo;s The Charm</div>
-               <div class="content-text-hover">
-                  In this article, I explain how exactly I made it, from the technologies I used to the planning I did
-               </div>
-            </div>
-         </div>
+        </div>
+    </div>
+</a>
+  </div>
+  
+  <style>
+    @font-face {
+      font-family: 'Marquee';
+      src: url('../fonts/Marquee.otf') format("opentype");
+      font-weight: 900;
+      font-style: normal;
+    }
 
+    .letters {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .letters li,
+    .letters li a {
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+      font-family: 'Marquee';
+      font-size: 57.5px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      line-height: 80px;
+      white-space: nowrap;
+      float: left;
+      -webkit-text-stroke: 2.5px black;
+      color: white;
+      text-shadow:
+        3px 3px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+
+    }
+
+    .letters li:hover {
+      color: black;
+      text-shadow: 0px 0px 0px white
+    }
+
+    .letters .separator {
+      padding-left: 30px;
+      padding-right: 30px;
+      text-shadow: 0px 0px 0px white;
+    }
+
+    .letters .separator:hover {
+      color: white;
+    }
+  </style>
+  
+  <div class="item item-5">
+    <ul class="letters">
+      
+      <li></li>
+      <li> <a href="https://chroma.tanzilzubair.tech" target="_blank" style="color:inherit;">CHROMA V:1.0 OUT NOW
+          !!</a> </li>
+      <li class='separator'>//</li>
+      <li><a href="https://caelum.tanzilzubair.tech" target="_blank" style="color:inherit;">CAELUM V:1.1 RELEASED !!</a>
+      </li>
+      <li class='separator'>//</li>
+      <li> <a href="https://chroma.tanzilzubair.tech" target="_blank" style="color:inherit;">CHROMA V:1.0 OUT NOW
+          !!</a> </li>
+      <li class='separator'>//</li>
+      <li><a href="https://caelum.tanzilzubair.tech" target="_blank" style="color:inherit;">CAELUM V:1.1 RELEASED !!</a>
+      </li>
+      <li class='separator'>//</li>
+      <li> <a href="https://chroma.tanzilzubair.tech" target="_blank" style="color:inherit;">CHROMA V:1.0 OUT NOW
+          !!</a> </li>
+      <li class='separator'>//</li>
+      <li><a href="https://caelum.tanzilzubair.tech" target="_blank" style="color:inherit;">CAELUM V:1.1 RELEASED !!</a>
+      </li>
+      <li class='separator'>//</li>
+    </ul>
+  </div>
+  
+  
+  <div class="item-6" s>
+    <a href="/projects/this-website/">
+    <style>
+        .post-long-left {
+            display: grid;
+            grid-template-columns: repeat(15, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        .post-long-left-img {
+            grid-column: 7 / 16;
+            grid-row: 1 / 3;
+        }
+
+        .post-long-left-content {
+            grid-column: 1 / 7;
+            grid-row: 1 / 3;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        @media (min-width: 400px) and (max-width:700px) {
+            .post-long-left-img {
+                grid-column: 9 / 16;
+                grid-row: 1 / 3;
+            }
+
+            .post-long-left-content {
+                grid-column: 1 / 9;
+                grid-row: 1 / 3;
+            }
+        }
+
+        @media (min-width: 700px) and (max-width:1000px) {
+            .post-long-left-img {
+                grid-column: 8 / 16;
+                grid-row: 1 / 3;
+            }
+
+            .post-long-left-content {
+                grid-column: 1 / 8;
+                grid-row: 1 / 3;
+            }
+        }
+
+
+        .post-long-left-content-title-box {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            position: relative;
+        }
+
+        .post-long-left-content-title {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 1.5vw;
+            padding-left: 1.5vw;
+        }
+
+        .post-long-left-content-title-font {
+            margin: 0;
+            font-size: 27.5px;
+            font-family: 'Ppneuemachina', sans-serif;
+            font-weight: 800;
+        }
+
+        .post-long-left-content-date {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 95%;
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            padding-right: 2vw;
+        }
+
+        .post-long-left-content-date-font {
+            margin: 0;
+            font-size: 17px;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .post-long-left-content-description {
+            grid-column: 1/2;
+            grid-row: 2/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 1.5vw;
+            padding-right: 1.5vw;
+            font-size: clamp(14.5px, 17px, 18px);
+        }
+    </style>
+    <div class="item post-long-left">
+
+        <div class="post-long-left-img">
+            <img src="https://i.ibb.co/vxM5SMp/57058efe-40f3-4e3c-9762-ffc00e3c7025.jpg" alt="" style="width:100%; height: 100%;" loading="lazy">
+        </div>
+
+        <div class="post-long-left-content">
+            <div class="post-long-left-content-title-box">
+                <div class="post-long-left-content-title">
+                    <h1 class="post-long-left-content-title-font">This Website, V:1.0.0!</h1>
+                </div>
+                <div class="post-long-left-content-date">
+                    <p class="post-long-left-content-date-font">Dec 01, 2020</p>
+                </div>
+            </div>
+            <div class="post-long-left-content-description">
+                <p>This is my website, my little space on the internet to share my thoughts, my opinions, and proudly display my projects.</p>
+            </div>
+
+        </div>
+    </div>
+</a>
+  </div>
+  
+
+  
+  <div class="item item-7" style="
+   display:grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr 1fr;
+   ">
+    
+    
+    <a href="/projects/chroma-website/">
+<div class="item-item" style="position: relative;">
+  <style>
+    .post-squashed-content-img {
+      height: 100%;
+      width: 100%;
+    }
+
+    .post-squashed-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .post-squashed-content-text-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 80%;
+      width: 87.5%;
+      flex-direction: column;
+      transition-duration: 0.15s;
+      color: #000000;
+      background-color: #FFFFFF;
+    }
+
+    .post-squashed-content-title-font {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      font-size: 27.5px;
+      font-family: 'Ppneuemachina', sans-serif;
+      font-weight: 800;
+    }
+
+    .post-squashed-content-date {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding-right: 2vw;
+    }
+
+    .post-squashed-content-date-font {
+      margin: 0;
+      font-size: 16px;
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .post-squashed-content-description-font {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      padding-left: 1.75vw;
+      padding-right: 1.75vw;
+      font-size: 15px;
+
+    }
+
+    .post-squashed-content-text-box:hover {
+      color: #FFFFFF;
+      background-color: #000000;
+    }
+
+    @media (max-width: 499px) {
+      .post-squashed-content-title-font {
+        padding-top: 10px;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        font-size: 22px;
+      }
+
+      .post-squashed-content-date-font {
+        padding-right: 3vw;
+        font-size: 13px;
+      }
+
+      .post-squashed-content-description-font {
+        padding-left: 5vw;
+        padding-right: 5vw;
+        font-size: 12px;
+      }
+    }
+  </style>
+  <div class="post-squashed-content-img"><img src="https://i.ibb.co/7rM2ZPs/5786b4b4-b297-4824-bb1a-f9f6a3dcc236.jpg" alt=""
+      style="height: 100%; width:100%; object-fit: cover;" loading="lazy"></div>
+  <div class="post-squashed-content">
+    <div class="post-squashed-content-text-box">
+      <h1 class="post-squashed-content-title-font">Chroma&rsquo;s website!</h1>
+      <div class="post-squashed-content-date">
+        <p class="post-squashed-content-date-font">Oct 18, 2022</p>
       </div>
-   </a>
-</div>
-  
-  <div style="display: flex; align-items:center; justify-content:center; width:100%;height:100%;">
-   <a href="/projects/minecraft-nuclear-weapons-add-on/">
-      <div class="lozad project-card" style="
-      background:no-repeat 45% / cover;
-      background-color:black;
-      " data-background-image='https://i.ibb.co/cNfHd46/b01b79d3-1f29-4759-bd9e-2748aa1fb1a4.jpg'>
-         <div style="position:absolute;top:0;left:0;height: 100%; width:100%; z-index:10; background-image:linear-gradient(
-               to bottom,
-               rgba(0, 0, 0, 0),
-               rgba(0, 0, 0, 0),
-               rgba(0, 0, 0, 0.98)
-               );">
-         </div>
-         <div class="date">
-            Feb 01, 2021
-         </div>
-         <div class="initial-content">
+      <p class="post-squashed-content-description-font">Writing takes time, and I have exams! Article on this coming soon I promise.</p>
+    </div>
+  </div>
 
-            <div class="content-title">
-               Minecraft: Nuclear Weapons Addon
-            </div>
-            <div class="content-text">
-               This is my first attempt at making packages, smaller, bundled up software that other developers can use in their own projects to help them out!
-            </div>
+</div></a>
+    
+    
+    
+    <a href="/projects/caelum-website/">
+<div class="item-item" style="position: relative;">
+  <style>
+    .post-squashed-content-img {
+      height: 100%;
+      width: 100%;
+    }
 
-         </div>
-         <div class="hover-contentB">
-            <div class="content-summary">
-               <div class="content-title-hover">MobX-Architecture</div>
-               <div class="content-text-hover">
-                  This package helps developers develop an architecture for the apps they&rsquo;re developing, by building a MVVM architecture around MobX, and providing tools to help them bind MobX to the rest of their project.
-               </div>
-            </div>
-         </div>
+    .post-squashed-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
 
+    .post-squashed-content-text-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 80%;
+      width: 87.5%;
+      flex-direction: column;
+      transition-duration: 0.15s;
+      color: #000000;
+      background-color: #FFFFFF;
+    }
+
+    .post-squashed-content-title-font {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      font-size: 27.5px;
+      font-family: 'Ppneuemachina', sans-serif;
+      font-weight: 800;
+    }
+
+    .post-squashed-content-date {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding-right: 2vw;
+    }
+
+    .post-squashed-content-date-font {
+      margin: 0;
+      font-size: 16px;
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .post-squashed-content-description-font {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      padding-left: 1.75vw;
+      padding-right: 1.75vw;
+      font-size: 15px;
+
+    }
+
+    .post-squashed-content-text-box:hover {
+      color: #FFFFFF;
+      background-color: #000000;
+    }
+
+    @media (max-width: 499px) {
+      .post-squashed-content-title-font {
+        padding-top: 10px;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        font-size: 22px;
+      }
+
+      .post-squashed-content-date-font {
+        padding-right: 3vw;
+        font-size: 13px;
+      }
+
+      .post-squashed-content-description-font {
+        padding-left: 5vw;
+        padding-right: 5vw;
+        font-size: 12px;
+      }
+    }
+  </style>
+  <div class="post-squashed-content-img"><img src="https://i.ibb.co/L9bb8hC/84f7c1e9-bb4f-4716-bf0d-e03d39bd6a2d.jpg" alt=""
+      style="height: 100%; width:100%; object-fit: cover;" loading="lazy"></div>
+  <div class="post-squashed-content">
+    <div class="post-squashed-content-text-box">
+      <h1 class="post-squashed-content-title-font">Caelum&rsquo;s website!</h1>
+      <div class="post-squashed-content-date">
+        <p class="post-squashed-content-date-font">May 17, 2021</p>
       </div>
-   </a>
-</div>
+      <p class="post-squashed-content-description-font">Writing takes time, and I have exams! Article on this coming soon I promise.</p>
+    </div>
+  </div>
+
+</div></a>
+    
+  </div>
+
   
-  <div style="display: flex; align-items:center; justify-content:center; width:100%;height:100%;">
-   <a href="/projects/mobx-architecture-my-first-package/">
-      <div class="lozad project-card" style="
-      background:no-repeat 45% / cover;
-      background-color:black;
-      " data-background-image='https://i.ibb.co/cNfHd46/b01b79d3-1f29-4759-bd9e-2748aa1fb1a4.jpg'>
-         <div style="position:absolute;top:0;left:0;height: 100%; width:100%; z-index:10; background-image:linear-gradient(
-               to bottom,
-               rgba(0, 0, 0, 0),
-               rgba(0, 0, 0, 0),
-               rgba(0, 0, 0, 0.98)
-               );">
-         </div>
-         <div class="date">
-            Feb 01, 2021
-         </div>
-         <div class="initial-content">
+  <div class="item item-8">
+    <div style="display:flex;justify-content:center;align-items:center; height:100%; width:100%;">
 
-            <div class="content-title">
-               MobX-Architecture, my first Flutter package!
+      <h1 class="filler-text" style="      background: url(https://images.unsplash.com/photo-1597177216409-a474906dfea4?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1740&q=80);
+        -webkit-background-clip: text;
+        background-clip: text;
+        background-size: 40%;
+        background-position: 50% 50%;"><em>logic;<br> errors;<br>brackets!</em></h1>
+
+    </div>
+  </div>
+
+  
+  
+  <div class="item-9">
+    <a href="/projects/chroma-mind-spaces/">
+    <style>
+        .post-long-left {
+            display: grid;
+            grid-template-columns: repeat(15, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        .post-long-left-img {
+            grid-column: 7 / 16;
+            grid-row: 1 / 3;
+        }
+
+        .post-long-left-content {
+            grid-column: 1 / 7;
+            grid-row: 1 / 3;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        @media (min-width: 400px) and (max-width:700px) {
+            .post-long-left-img {
+                grid-column: 9 / 16;
+                grid-row: 1 / 3;
+            }
+
+            .post-long-left-content {
+                grid-column: 1 / 9;
+                grid-row: 1 / 3;
+            }
+        }
+
+        @media (min-width: 700px) and (max-width:1000px) {
+            .post-long-left-img {
+                grid-column: 8 / 16;
+                grid-row: 1 / 3;
+            }
+
+            .post-long-left-content {
+                grid-column: 1 / 8;
+                grid-row: 1 / 3;
+            }
+        }
+
+
+        .post-long-left-content-title-box {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            position: relative;
+        }
+
+        .post-long-left-content-title {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 1.5vw;
+            padding-left: 1.5vw;
+        }
+
+        .post-long-left-content-title-font {
+            margin: 0;
+            font-size: 27.5px;
+            font-family: 'Ppneuemachina', sans-serif;
+            font-weight: 800;
+        }
+
+        .post-long-left-content-date {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 95%;
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            padding-right: 2vw;
+        }
+
+        .post-long-left-content-date-font {
+            margin: 0;
+            font-size: 17px;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .post-long-left-content-description {
+            grid-column: 1/2;
+            grid-row: 2/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 1.5vw;
+            padding-right: 1.5vw;
+            font-size: clamp(14.5px, 17px, 18px);
+        }
+    </style>
+    <div class="item post-long-left">
+
+        <div class="post-long-left-img">
+            <img src="https://i.ibb.co/m0CjQYn/83162c07-0c97-4f20-a855-6abd05997f1d.jpg" alt="" style="width:100%; height: 100%;" loading="lazy">
+        </div>
+
+        <div class="post-long-left-content">
+            <div class="post-long-left-content-title-box">
+                <div class="post-long-left-content-title">
+                    <h1 class="post-long-left-content-title-font">Building Chroma, my 2nd app!!</h1>
+                </div>
+                <div class="post-long-left-content-date">
+                    <p class="post-long-left-content-date-font">Oct 18, 2022</p>
+                </div>
             </div>
-            <div class="content-text">
-               This is my first attempt at making packages, smaller, bundled up software that other developers can use in their own projects to help them out!
+            <div class="post-long-left-content-description">
+                <p>Writing takes time, and I have exams! Article on this coming soon I promise.</p>
             </div>
 
-         </div>
-         <div class="hover-contentB">
-            <div class="content-summary">
-               <div class="content-title-hover">MobX-Architecture</div>
-               <div class="content-text-hover">
-                  This package helps developers develop an architecture for the apps they&rsquo;re developing, by building a MVVM architecture around MobX, and providing tools to help them bind MobX to the rest of their project.
-               </div>
-            </div>
-         </div>
+        </div>
+    </div>
+</a>
+  </div>
+  
 
+  
+  
+  <div class="item-10">
+    <a href="/projects/an-openweather-api-interface-my-second-package/">
+    <style>
+        .post-long-right {
+            display: grid;
+            grid-template-columns: repeat(15, 1fr);
+            grid-template-rows: repeat(2, 1fr);
+        }
+
+        .post-long-right-img {
+            grid-column: 1 / 10;
+            grid-row: 1 / 3;
+        }
+
+        .post-long-right-content {
+            grid-column: 10 / 16;
+            grid-row: 1 / 3;
+            display: grid;
+            grid-template-columns: 1fr;
+            grid-template-rows: repeat(2, 1fr);
+        }
+        @media (min-width: 400px) and (max-width:700px) {
+            .post-long-right-img {
+                grid-column: 1 / 8;
+                grid-row: 1 / 3;
+            }
+    
+            .post-long-right-content {
+                grid-column: 8 / 16;
+                grid-row: 1 / 3;
+            }  
+        }
+        @media (min-width: 700px) and (max-width:1000px) {
+            .post-long-right-img {
+                grid-column: 1 / 9;
+                grid-row: 1 / 3;
+            }
+    
+            .post-long-right-content {
+                grid-column: 9 / 16;
+                grid-row: 1 / 3;
+            }  
+        }
+
+        .post-long-right-content-title-box {
+            grid-column: 1/2;
+            grid-row: 1/2;
+            position: relative;
+        }
+
+        .post-long-right-content-title {
+            height: 100%;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 1.5vw;
+            padding-right: 1.5vw;
+        }
+
+        .post-long-right-content-title-font {
+            margin: 0;
+            font-size: clamp(27.5px, 2.2vw, 32px);
+            line-height: 1.4;
+            font-family: 'Ppneuemachina', sans-serif;
+            font-weight: 800;
+        }
+
+        .post-long-right-content-date {
+            position: absolute;
+            top: 0;
+            left: 0;
+            height: 95%;
+            width: 100%;
+            display: flex;
+            align-items: flex-end;
+            justify-content: flex-end;
+            padding-right: 2vw;
+        }
+
+        .post-long-right-content-date-font {
+            margin: 0;
+            font-size: 17px;
+            font-style: italic;
+            font-weight: 300;
+        }
+
+        .post-long-right-content-description {
+            grid-column: 1/2;
+            grid-row: 2/3;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding-left: 1.5vw;
+            padding-right: 1.5vw;
+            font-size: clamp(14.5px, 17px, 18px);
+        }
+    </style>
+    <div class="item post-long-right">
+
+        <div class="post-long-right-img">
+            <img src="https://i.ibb.co/3f5BPxD/366bb76f-799a-4368-958c-b7b430c6cf7c.jpg" alt="" style="width:100%; height: 100%; object-fit:cover;" loading="lazy">
+        </div>
+
+        <div class="post-long-right-content">
+            <div class="post-long-right-content-title-box">
+                <div class="post-long-right-content-title">
+                    <h1 class="post-long-right-content-title-font">An OpenWeather API Interface, my second package!</h1>
+                </div>
+                <div class="post-long-right-content-date">
+                    <p class="post-long-right-content-date-font">May 23, 2021</p>
+                </div>
+            </div>
+            <div class="post-long-right-content-description">
+                <p>My second attempt at open-source, but slightly diffeent: I&rsquo;m cutting out, improving and turning part of the engine-code lying at the heart of Caelum into its own project hosted on pub.dev, that anyone can use and improve on</p>
+            </div>
+
+        </div>
+    </div>
+</a>
+  </div>
+  
+
+  
+  
+  <div class="item-11">
+    <a href="/projects/mobx-architecture-my-first-package/">
+
+  <div class="item" style="position: relative;">
+    <style>
+      .post-square {
+        position: absolute;
+        top: 0%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .post-square-content {
+        height: 50%;
+        transition-duration: 0.15s;
+        background-color: #FFFFFF;
+      }
+
+      .post-square-content:hover {
+        background-color: #000000;
+      }
+
+      .post-square-content-title-font {
+        position: absolute;
+        top: 50%;
+        bottom:25%;
+        left: 0;
+        height: 20%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5px;
+        padding-left: 1.5vw;
+        padding-right:1.5vw;
+        margin: 0;
+        font-size: clamp(28.5px, 2.3vw, 35px);
+        font-family: 'Ppneuemachina', sans-serif;
+        font-weight: 800;
+      }
+
+      .post-square-content-date {
+        position: absolute;
+        top: 70%;
+        right: 0px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding-right: 2vw;
+      }
+
+      .post-square-content-date-font {
+        margin: 0;
+        margin-top: -5px;
+        font-size: 17px;
+        font-style: italic;
+        font-weight: 300;
+      }
+
+      .post-square-content-description {
+        position: absolute;
+        top: 70%;
+        left: 0;
+        height: 30%;
+        width: 100%;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-bottom: 8px;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .post-square-content-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 50%;
+        width: 100%;
+        z-index: 5;
+      }
+
+      @media (max-width: 499px) {
+        .post-square-content-title-font {
+          padding-top: 15px;
+          padding-left: 4vw;
+          padding-right: 4vw;
+          font-size: 23px;
+        }
+
+        .post-square-content-date-font {
+          font-size: 18px;
+          padding-right: 4vw;
+        }
+
+        .post-square-content-description {
+          margin-top: 8px;
+          margin-bottom: 16px;
+          padding-left: 4vw;
+          padding-right: 4vw;
+          font-size: 13.5px;
+        }
+      }
+    </style>
+    <div class="post-square">
+      <div class="post-square-content"></div>
+      <h1 class="post-square-content-title-font">My first Flutter package!!</h1>
+      <div class="post-square-content-date">
+        <p class="post-square-content-date-font">Feb 01, 2021</p>
       </div>
-   </a>
-</div>
+
+      <p class="post-square-content-description">This is my first attempt at making packages, smaller, bundled up software that other developers can use in their own projects to help them out!</p>
+    </div>
+    <div class="post-square-content-img"><img src="https://i.ibb.co/Z6cGpR9/e699a03b-d4c5-460e-aeb1-9ce97daa79e8.jpg" alt=""
+        style="height: 100%; width:100%; object-fit: cover; z-index:5;" loading="lazy"></div>
+  </div>
+</a>
+  </div>
+
   
-  <div style="display: flex; align-items:center; justify-content:center; width:100%;height:100%;">
-   <a href="/projects/this-website/">
-      <div class="lozad project-card" style="
-      background:no-repeat 45% / cover;
-      background-color:black;
-      " data-background-image='https://i.ibb.co/vxM5SMp/57058efe-40f3-4e3c-9762-ffc00e3c7025.jpg'>
-         <div style="position:absolute;top:0;left:0;height: 100%; width:100%; z-index:10; background-image:linear-gradient(
-               to bottom,
-               rgba(0, 0, 0, 0),
-               rgba(0, 0, 0, 0),
-               rgba(0, 0, 0, 0.98)
-               );">
-         </div>
-         <div class="date">
-            Dec 01, 2020
-         </div>
-         <div class="initial-content">
 
-            <div class="content-title">
-               This Website!
-            </div>
-            <div class="content-text">
-               This is my website, my little space on the internet to share my thoughts, my opinions, and proudly display my projects.
-            </div>
+  
+  
 
-         </div>
-         <div class="hover-contentB">
-            <div class="content-summary">
-               <div class="content-title-hover">My website</div>
-               <div class="content-text-hover">
-                  Built with HTML, CSS, JS and caffeine, this website is one of my best looking projects, combining functionality with beautiful design
-               </div>
-            </div>
-         </div>
+</div>
+<div class="blog-grid small-grid">
+  
+  
+  <div class="item-1">
+    <a href="/projects/caelum-beautiful-weather/">
 
+  <div class="item" style="position: relative;">
+    <style>
+      .post-square {
+        position: absolute;
+        top: 0%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .post-square-content {
+        height: 50%;
+        transition-duration: 0.15s;
+        background-color: #FFFFFF;
+      }
+
+      .post-square-content:hover {
+        background-color: #000000;
+      }
+
+      .post-square-content-title-font {
+        position: absolute;
+        top: 50%;
+        bottom:25%;
+        left: 0;
+        height: 20%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5px;
+        padding-left: 1.5vw;
+        padding-right:1.5vw;
+        margin: 0;
+        font-size: clamp(28.5px, 2.3vw, 35px);
+        font-family: 'Ppneuemachina', sans-serif;
+        font-weight: 800;
+      }
+
+      .post-square-content-date {
+        position: absolute;
+        top: 70%;
+        right: 0px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding-right: 2vw;
+      }
+
+      .post-square-content-date-font {
+        margin: 0;
+        margin-top: -5px;
+        font-size: 17px;
+        font-style: italic;
+        font-weight: 300;
+      }
+
+      .post-square-content-description {
+        position: absolute;
+        top: 70%;
+        left: 0;
+        height: 30%;
+        width: 100%;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-bottom: 8px;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .post-square-content-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 50%;
+        width: 100%;
+        z-index: 5;
+      }
+
+      @media (max-width: 499px) {
+        .post-square-content-title-font {
+          padding-top: 15px;
+          padding-left: 4vw;
+          padding-right: 4vw;
+          font-size: 23px;
+        }
+
+        .post-square-content-date-font {
+          font-size: 18px;
+          padding-right: 4vw;
+        }
+
+        .post-square-content-description {
+          margin-top: 8px;
+          margin-bottom: 16px;
+          padding-left: 4vw;
+          padding-right: 4vw;
+          font-size: 13.5px;
+        }
+      }
+    </style>
+    <div class="post-square">
+      <div class="post-square-content"></div>
+      <h1 class="post-square-content-title-font">Caelum: Beautiful Weather</h1>
+      <div class="post-square-content-date">
+        <p class="post-square-content-date-font">May 17, 2021</p>
       </div>
-   </a>
-</div>
+
+      <p class="post-square-content-description">Caelum is a weather app combining beautiful, intuitive and responsive UI with powerful features to provide you with up to date, accurate weather forecasts.</p>
+    </div>
+    <div class="post-square-content-img"><img src="https://i.ibb.co/R2tkWvG/f3823141-2e3a-46aa-991c-02636414a336.jpg" alt=""
+        style="height: 100%; width:100%; object-fit: cover; z-index:5;" loading="lazy"></div>
+  </div>
+</a>
+  </div>
+
+  
+
+  
+  <div class="item item-2">
+    <div style="display:flex;justify-content:center;align-items:center; height:100%; width:100%;">
+      <em>
+        <h1 class="filler-text">lessons;<br> problems;<br>even code!</h1>
+      </em>
+    </div>
+  </div>
+
   
   
+  <div class="item-3">
+    <a href="/projects/minecraft-nuclear-weapons-add-on/">
+
+  <div class="item" style="position: relative;">
+    <style>
+      .post-square {
+        position: absolute;
+        top: 0%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .post-square-content {
+        height: 50%;
+        transition-duration: 0.15s;
+        background-color: #FFFFFF;
+      }
+
+      .post-square-content:hover {
+        background-color: #000000;
+      }
+
+      .post-square-content-title-font {
+        position: absolute;
+        top: 50%;
+        bottom:25%;
+        left: 0;
+        height: 20%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5px;
+        padding-left: 1.5vw;
+        padding-right:1.5vw;
+        margin: 0;
+        font-size: clamp(28.5px, 2.3vw, 35px);
+        font-family: 'Ppneuemachina', sans-serif;
+        font-weight: 800;
+      }
+
+      .post-square-content-date {
+        position: absolute;
+        top: 70%;
+        right: 0px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding-right: 2vw;
+      }
+
+      .post-square-content-date-font {
+        margin: 0;
+        margin-top: -5px;
+        font-size: 17px;
+        font-style: italic;
+        font-weight: 300;
+      }
+
+      .post-square-content-description {
+        position: absolute;
+        top: 70%;
+        left: 0;
+        height: 30%;
+        width: 100%;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-bottom: 8px;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .post-square-content-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 50%;
+        width: 100%;
+        z-index: 5;
+      }
+
+      @media (max-width: 499px) {
+        .post-square-content-title-font {
+          padding-top: 15px;
+          padding-left: 4vw;
+          padding-right: 4vw;
+          font-size: 23px;
+        }
+
+        .post-square-content-date-font {
+          font-size: 18px;
+          padding-right: 4vw;
+        }
+
+        .post-square-content-description {
+          margin-top: 8px;
+          margin-bottom: 16px;
+          padding-left: 4vw;
+          padding-right: 4vw;
+          font-size: 13.5px;
+        }
+      }
+    </style>
+    <div class="post-square">
+      <div class="post-square-content"></div>
+      <h1 class="post-square-content-title-font">My First Minecraft Mod!</h1>
+      <div class="post-square-content-date">
+        <p class="post-square-content-date-font">Nov 12, 2016</p>
+      </div>
+
+      <p class="post-square-content-description">This is my first attempt at making packages, smaller, bundled up software that other developers can use in their own projects to help them out!</p>
+    </div>
+    <div class="post-square-content-img"><img src="https://i.ibb.co/cNfHd46/b01b79d3-1f29-4759-bd9e-2748aa1fb1a4.jpg" alt=""
+        style="height: 100%; width:100%; object-fit: cover; z-index:5;" loading="lazy"></div>
+  </div>
+</a>
+  </div>
+
+  
+
+  
+  
+  <div class="item-4">
+    <a href="/projects/morbus/">
+
+  <div class="item" style="position: relative;">
+    <style>
+      .post-square {
+        position: absolute;
+        top: 0%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .post-square-content {
+        height: 50%;
+        transition-duration: 0.15s;
+        background-color: #FFFFFF;
+      }
+
+      .post-square-content:hover {
+        background-color: #000000;
+      }
+
+      .post-square-content-title-font {
+        position: absolute;
+        top: 50%;
+        bottom:25%;
+        left: 0;
+        height: 20%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5px;
+        padding-left: 1.5vw;
+        padding-right:1.5vw;
+        margin: 0;
+        font-size: clamp(28.5px, 2.3vw, 35px);
+        font-family: 'Ppneuemachina', sans-serif;
+        font-weight: 800;
+      }
+
+      .post-square-content-date {
+        position: absolute;
+        top: 70%;
+        right: 0px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding-right: 2vw;
+      }
+
+      .post-square-content-date-font {
+        margin: 0;
+        margin-top: -5px;
+        font-size: 17px;
+        font-style: italic;
+        font-weight: 300;
+      }
+
+      .post-square-content-description {
+        position: absolute;
+        top: 70%;
+        left: 0;
+        height: 30%;
+        width: 100%;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-bottom: 8px;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .post-square-content-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 50%;
+        width: 100%;
+        z-index: 5;
+      }
+
+      @media (max-width: 499px) {
+        .post-square-content-title-font {
+          padding-top: 15px;
+          padding-left: 4vw;
+          padding-right: 4vw;
+          font-size: 23px;
+        }
+
+        .post-square-content-date-font {
+          font-size: 18px;
+          padding-right: 4vw;
+        }
+
+        .post-square-content-description {
+          margin-top: 8px;
+          margin-bottom: 16px;
+          padding-left: 4vw;
+          padding-right: 4vw;
+          font-size: 13.5px;
+        }
+      }
+    </style>
+    <div class="post-square">
+      <div class="post-square-content"></div>
+      <h1 class="post-square-content-title-font">Morbus, my 1st prize winning game!</h1>
+      <div class="post-square-content-date">
+        <p class="post-square-content-date-font">Feb 27, 2022</p>
+      </div>
+
+      <p class="post-square-content-description">Writing takes time, and I have exams! Article on this coming soon I promise.</p>
+    </div>
+    <div class="post-square-content-img"><img src="https://i.ibb.co/12TYc0h/88885b04-66d7-4942-9d45-a5c4a9ffd03c.jpg" alt=""
+        style="height: 100%; width:100%; object-fit: cover; z-index:5;" loading="lazy"></div>
+  </div>
+</a>
+  </div>
+  
+
+  <style>
+    @font-face {
+      font-family: 'Marquee';
+      src: url('../fonts/Marquee.otf') format("opentype");
+      font-weight: 900;
+      font-style: normal;
+    }
+
+    .letters-2 {
+      margin: 0px;
+      padding: 0px;
+    }
+
+    .letters-2 li,
+    .letters-2 li a {
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+      font-family: 'Marquee';
+      font-size: 57.5px;
+      font-weight: 900;
+      letter-spacing: 3px;
+      line-height: 80px;
+      white-space: nowrap;
+      float: left;
+      -webkit-text-stroke: 2.5px black;
+      color: white;
+      text-shadow:
+        3px 3px 0 #000,
+        -1px -1px 0 #000,
+        1px -1px 0 #000,
+        -1px 1px 0 #000,
+        1px 1px 0 #000;
+
+    }
+
+    .letters-2 li:hover {
+      color: black;
+      text-shadow: 0px 0px 0px white
+    }
+
+    .letters-2 .separator {
+      padding-left: 30px;
+      padding-right: 30px;
+      text-shadow: 0px 0px 0px white;
+    }
+
+    .letters-2 .separator:hover {
+      color: white;
+    }
+  </style>
+  
+  <div class="item item-5">
+    <ul class="letters-2">
+      
+      <li></li>
+      <li> <a href="https://chroma.tanzilzubair.tech" target="_blank" style="color:inherit;">CHROMA V:1.0 !!</a> </li>
+      <li class='separator'>//</li>
+      <li><a href="https://caelum.tanzilzubair.tech" target="_blank" style="color:inherit;">CAELUM V:1.1 !!</a> </li>
+      <li class='separator'>//</li>
+      <li> <a href="https://chroma.tanzilzubair.tech" target="_blank" style="color:inherit;">CHROMA V:1.0 !!</a> </li>
+      <li class='separator'>//</li>
+      <li><a href="https://caelum.tanzilzubair.tech" target="_blank" style="color:inherit;">CAELUM V:1.1 !!</a> </li>
+      <li class='separator'>//</li>
+      <li> <a href="https://chroma.tanzilzubair.tech" target="_blank" style="color:inherit;">CHROMA V:1.0 !!</a> </li>
+      <li class='separator'>//</li>
+      <li><a href="https://caelum.tanzilzubair.tech" target="_blank" style="color:inherit;">CAELUM V:1.1 !!</a> </li>
+      <li class='separator'>//</li>
+    </ul>
+  </div>
+
+  
+  
+  <div class="item-6" s>
+    <a href="/projects/this-website/">
+
+  <div class="item" style="position: relative;">
+    <style>
+      .post-square {
+        position: absolute;
+        top: 0%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .post-square-content {
+        height: 50%;
+        transition-duration: 0.15s;
+        background-color: #FFFFFF;
+      }
+
+      .post-square-content:hover {
+        background-color: #000000;
+      }
+
+      .post-square-content-title-font {
+        position: absolute;
+        top: 50%;
+        bottom:25%;
+        left: 0;
+        height: 20%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5px;
+        padding-left: 1.5vw;
+        padding-right:1.5vw;
+        margin: 0;
+        font-size: clamp(28.5px, 2.3vw, 35px);
+        font-family: 'Ppneuemachina', sans-serif;
+        font-weight: 800;
+      }
+
+      .post-square-content-date {
+        position: absolute;
+        top: 70%;
+        right: 0px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding-right: 2vw;
+      }
+
+      .post-square-content-date-font {
+        margin: 0;
+        margin-top: -5px;
+        font-size: 17px;
+        font-style: italic;
+        font-weight: 300;
+      }
+
+      .post-square-content-description {
+        position: absolute;
+        top: 70%;
+        left: 0;
+        height: 30%;
+        width: 100%;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-bottom: 8px;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .post-square-content-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 50%;
+        width: 100%;
+        z-index: 5;
+      }
+
+      @media (max-width: 499px) {
+        .post-square-content-title-font {
+          padding-top: 15px;
+          padding-left: 4vw;
+          padding-right: 4vw;
+          font-size: 23px;
+        }
+
+        .post-square-content-date-font {
+          font-size: 18px;
+          padding-right: 4vw;
+        }
+
+        .post-square-content-description {
+          margin-top: 8px;
+          margin-bottom: 16px;
+          padding-left: 4vw;
+          padding-right: 4vw;
+          font-size: 13.5px;
+        }
+      }
+    </style>
+    <div class="post-square">
+      <div class="post-square-content"></div>
+      <h1 class="post-square-content-title-font">This Website, V:1.0.0!</h1>
+      <div class="post-square-content-date">
+        <p class="post-square-content-date-font">Dec 01, 2020</p>
+      </div>
+
+      <p class="post-square-content-description">This is my website, my little space on the internet to share my thoughts, my opinions, and proudly display my projects.</p>
+    </div>
+    <div class="post-square-content-img"><img src="https://i.ibb.co/vxM5SMp/57058efe-40f3-4e3c-9762-ffc00e3c7025.jpg" alt=""
+        style="height: 100%; width:100%; object-fit: cover; z-index:5;" loading="lazy"></div>
+  </div>
+</a>
+  </div>
+  
+
+  
+  <div class="item item-7" style="
+   display:grid;
+   grid-template-columns: 1fr;
+   grid-template-rows: 1fr 1fr;
+   ">
+    
+    
+    <a href="/projects/chroma-website/">
+<div class="item-item" style="position: relative;">
+  <style>
+    .post-squashed-content-img {
+      height: 100%;
+      width: 100%;
+    }
+
+    .post-squashed-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .post-squashed-content-text-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 80%;
+      width: 87.5%;
+      flex-direction: column;
+      transition-duration: 0.15s;
+      color: #000000;
+      background-color: #FFFFFF;
+    }
+
+    .post-squashed-content-title-font {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      font-size: 27.5px;
+      font-family: 'Ppneuemachina', sans-serif;
+      font-weight: 800;
+    }
+
+    .post-squashed-content-date {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding-right: 2vw;
+    }
+
+    .post-squashed-content-date-font {
+      margin: 0;
+      font-size: 16px;
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .post-squashed-content-description-font {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      padding-left: 1.75vw;
+      padding-right: 1.75vw;
+      font-size: 15px;
+
+    }
+
+    .post-squashed-content-text-box:hover {
+      color: #FFFFFF;
+      background-color: #000000;
+    }
+
+    @media (max-width: 499px) {
+      .post-squashed-content-title-font {
+        padding-top: 10px;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        font-size: 22px;
+      }
+
+      .post-squashed-content-date-font {
+        padding-right: 3vw;
+        font-size: 13px;
+      }
+
+      .post-squashed-content-description-font {
+        padding-left: 5vw;
+        padding-right: 5vw;
+        font-size: 12px;
+      }
+    }
+  </style>
+  <div class="post-squashed-content-img"><img src="https://i.ibb.co/7rM2ZPs/5786b4b4-b297-4824-bb1a-f9f6a3dcc236.jpg" alt=""
+      style="height: 100%; width:100%; object-fit: cover;" loading="lazy"></div>
+  <div class="post-squashed-content">
+    <div class="post-squashed-content-text-box">
+      <h1 class="post-squashed-content-title-font">Chroma&rsquo;s website!</h1>
+      <div class="post-squashed-content-date">
+        <p class="post-squashed-content-date-font">Oct 18, 2022</p>
+      </div>
+      <p class="post-squashed-content-description-font">Writing takes time, and I have exams! Article on this coming soon I promise.</p>
+    </div>
+  </div>
+
+</div></a>
+    
+    
+    
+    <a href="/projects/caelum-website/">
+<div class="item-item" style="position: relative;">
+  <style>
+    .post-squashed-content-img {
+      height: 100%;
+      width: 100%;
+    }
+
+    .post-squashed-content {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 100%;
+      width: 100%;
+      z-index: 5;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .post-squashed-content-text-box {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 80%;
+      width: 87.5%;
+      flex-direction: column;
+      transition-duration: 0.15s;
+      color: #000000;
+      background-color: #FFFFFF;
+    }
+
+    .post-squashed-content-title-font {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      font-size: 27.5px;
+      font-family: 'Ppneuemachina', sans-serif;
+      font-weight: 800;
+    }
+
+    .post-squashed-content-date {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      width: 100%;
+      display: flex;
+      align-items: flex-end;
+      justify-content: flex-end;
+      padding-right: 2vw;
+    }
+
+    .post-squashed-content-date-font {
+      margin: 0;
+      font-size: 16px;
+      font-style: italic;
+      font-weight: 300;
+    }
+
+    .post-squashed-content-description-font {
+      margin-top: 0px;
+      margin-bottom: 0px;
+      padding-left: 1.75vw;
+      padding-right: 1.75vw;
+      font-size: 15px;
+
+    }
+
+    .post-squashed-content-text-box:hover {
+      color: #FFFFFF;
+      background-color: #000000;
+    }
+
+    @media (max-width: 499px) {
+      .post-squashed-content-title-font {
+        padding-top: 10px;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        font-size: 22px;
+      }
+
+      .post-squashed-content-date-font {
+        padding-right: 3vw;
+        font-size: 13px;
+      }
+
+      .post-squashed-content-description-font {
+        padding-left: 5vw;
+        padding-right: 5vw;
+        font-size: 12px;
+      }
+    }
+  </style>
+  <div class="post-squashed-content-img"><img src="https://i.ibb.co/L9bb8hC/84f7c1e9-bb4f-4716-bf0d-e03d39bd6a2d.jpg" alt=""
+      style="height: 100%; width:100%; object-fit: cover;" loading="lazy"></div>
+  <div class="post-squashed-content">
+    <div class="post-squashed-content-text-box">
+      <h1 class="post-squashed-content-title-font">Caelum&rsquo;s website!</h1>
+      <div class="post-squashed-content-date">
+        <p class="post-squashed-content-date-font">May 17, 2021</p>
+      </div>
+      <p class="post-squashed-content-description-font">Writing takes time, and I have exams! Article on this coming soon I promise.</p>
+    </div>
+  </div>
+
+</div></a>
+    
+  </div>
+
+  
+  <div class="item item-8"></div>
+
+  
+  
+  <div class="item-9">
+    <a href="/projects/chroma-mind-spaces/">
+
+  <div class="item" style="position: relative;">
+    <style>
+      .post-square {
+        position: absolute;
+        top: 0%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .post-square-content {
+        height: 50%;
+        transition-duration: 0.15s;
+        background-color: #FFFFFF;
+      }
+
+      .post-square-content:hover {
+        background-color: #000000;
+      }
+
+      .post-square-content-title-font {
+        position: absolute;
+        top: 50%;
+        bottom:25%;
+        left: 0;
+        height: 20%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5px;
+        padding-left: 1.5vw;
+        padding-right:1.5vw;
+        margin: 0;
+        font-size: clamp(28.5px, 2.3vw, 35px);
+        font-family: 'Ppneuemachina', sans-serif;
+        font-weight: 800;
+      }
+
+      .post-square-content-date {
+        position: absolute;
+        top: 70%;
+        right: 0px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding-right: 2vw;
+      }
+
+      .post-square-content-date-font {
+        margin: 0;
+        margin-top: -5px;
+        font-size: 17px;
+        font-style: italic;
+        font-weight: 300;
+      }
+
+      .post-square-content-description {
+        position: absolute;
+        top: 70%;
+        left: 0;
+        height: 30%;
+        width: 100%;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-bottom: 8px;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .post-square-content-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 50%;
+        width: 100%;
+        z-index: 5;
+      }
+
+      @media (max-width: 499px) {
+        .post-square-content-title-font {
+          padding-top: 15px;
+          padding-left: 4vw;
+          padding-right: 4vw;
+          font-size: 23px;
+        }
+
+        .post-square-content-date-font {
+          font-size: 18px;
+          padding-right: 4vw;
+        }
+
+        .post-square-content-description {
+          margin-top: 8px;
+          margin-bottom: 16px;
+          padding-left: 4vw;
+          padding-right: 4vw;
+          font-size: 13.5px;
+        }
+      }
+    </style>
+    <div class="post-square">
+      <div class="post-square-content"></div>
+      <h1 class="post-square-content-title-font">Building Chroma, my 2nd app!!</h1>
+      <div class="post-square-content-date">
+        <p class="post-square-content-date-font">Oct 18, 2022</p>
+      </div>
+
+      <p class="post-square-content-description">Writing takes time, and I have exams! Article on this coming soon I promise.</p>
+    </div>
+    <div class="post-square-content-img"><img src="https://i.ibb.co/m0CjQYn/83162c07-0c97-4f20-a855-6abd05997f1d.jpg" alt=""
+        style="height: 100%; width:100%; object-fit: cover; z-index:5;" loading="lazy"></div>
+  </div>
+</a>
+  </div>
+  
+
+  
+  
+  <div class="item-10">
+    <a href="/projects/an-openweather-api-interface-my-second-package/">
+
+  <div class="item" style="position: relative;">
+    <style>
+      .post-square {
+        position: absolute;
+        top: 0%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .post-square-content {
+        height: 50%;
+        transition-duration: 0.15s;
+        background-color: #FFFFFF;
+      }
+
+      .post-square-content:hover {
+        background-color: #000000;
+      }
+
+      .post-square-content-title-font {
+        position: absolute;
+        top: 50%;
+        bottom:25%;
+        left: 0;
+        height: 20%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5px;
+        padding-left: 1.5vw;
+        padding-right:1.5vw;
+        margin: 0;
+        font-size: clamp(28.5px, 2.3vw, 35px);
+        font-family: 'Ppneuemachina', sans-serif;
+        font-weight: 800;
+      }
+
+      .post-square-content-date {
+        position: absolute;
+        top: 70%;
+        right: 0px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding-right: 2vw;
+      }
+
+      .post-square-content-date-font {
+        margin: 0;
+        margin-top: -5px;
+        font-size: 17px;
+        font-style: italic;
+        font-weight: 300;
+      }
+
+      .post-square-content-description {
+        position: absolute;
+        top: 70%;
+        left: 0;
+        height: 30%;
+        width: 100%;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-bottom: 8px;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .post-square-content-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 50%;
+        width: 100%;
+        z-index: 5;
+      }
+
+      @media (max-width: 499px) {
+        .post-square-content-title-font {
+          padding-top: 15px;
+          padding-left: 4vw;
+          padding-right: 4vw;
+          font-size: 23px;
+        }
+
+        .post-square-content-date-font {
+          font-size: 18px;
+          padding-right: 4vw;
+        }
+
+        .post-square-content-description {
+          margin-top: 8px;
+          margin-bottom: 16px;
+          padding-left: 4vw;
+          padding-right: 4vw;
+          font-size: 13.5px;
+        }
+      }
+    </style>
+    <div class="post-square">
+      <div class="post-square-content"></div>
+      <h1 class="post-square-content-title-font">An OpenWeather API Interface, my second package!</h1>
+      <div class="post-square-content-date">
+        <p class="post-square-content-date-font">May 23, 2021</p>
+      </div>
+
+      <p class="post-square-content-description">My second attempt at open-source, but slightly diffeent: I&rsquo;m cutting out, improving and turning part of the engine-code lying at the heart of Caelum into its own project hosted on pub.dev, that anyone can use and improve on</p>
+    </div>
+    <div class="post-square-content-img"><img src="https://i.ibb.co/3f5BPxD/366bb76f-799a-4368-958c-b7b430c6cf7c.jpg" alt=""
+        style="height: 100%; width:100%; object-fit: cover; z-index:5;" loading="lazy"></div>
+  </div>
+</a>
+  </div>
+  
+
+  
+  
+  <div class="item-11">
+    <a href="/projects/mobx-architecture-my-first-package/">
+
+  <div class="item" style="position: relative;">
+    <style>
+      .post-square {
+        position: absolute;
+        top: 0%;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+      }
+
+      .post-square-content {
+        height: 50%;
+        transition-duration: 0.15s;
+        background-color: #FFFFFF;
+      }
+
+      .post-square-content:hover {
+        background-color: #000000;
+      }
+
+      .post-square-content-title-font {
+        position: absolute;
+        top: 50%;
+        bottom:25%;
+        left: 0;
+        height: 20%;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 5px;
+        padding-left: 1.5vw;
+        padding-right:1.5vw;
+        margin: 0;
+        font-size: clamp(28.5px, 2.3vw, 35px);
+        font-family: 'Ppneuemachina', sans-serif;
+        font-weight: 800;
+      }
+
+      .post-square-content-date {
+        position: absolute;
+        top: 70%;
+        right: 0px;
+        display: flex;
+        align-items: flex-end;
+        justify-content: flex-end;
+        padding-right: 2vw;
+      }
+
+      .post-square-content-date-font {
+        margin: 0;
+        margin-top: -5px;
+        font-size: 17px;
+        font-style: italic;
+        font-weight: 300;
+      }
+
+      .post-square-content-description {
+        position: absolute;
+        top: 70%;
+        left: 0;
+        height: 30%;
+        width: 100%;
+        padding-left: 2vw;
+        padding-right: 2vw;
+        padding-bottom: 8px;
+        font-size: 16px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .post-square-content-img {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 50%;
+        width: 100%;
+        z-index: 5;
+      }
+
+      @media (max-width: 499px) {
+        .post-square-content-title-font {
+          padding-top: 15px;
+          padding-left: 4vw;
+          padding-right: 4vw;
+          font-size: 23px;
+        }
+
+        .post-square-content-date-font {
+          font-size: 18px;
+          padding-right: 4vw;
+        }
+
+        .post-square-content-description {
+          margin-top: 8px;
+          margin-bottom: 16px;
+          padding-left: 4vw;
+          padding-right: 4vw;
+          font-size: 13.5px;
+        }
+      }
+    </style>
+    <div class="post-square">
+      <div class="post-square-content"></div>
+      <h1 class="post-square-content-title-font">My first Flutter package!!</h1>
+      <div class="post-square-content-date">
+        <p class="post-square-content-date-font">Feb 01, 2021</p>
+      </div>
+
+      <p class="post-square-content-description">This is my first attempt at making packages, smaller, bundled up software that other developers can use in their own projects to help them out!</p>
+    </div>
+    <div class="post-square-content-img"><img src="https://i.ibb.co/Z6cGpR9/e699a03b-d4c5-460e-aeb1-9ce97daa79e8.jpg" alt=""
+        style="height: 100%; width:100%; object-fit: cover; z-index:5;" loading="lazy"></div>
+  </div>
+</a>
+  </div>
+
+  
+
+  
+  
+
 </div>
 
 	</div>
@@ -1013,6 +3569,136 @@
         delay: (el, i) => 500 + 30 * i
       });
   });
+</script>
+<script>
+  if (window.innerWidth >= 600) {
+    $(document).ready(function () {
+      var letterCount = $(".letters li").length;
+      var totalLetterWidth = 0;
+
+      for (var i = 0; i < letterCount; i++) {
+        var letterWidth = $(".letters li").eq(i).outerWidth(true);
+        totalLetterWidth = totalLetterWidth + letterWidth;
+      }
+      $(".letters").css('width', totalLetterWidth + 'px');
+
+      var speed = 2;
+      animateLetters();
+
+      function animateLetters() {
+        $(".letters li").eq(0).animate({
+          'marginLeft': '-=' + speed + 'px'
+        }, 1, function () {
+          var animateLetterWidth = $(this).outerWidth(true);
+          if (speed >= animateLetterWidth) {
+            $(this).parent().append($(this));
+            $(this).removeAttr('style');
+          }
+
+          setTimeout(function () {
+            animateLetters();
+          });
+        });
+      }
+    });
+  }
+  if (window.innerWidth <= 599) {
+    $(document).ready(function () {
+      var letterCount = $(".letters-2 li").length;
+      var totalLetterWidth = 0;
+
+      for (var i = 0; i < letterCount; i++) {
+        var letterWidth = $(".letters-2 li").eq(i).outerWidth(true);
+        totalLetterWidth = totalLetterWidth + letterWidth;
+      }
+      $(".letters-2").css('width', totalLetterWidth + 'px');
+
+      var speed = 2;
+      animateLetters();
+
+      function animateLetters() {
+        $(".letters-2 li").eq(0).animate({
+          'marginLeft': '-=' + speed + 'px'
+        }, 1, function () {
+          var animateLetterWidth = $(this).outerWidth(true);
+          if (speed >= animateLetterWidth) {
+            $(this).parent().append($(this));
+            $(this).removeAttr('style');
+          }
+
+          setTimeout(function () {
+            animateLetters();
+          });
+        });
+      }
+    });
+  }
+  window.addEventListener('resize', function (event) {
+    if (window.innerWidth >= 600) {
+      $(document).ready(function () {
+        var letterCount = $(".letters li").length;
+        var totalLetterWidth = 0;
+
+        for (var i = 0; i < letterCount; i++) {
+          var letterWidth = $(".letters li").eq(i).outerWidth(true);
+          totalLetterWidth = totalLetterWidth + letterWidth;
+        }
+        $(".letters").css('width', totalLetterWidth + 'px');
+
+        var speed = 2;
+        animateLetters();
+
+        function animateLetters() {
+          $(".letters li").eq(0).animate({
+            'marginLeft': '-=' + speed + 'px'
+          }, 1, function () {
+            var animateLetterWidth = $(this).outerWidth(true);
+            if (speed >= animateLetterWidth) {
+              $(this).parent().append($(this));
+              $(this).removeAttr('style');
+            }
+
+            setTimeout(function () {
+              animateLetters();
+            });
+          });
+        }
+      });
+    }
+    if (window.innerWidth <= 599) {
+      $(document).ready(function () {
+        var letterCount = $(".letters-2 li").length;
+        var totalLetterWidth = 0;
+
+        for (var i = 0; i < letterCount; i++) {
+          var letterWidth = $(".letters-2 li").eq(i).outerWidth(true);
+          totalLetterWidth = totalLetterWidth + letterWidth;
+        }
+        $(".letters-2").css('width', totalLetterWidth + 'px');
+
+        var speed = 2;
+        animateLetters();
+
+        function animateLetters() {
+          $(".letters-2 li").eq(0).animate({
+            'marginLeft': '-=' + speed + 'px'
+          }, 1, function () {
+            var animateLetterWidth = $(this).outerWidth(true);
+            if (speed >= animateLetterWidth) {
+              $(this).parent().append($(this));
+              $(this).removeAttr('style');
+            }
+
+            setTimeout(function () {
+              animateLetters();
+            });
+          });
+        }
+      });
+    }
+  }, true);
+
+
 </script>
 
 
