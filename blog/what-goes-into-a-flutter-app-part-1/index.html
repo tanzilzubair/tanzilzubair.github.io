@@ -645,7 +645,7 @@
 <p>It is simply providing your classes/widgets/objects/instances with <em>other</em> classes/widgets/objects/instances that they use (and therefore, <strong><em>depend</em></strong> on).</p>
 <p>In fact, you may have already been doing this, with the constructors of your classes/widgets/objects/instances.</p>
 <p><strong><em>Well, what problem does dependency injection solve?</em></strong></p>
-<p>Imagine you have your Widget tree, and you need to pass an object, of, say, type <em>DeviceData</em>, that contains the sizing information and device orientation, from the topmost widget, to a widget <em>7 (widget) layers down</em>.</p>
+<p>Imagine you have your Widget tree, and you need to pass an object, of, say, type <em>DeviceData</em>, that contains the sizing informati]on and device orientation, from the topmost widget, to a widget <em>7 (widget) layers down</em>.</p>
 <p>This means that you would have to code in 7 separate constructors, with the widgets in the middle keeping the object solely to be able to pass it down to the next widget.</p>
 <p><em>This is not a sign of clean, maintainable code.</em></p>
 <p>Furthermore, when you get more advanced with a project, you might want to use abstractions more and more, so that you can switch out the concrete implementation of a class for one more suitable for testing, and that is simply not feasible here if you have to change 7 different constructors to switch out one implementation housed in one part of your code.</p>
