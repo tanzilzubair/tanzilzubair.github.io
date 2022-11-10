@@ -36,6 +36,15 @@ The very pulse, of the machine</description>
     </item>
     
     <item>
+      <title>Exploring Flutter</title>
+      <link>/blog/exploring-flutter/</link>
+      <pubDate>Fri, 18 Jun 2021 07:00:30 +0000</pubDate>
+      
+      <guid>/blog/exploring-flutter/</guid>
+      <description>Flutter is an open source cross-platform app building framework created by Google, that uses the Dart programming language.</description>
+    </item>
+    
+    <item>
       <title>Architecting a Flutter app…and it’s importance</title>
       <link>/blog/architecting-a-flutter-app-and-why-it-s-important/</link>
       <pubDate>Sat, 05 Jun 2021 07:00:00 +0000</pubDate>
