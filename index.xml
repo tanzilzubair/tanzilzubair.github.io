@@ -153,15 +153,6 @@ The very pulse, of the machine</description>
     </item>
     
     <item>
-      <title>How to make X: Part 2</title>
-      <link>/blog/how-do-i-make-x-part-2/</link>
-      <pubDate>Mon, 22 Feb 2021 11:34:42 +0000</pubDate>
-      
-      <guid>/blog/how-do-i-make-x-part-2/</guid>
-      <description>Codename VT-7274 So, before we begin, let me lay out my idea for the project that we&amp;rsquo;ll be using as an example for how to flesh out ideas.</description>
-    </item>
-    
-    <item>
       <title>This Website, but better</title>
       <link>/blog/this-website-but-better/</link>
       <pubDate>Wed, 10 Feb 2021 07:00:00 +0000</pubDate>
@@ -171,11 +162,11 @@ The very pulse, of the machine</description>
     </item>
     
     <item>
-      <title>How do I make X ?</title>
-      <link>/blog/how-do-i-make-x-part-1/</link>
+      <title>How do I make X?</title>
+      <link>/blog/how-do-i-make-x/</link>
       <pubDate>Sun, 07 Feb 2021 07:00:19 +0000</pubDate>
       
-      <guid>/blog/how-do-i-make-x-part-1/</guid>
+      <guid>/blog/how-do-i-make-x/</guid>
       <description>Preambles Ideas are a fickle, elusive thing. They come to us in droves, or sometimes not at all.</description>
     </item>
     
