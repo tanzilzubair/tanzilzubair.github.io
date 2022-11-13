@@ -3,13 +3,13 @@
 
 <head>
   <meta charset="utf-8">
-  <title>Exploring Flutter</title>
+  <title>The Heralds Of A New Web</title>
 
   <meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="HandheldFriendly" content="true">
   <meta name="description"
-    content="A deep-dive into Flutter and Flutter apps, exploring engine architecture, compilation and of-course, code.">
+    content="The internet is a medium driven forward by its pursuit of better experiences; what will be its next evolution?">
   <meta name="attribution"
     content='<a href="https://www.vecteezy.com/free-vector/t-logo">T Logo Vectors by Vecteezy</a>'>
   <meta name="theme-color" content="#ffffff">
@@ -543,10 +543,10 @@
 
 <div class="article-page-header" id="parallax" style="background-image:linear-gradient(rgba(0, 0, 0, 0),
   rgba(0, 0, 0, 0),
-  rgba(0, 0, 0, 0.98)),url(https://i.ibb.co/TB2djrS/2566895785-Intricate-cyberpunk-electronics-drawn-in-an-oil-painting-style-with-vibrant-colors.png)">
+  rgba(0, 0, 0, 0.98)),url(https://i.ibb.co/9mDKzj7/f6587191-e466-4081-a31f-5fa1da0ee8ad.png)">
   <div>
     <div class="article-page-header-primaryTextBox">
-      <h1 class="article-page-header-primaryTitleText">Exploring Flutter</h1>
+      <h1 class="article-page-header-primaryTitleText">The Heralds Of A New Web</h1>
     </div>
     <div class="article-page-header-secondaryTextBox">
       <h1 class="article-page-header-secondaryTitleText"> By Tanzil Zubair Bin Zaman</h1>
@@ -557,54 +557,36 @@
       <span></span>
     </div>
     <div class="article-page-header-tertiaryTextBox">
-      <h1 class="article-page-header-tertiaryTitleText">Published on Jun 18, 2021</h1>
+      <h1 class="article-page-header-tertiaryTitleText">Published on Apr 15, 2022</h1>
     </div>
   </div>
 </div>
 
 <div class="article-content-wrapper">
-  <div class="article-content"><p><span class="firstcharacter">F</span>lutter is an open source cross-platform app building framework created by Google, that uses the Dart programming language. It allows for the development of apps for iOS, Android, the web and desktop, all from the same codebase (as opposed to using separate programming languages and tools for each), greatly reducing development times and complexity.</p>
-<p>This results in developers being able to deliver fast apps that feel natural and embrace the unique interactivity options of each platform (for example, gyroscopic control on mobile and hover interactions on desktops) while still sharing the majority of their code between app versions for these different platform.</p>
-<h2 id="disclaimer">Disclaimer</h2>
-<p>This article is meant to be a starting point for people who want to know more about Flutter and Dart, and while it does try to simplify concepts as much as possible, I must warn you that it gets <em>fairly</em> technical at places, as I touch on how some of the core components of Flutter really work, and that can be complex, especially if you have little experience with software or programming.
-In conclusion, I encourage heavy Googling.</p>
-<p>And with that being said, let&rsquo;s start</p>
-<h2 id="how-flutter-works">How Flutter Works</h2>
-<p>Flutter supports multiple platforms. Yet, each platform Flutter supports has its own tooling, its own programming language(s) and frameworks, and even its own IDEs! So, you might naturally wonder, how does Flutter do it?</p>
-<p>In simple terms, Flutter works by having &ldquo;shells&rdquo; for each platform, written with native code, which host the <em>Flutter engine</em>, while providing developers with the <em>Flutter framework</em>, which gives them a rich set of tools in the form of libraries in Dart, to more easily interact with the Flutter engine, and render pixels on the screen.</p>
-<p>Going a bit more in-depth, these shells are native, platform-specific <em>embedders</em>, written in the native languages of each platform (Java for Android, Objective-C for iOS, etc.), which provide an entrypoint for the <em>Flutter engine</em> to connect with each platform.</p>
-<p>The <em>Flutter engine</em> is itself written in C++, and provides a low-level implementation of the core APIs used by Flutter, by bringing together core technologies such as <a href="https://skia.org"  target="_blank" >Skia</a>, a 2D graphics rendering engine, and the Dart language runtime, as well as support for text layouts, network functionalities, I/O and plugin support, compilation tools, and more.</p>
-<p>The <em>Flutter framework</em>, which is typically how developers interact with Flutter, is written in Dart, and builds on top of this foundation, providing a UI toolkit composed of a series of layers extending from basic foundational classes which handle animation and gestures, to comprehensive Material and Cupertino UI components that adhere to their respective design languages and implement all expected functionalities.</p>
-<p>During development, Flutter apps run in a VM, and are JIT (Just-In-Time) compiled, allowing for fast development cycles utilizing &ldquo;hot reloading&rdquo;(more on that later). For release, Flutter apps are AOT (Ahead-Of-Time) compiled directly into native machine code, be it Intel x64 or ARM instructions, or transpiled into Javascript when targeting the web.</p>
-<p>Note that during the compilation process, the Flutter engine itself is also compiled (using LLVM on iOS, Android&rsquo;s NDK on Android, etc.) and included in the generated executable, with the app loading the Flutter library on app launch, and delegating graphics rendering, gestures, events etc. etc. to the compiled Flutter and app code.</p>
-<h2 id="widgets-widgets-everywhere">Widgets, Widgets Everywhere</h2>
-<p>An important concept in programming is that of <em><strong>composition</strong></em>, where&hellip;..</p>
-<p>The Flutter framework, uses <em><strong>widgets</strong></em> as a unit of composition. A line you&rsquo;ll find repeated everywhere when it comes to Flutter is that &ldquo;Everything is a widget&rdquo;. And its true!</p>
-<p>Widgets are the building blocks of a Flutter app’s user interface, each an immutable declaration of a part of the user interface. Widgets are typically composed of many other small, single-purpose widgets that combine to produce powerful effects.</p>
-<p>Furthermore, the &ldquo;layered&rdquo; architecture the Flutter framework uses also provides the ability to &ldquo;tap into&rdquo; and start building from <em>any</em> of these layers, each subsequent one allowing for more and more control over the rendering process, at the trade-off of increased code complexity, to allow for almost any UI or design to be replicated in Flutter.</p>
-<h2 id="flutter-app-architecture">Flutter App Architecture</h2>
-<p>Now, going to individual Flutter projects, each Flutter app comprises of, among others, <strong>3</strong> key areas:</p>
-<ul>
-<li>The <code>lib</code> folder, which is generally (but not exclusively) the area of the project where your Dart code resides, and where you&rsquo;ll be spending most of your time</li>
-<li>The <code>android</code> folder, which houses the android portion of your app (the &ldquo;shell&rdquo; mentioned earlier), containing a relatively small amount of code when starting out, although this can increase a small bit with the addition of plugins that need to interact with native platform APIs.</li>
-<li>The <code>ios</code> folder, which houses the iOS portion of your app (the &ldquo;shell&rdquo; mentioned earlier), containing a relatively small amount of code when starting out, although this can increase a small bit with the addition of plugins that need to interact with native platform APIs.</li>
-</ul>
-<h2 id="hot-reload">Hot-Reload</h2>
-<p>Of course, we can&rsquo;t talk about developing Flutter projects without mentioning one of the most famous features of Flutter: <strong>hot-reload</strong>. It allows for code changes to be reflected on running dev versions of the app near-instantly, while preserving state and skipping the need of a full recompile, a benefit of Dart being JIT compilable.</p>
-<h2 id="ecosystem--dependency-management">Ecosystem &amp; Dependency Management</h2>
-<p>Flutter is open source and completely free, with permissive licensing. Traits that have led to it having a thriving ecosystem of third-party projects for everything from accessing on-device camera APIs to pre-made Flutter UI components ready for use. Relatively small compared to those of its much older competition, but growing fast nonetheless.</p>
-<p>These projects are housed in self-contained &ldquo;packages&rdquo;, and hosted, for free by Google, on its package registry, <a href="https://pub.dev"  target="_blank" >pub.dev</a>. For Flutter projects, these packages are mentioned in a <code>pubspec.yaml</code> file, with each new project being generated with one by default.</p>
-<h2 id="a-note-on-performance--support">A Note On Performance &amp; Support</h2>
-<p>Flutter&rsquo;s pretty great, yes, but it <em>does</em> have drawbacks, some that will be fixed as time goes on and the framework matures more and more, and some that are more just a side-effect of how Flutter <em>works</em>, and don&rsquo;t really have any workarounds.</p>
-<p>And most, if not all of these remaining problems, stem from the simple fact that <strong>Flutter is not native to the platforms it runs on</strong>, and so, problems associated with that fact will always plague it, even if strides are made to mitigate them.
-Flutter, while fast enough for most apps, is <em>not</em> fast enough for apps building with a high number of UI refreshes per second. As such non-trivial games, or just software that by definition requires more processing power, such as design software or professional grade tools, which will always benefit substantially from being built natively (or at-least having the most computationally expensive parts be written natively).</p>
-<p>Secondly, while Flutter has a budding plugin ecosystem that handles many native functionalities, including things such as access to camera APIs, location information, gyroscopic information, etc. also as a consequence of not being built natively, platform specific integration features, such as widgets on iOS and Android, Apple Pencil 2 support on iPads, or even features such as the new Live Activities on iOS 16 devices, need to mostly be developed individually for each platform, exactly the way they would if the app was not a Flutter app, making developers have to deal with the exact problem Flutter is designed to solve: not having to learn platform specific languages and tools.</p>
-<p>Thirdly, due to issues with how Flutter projects target the Web platform and build for it, web projects are plagued by terrible loading times, jittery scrolling issues, and not-insignificant issues surrounding text rendering and layout, all of which lead to a subpar experience compared to that which Flutter delivers on mobile devices.</p>
-<p>While these issues are somewhat small compared to just how many problem Flutter solves, they are not no problem at all, and require solutions that will only come with time, as the framework evolves and grows. So, if you need features such as those, or are building apps that will need a lot of on-device processing power, you might consider going native, as Flutter is not ready for those uses (yet).</p>
-<h2 id="conclusion">Conclusion</h2>
-<p>We&rsquo;ve covered a lot of ground here, from explanations on how Flutter itself works, to widgets and the structure of Flutter apps, and more. But perhaps even <em>more</em> importantly, there&rsquo;s so many things we didn&rsquo;t cover, such as how Flutter itself renders things onto the screen, how Flutter updates parts of the UI when the underlying data changes, how animations and tickers work, the more conceptual parts of widget composition, and so much more.
-There&rsquo;s simply no way one article, or even a couple, could fully encompass the enormous array of systems that come together to make Flutter work.</p>
-<p><em>But</em>, we did properly scratch the surface, and in doing so, we&rsquo;ve seen the many benefits of using Flutter, as well as some of the not too many areas where it is lacking.</p>
+  <div class="article-content"><h2 id="the-internet">The Internet</h2>
+<p><span class="firstcharacter">T</span>he web has always been a place for great minds to push the limits of what&rsquo;s possible; what can be created; <em>experienced</em>. Born as an academic research project in 1969, the vehement determination of talented, passionate people <em>pushing</em> what it could do again and again — making scientific breakthroughs and <em>history</em> along the way — is why it is so incredibly ubiquitous in the modern world, used by over 5.03 <em>billion</em> people, that there are debates on whether it is a <em>human right</em>.</p>
+<p>So, naturally, when something is said to be the next evolution of such a vast and intricate medium, capable of changing it entirely, well, suffice to say, that attaches some <em>very</em> heavy expectations.</p>
+<p>NFTs,  cryptocurrency and even the infamous <em>Blockchain</em> have held this promise, if only for a short while. Touted to be the Next Big Thing: <em>Web 3.0</em>. A rethinking of how data, the lifeblood of the internet, flows.
+That wave, has, for the most part subsided, leaving behind seemingly as many promises to change the internet forever, as horror stories about scams and hacks and even high-profile crimes.</p>
+<p>Still, at its core, these are incredible, if esoteric, technologies, with real world benefits and impactful security advantages that do have real world applications; those applications just aren&rsquo;t JPG Apes or Bitcoin, and while they may be beneficial, they certainly wouldn&rsquo;t <em>drive the medium forward</em>, in any sense of the word.
+And that is what matters, in the end. Driving the medium forward, and evolving what experiences can be communicated. Because, quite frankly, these movements are born of, live for, and die to enrich, what they can make their users <em>feel</em>: connection. Wonder. Amazement. <em>Joy</em>.</p>
+<p>But I digress. We’re here to talk about a <em>different</em> technology. Something that <em>does</em> exhibit the criteria demanded of technology that will leave its mark on the internet. But, to know where we’re headed, we need at-least a bit of an idea of where we are.</p>
+<h2 id="the-heralds-of-the-old-new">The Heralds of The Old New</h2>
+<p>Before around 2005, the web was a simpler place, comprised of little more than basic text documents, that at most pointed to each other, using <em>hyperlinks</em>. Web 1.0.</p>
+<p>The <em>interactive</em>, participatory and easy to use web we know now, Web <em>2.0</em>, on the other hand, is filled with sites that, for the most part, can be put into a spectrum going from static-<em>ish</em> sites (much like this one), to fully dynamic and interactive ones, such as, say, Facebook&rsquo;s home feed.</p>
+<p>And driving this period of transition, of looking at the internet fundamentally in a different way, is the beating heart of Web 2.0: web-app technology, which paved the way for one of the defining traits of Web 2.0: <strong>user-generated content and social media</strong>.</p>
+<p>But what we&rsquo;re interested in, is that first bit; what powered this transition, behind the scenes: the aforementioned web-app technology. A sort of Frankensteining of the core parts of a native, interactive and responsive app experience, traditionally found in installed software, onto the hisotrically static-<em>er</em> website paradigm that exists in browsers.
+The best of <em>both worlds</em>, offering the interactivity of an application, but the freedom of distribution, availability and accessibility of the internet, unbridled by restrictions and the occasionally predatory guidelines and rules of the app stores.</p>
+<p>And while phrases such as &ldquo;Web 2.0&rdquo; represent slow gradual shifts in ideology and what people wanted, and what people could create, on the web, instead of hard, straight lines and a &ldquo;software version update&rdquo; that took us from one to the other, they serve to mark an important time: when public perception and public, change.</p>
+<p>But still, no matter how you draw the line, or <em>when</em>, one thing is certain: we&rsquo;ve left the humble text documents that started it all a long ways behind.</p>
+<h2 id="the-unwilling-participant">The Unwilling Participant</h2>
+<p>Powering this monumentous shift on the web, is the somewhat unwilling facilitator, <a href="https://en.wikipedia.org/wiki/JavaScript"  target="_blank" >Javascript</a>. A simple scripting language made for trivial tasks and infamously written in 10 days (to be fair, no small achievement), that, over the past 25 years has been turned into an amalgamation of features and paradigms and obsolete (but never removed) behavior, hacked together to support modern-day requirements.</p>
+<p>Like duct-taping a V8 onto a tricycle, (this is not hyperbole, this is a <a href="https://v8.dev"  target="_blank" >pun</a>) Javascript has been extended and re-extended to be able to support all that is demanded of it now, while making sure it is 100% backwards compatible — a point of heated contention, as it gives rise to most of JS&rsquo;s problems, done <a href="https://github.com/tc39/how-we-work/issues/37"  target="_blank" >because you do not break the web</a>.</p>
+<p>But its limitations — missing features, messy semantics and subpar developer experience — coupled with a nightmarish ecosystem plagued by controversies and supply-chain-attacks (<a href="https://www.bleepingcomputer.com/news/security/npm-supply-chain-attack-impacts-hundreds-of-websites-and-apps/"  target="_blank" >here</a>, <a href="https://www.techtarget.com/searchsecurity/news/252525968/NPM-malware-attack-goes-unnoticed-for-a-year"  target="_blank" >here</a> and <a href="https://www.techtarget.com/searchsecurity/news/252525335/Malicious-NPM-package-discovered-in-supply-chain-attack"  target="_blank" >here</a> <em>just in the last few months</em>) will only become more problematic, more <em>encumbering</em>, as time goes on.</p>
+<p>Even the performance of Javascript, <em>heavily</em> accelerated and optimized for by state-of-the-art JS engines and JIT compilation optimizations, still can&rsquo;t compare to native speeds (needed because that is what is expected of the web now). And then too, it comes relatively close because Javascript has <em>decades</em> of compiler iteration behind it.</p>
+<p>There&rsquo;s just no way to avoid the fact that Javascript is struggling to keep up with the exponentially increasing demands of the web, falling further and further behind each day.</p>
+<p>Still vital, still used and still chosen to build new things. But <em><strong>not</strong></em> because it is a good option. And certainly not, because its the best. But because, it is the <em>only</em> one.</p>
+<p>That is of-course, until now.</p>
 <div class="divider-wrapper">
     <svg class="animatedline divider-child" viewBox="0 0 523.66 16.3" width="523.6599731445312"
         height="16.299999237060547">
@@ -618,8 +600,45 @@ There&rsquo;s simply no way one article, or even a couple, could fully encompass
         </g>
     </svg>
 </div>
-<p>And so, as with everything else, it can reasonably be said that Flutter is not a golden bullet for every single problem. It excels in building mobile apps that are not supposed to be <em>too</em> demanding on a device&rsquo;s hardware, falling a little short when it comes to the other platforms it supports, as well as when using it in building performance intensive apps (for now).</p>
-<p>But Flutter has a growing ecosystem, a passionate community and Google itself backing it, and a framework that is rapidly adding new features and improving older ones. So, while there may be problems here and there, its just going to get better and better.
+<h2 id="a-new-contender">A New Contender</h2>
+<p>And that’s where the technology we&rsquo;re gonna talk about, <a href="https://webassembly.org/"  target="_blank" >WebAssembly</a> — WASM — comes in. A new standard, built with the goals of the modern web, but compatible and <em>interoperable</em> with all that came before.</p>
+<p>WebAssembly is an official <a href="https://www.w3.org/standards/"  target="_blank" >W3C standard</a>, and <a href="https://www.w3.org/2019/12/pressrelease-wasm-rec.html.en"  target="_blank" >recognized</a> as the web&rsquo;s 4th official programming language (after HTML, CSS and JavaScript), being backed by developers from Mozilla, Microsoft, Google, and Apple. The second universal programming language that all web browsers can understand and run, in the history of the internet.</p>
+<p>It consists of a low level language similar to Assembly, that can be represented with text, then converted to an efficient, compact binary format (.wasm) that can run on <em>all</em> modern browsers.</p>
+<p>It is <em>very fast</em>, running at near-native speeds and being capable of streamlining and off-loading heavy, performance-intensive tasks from the much slower Javascript, <em>significantly</em> increasing application responsiveness and performance in places.
+The compact, binary format it uses also means bundle sizes — an important metric used to estimate website load times, with smaller being better — become considerably smaller, allowing for faster site load times and a better user experience overall.</p>
+<h2 id="magic">Magic</h2>
+<p>The <em>magic</em> of WebAssembly however, is not in any of this, as you’re not going to be writing scripts in WebAssembly yourself — it’s a low level assembly language, designed to be very close to compiled machine code, allowing it to also be very close to native performance. It&rsquo;s magic comes from the fact that it is an easy <em>compilation target</em>. </p>
+<p>Now compilation is, simply put, an almost completely automated process that turns the code files on a developer&rsquo;s computer into an executable file of machine code that a computer can easily run: a process that almost all programming languages have to go through, eventually.
+The <em>output</em> of compilation, however, can be many things. A <code>.exe</code> file for Windows devices, a <code>.ipa</code> file for iOS devices, <code>.dmg</code> for Macs or a plethora of other formats as well.</p>
+<p>But now, you can compile to one <em>more</em> format: you can compile, to WebAssembly. And what this means in practice, is that JavaScript is no longer the only language you can run on the web.
+Web browsers can run <em>any</em> language now, if that language has a WebAssembly compiler. And this means that web-based programs can now be written in a growing list of languages, that includes C++, Python, Rust, C#, Go, and <em><a href="https://github.com/appcypher/awesome-wasm-langs"  target="_blank" >more</a>.</em></p>
+<h2 id="well-used-magic"><em>Well Used</em> Magic</h2>
+<p>While still quite new, and understandably rough around the edges, WASM is already a powerful, principled and practical approach to achieving high performance on the web, being used by big companies to build and ship production software.</p>
+<p><a href="https://www.autodesk.com"  target="_blank" >AutoDesk</a>, for example, was able to <a href="https://www.infoq.com/presentations/autocad-webassembly/"  target="_blank" >port their 35 year old C/C&#43;&#43; codebase over to WASM</a> in a relatively short period of time, and <a href="https://medium.com/google-earth/google-earth-comes-to-more-browsers-thanks-to-webassembly-1877d95810d6"  target="_blank" >Google could do the same with Google Earth</a>; both of these render complex 3D models and environments, and both have gained <em>significant</em> performance improvements across the board, now running at near-native performance.</p>
+<p><a href="https://www.figma.com"  target="_blank" >Figma</a>, a very popular designing tool, <a href="https://www.figma.com/blog/webassembly-cut-figmas-load-time-by-3x/"  target="_blank" >also uses WASM</a>, to deliver a high-performance C++ written designing experience that has native, buttery-smooth performance, and is available wherever there&rsquo;s a browser.</p>
+<p>Even performance intensive games are now nearly as easy to build for the web, as they are for any other device — with someone already porting over <a href="https://silentspacemarine.com"  target="_blank" >Doom</a>, as expected —, as the <a href="https://blog.unity.com/technology/webassembly-is-here"  target="_blank" >Unity game engine can target WASM now</a>.</p>
+<p>WASM also has a good ecosystem, with powerful developer tools such as <a href="https://emscripten.org"  target="_blank" >Emscripten</a>, which can convert existing projects written in C, C++ or any other language that uses LLVM to WebAssembly, allowing them to become performant web-based experiences.</p>
+<p>What all this means, in practice, is that now, complex, performance-intensive software is fully deliverable in the browser, cross-platform by default and with little in the way of performance overheads, while also providing a seamless experience with no installations required for the end user.</p>
+<h2 id="not-just-for-the-web">Not Just For The Web</h2>
+<p>Leaving web-development behind, WASM&rsquo;s benefits are much more far-reaching, extending to various different branches of computing.</p>
+<p>For one, its inherent cross-platform capabilities allow for simpler and safer ways to bring cloud-computing code, commonly written in a variety of languages, together.
+By providing a framework in which code can be written in any of a large (and growing!) list of supported languages, and then compiled to produce a common, simulated machine format, it allows components written in various languages—like Rust, Go and C++, to interact with each other.</p>
+<p>Being secure by default, with each WebAssembly module executing within an isolated, sandboxed environment separate from the host runtime, and with restricted – but compatible — execution semantics, WASM can act also as a universal plugin format, allowing third-party components to interact with internal components in a custom system, letting you bring new components into a system while mitigating the risks that typically come with integrating them.</p>
+<p>Tools such as <a href="https://wasi.dev/"  target="_blank" >WASI</a>, which provides a way to run WebAssembly portably on any system using a standardized system interface, also allow for WASM to be perfectly poised as a viable way to run <em>any</em> kind of code, on <em>any</em> kind of system, in the near future.</p>
+<p>And while WASM is undoubtedly faster overall, it doesn’t need ti have blazing-fast performance in <em>every</em> use-case, to be revolutionary. It just needs to work, not be slow, and support many languages. All of which <em>it already does and is</em>.</p>
+<h2 id="a-supplement--not-a-replacement">A Supplement,  Not A Replacement</h2>
+<p>It is however important to realize that WASM isn&rsquo;t meant to <em>replace</em> Javascript. At-least, not any time soon. What WASM does, is provide more <em>options</em>, unlocking a new way to create with the medium that is the internet.</p>
+<p>For instance, our earlier example, Figma, uses WebAssembly to power its core design engine and editing tools. But the &ldquo;shell&rdquo; housing it, comprising its buttons and menus and graphics, is built using <em>ReactJS</em>, a Javascript framework: Javascript interoperability is a well supported, prominent feature of WASM!</p>
+<p>However, despite its wide array of benefits, WebAssembly is <em><strong>not</strong></em> a fix-all solution: it will never replace HTML, CSS or the basics of JavaScript. What it is, is a tool that makes things previously <em>very hard to do</em> with Javascript, like building performance intensive applications on the web, much much easier, and <em>greatly</em> in the realm of possibility.</p>
+<h2 id="web-30">Web 3.0</h2>
+<p>When the web transitioned from being mostly read only, to interactive, from Web 1.0 to 2.0, so-to-speak, it was born of a shared love of technology, and led by people who had extreme passion and ingenious skill in their craft; it was a great leap forward, done because of the <em>joy</em> of leaping.
+It was a change in how we interacted with the web, and it was a fundamental shift in how the web interacted with <em>us</em>. It was born because of the promise of revolutionary new web-experiences, and it thrived, <em>thrives</em>, because it delivered.</p>
+<p>It was the evolution of a medium, with people creating things on the web beyond others&rsquo; wildest expectations, all lead by passionate people who did so simply because they could. Because it was fun. Because the alternative was not doing it.</p>
+<p>Such a paradigm shift, and the subsequent proliferation of previously unheard of web-experiences, is also the promise of WebAssembly, and one that it has already started delivering on.</p>
+<p>And so, here we are, with WASM, a tool leading a fundamental shift in how developers and users think of the web as a platform, and that allows for nearly <em>any</em> app to be shipped to the web, capable of running anywhere there&rsquo;s a browser.
+No installations, no revenue cuts to gargantuan corporations for <em>deigning</em> to allow your apps into their stores, no long wait times to ship updates and critical bug fixes.</p>
+<p>The evolution of a medium, making new things <em>possible</em>, and empowering everyone to create in previously unimaginable ways, and leaving just you, the experience you coded, and the ability to share it with the world.</p>
+<p>Now <em>that</em>, sounds like Web 3.0.</p>
 <div class="divider-wrapper">
     <svg class="animatedline divider-child" viewBox="0 0 523.66 16.3" width="523.6599731445312"
         height="16.299999237060547">
@@ -632,7 +651,7 @@ There&rsquo;s simply no way one article, or even a couple, could fully encompass
             <ellipse class="pl-center" cx="262.22" cy="8.15" rx="7.48" ry="7.54" stroke-width="1.35"></ellipse>
         </g>
     </svg>
-</div></p>
+</div>
 </div>
 </div><div class="ending-box">
     <svg class="ending-text" width="108" height="57" viewBox="0 0 108 57" fill="none"
