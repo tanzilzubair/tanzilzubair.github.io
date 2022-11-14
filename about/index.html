@@ -30,9 +30,6 @@
   
 
   
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
-
-  
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=2">
@@ -523,11 +520,11 @@
     <div class="logo-area">
       
       <a href="/">
-        <h1 class="logo-text">Tanzil Zubair Bin Zaman</h1>
+        <h1 class="logo-text ml-title-1">Tanzil Zubair Bin Zaman</h1>
       </a>
       <a href="/">
         <div class="logo-icon">
-          <a href="/" class="logo-icon-text">T</a>
+          <a href="/" class="logo-icon-text ml-title-2">T</a>
         </div>
       </a>
     </div>
@@ -554,6 +551,42 @@
       
     </div>
   </nav>
+  <script>
+    
+    var textWrapperTitle = document.querySelector('.ml-title-1');
+    textWrapperTitle.innerHTML = textWrapperTitle.textContent.replace(/\S/g, "<span class='letterml-title-1' style='display: inline-block;'>$&</span>");
+    window.onload = function () {
+      anime.timeline({ loop: false })
+        .add({
+          targets: '.ml-title-1 .letterml-title-1',
+          translateX: [40, 0],
+          translateZ: 0,
+          opacity: [0, 1],
+          easing: "easeOutExpo",
+          duration: 1200,
+          delay: (el, i) => 250 + 30 * i
+        });
+    };
+
+  </script>
+  <script>
+    
+    var textWrapperTitle = document.querySelector('.ml-title-2');
+    textWrapperTitle.innerHTML = textWrapperTitle.textContent.replace(/\S/g, "<span class='letterml-title-2' style='display: inline-block;'>$&</span>");
+    window.onload = function () {
+      anime.timeline({ loop: false })
+        .add({
+          targets: '.ml-title-2 .letterml-title-2',
+          translateX: [40, 0],
+          translateZ: 0,
+          opacity: [0, 1],
+          easing: "easeOutExpo",
+          duration: 1200,
+          delay: (el, i) => 350 + 30 * i
+        });
+    };
+
+  </script>
 </header>
 	<div class="wrapper">
 
@@ -639,22 +672,19 @@
   </div>
   <div class="image-target image-area-2-2" id="image-area-id-2-2">
     <div class="img-container-2-2">
-      <img class="lozad" data-placeholder-background="black"
-        data-src="https://i.ibb.co/3BpXWMd/3cb05241-bcd3-492c-8ea3-dae4883c0cc6.jpg" alt="" />
+      <img src="https://i.ibb.co/3BpXWMd/3cb05241-bcd3-492c-8ea3-dae4883c0cc6.jpg" alt="" loading="lazy" />
       <div class="overlay-2-2"></div>
     </div>
   </div>
   <div class="image-target image-area-2-3" id="image-area-id-2-3">
     <div class="img-container-2-3">
-      <img class="lozad" data-placeholder-background="black"
-        data-src="https://i.ibb.co/yn2BXbM/5e0cf1fe-db21-470a-9589-57c6d7aaccb8.jpg" alt="" />
+      <img src="https://i.ibb.co/yn2BXbM/5e0cf1fe-db21-470a-9589-57c6d7aaccb8.jpg" alt="" loading="lazy" />
       <div class="overlay-2-3"></div>
     </div>
   </div>
   <div class="image-target image-area-2-4" id="image-area-id-2-4">
     <div class="img-container-2-4">
-      <img class="lozad" data-placeholder-background="black"
-        data-src="https://i.ibb.co/bFVBVRF/f5be708c-645f-46a6-85d0-0ba09fea1d31.png" alt="" />
+      <img src="https://i.ibb.co/bFVBVRF/f5be708c-645f-46a6-85d0-0ba09fea1d31.png" alt="" loading="lazy" />
       <div class="overlay-2-4"></div>
     </div>
   </div>
@@ -671,8 +701,8 @@
   </div>
   <div class="image-target image-area-3-1">
     <div class="img-container-3-1">
-      <img class="lozad" data-placeholder-background="black"
-        data-src="https://i.ibb.co/PjdHNfC/4af6156c-14ad-4c30-9472-483e2893c81f.jpg" alt="" id="image-area-id-3-1" />
+      <img src="https://i.ibb.co/PjdHNfC/4af6156c-14ad-4c30-9472-483e2893c81f.jpg" alt="" id="image-area-id-3-1"
+        loading="lazy" />
       <div class="overlay-3-1"></div>
     </div>
   </div>
@@ -690,21 +720,20 @@
   </div>
   <div class="image-target image-area-3-2" id="image-area-id-3-2">
     <div class="img-container-3-2">
-      <img class="lozad" data-placeholder-background="black"
-        data-src="https://i.ibb.co/fvymXhF/3fc7205c-9a24-4f5f-8474-e6fa50f149ac.jpg" alt="" />
+      <img src="https://i.ibb.co/fvymXhF/3fc7205c-9a24-4f5f-8474-e6fa50f149ac.jpg" alt="" loading="lazy" />
       <div class="overlay-3-2"></div>
     </div>
   </div>
   <div class="image-target image-area-3-3" id="image-area-id-3-3">
     <div class="img-container-3-3">
       
-      <img class="lozad" data-placeholder-background="black"
-        data-src="https://i.ibb.co/N6Y2Vvh/97ce7444-ed31-4477-9086-3b91f6780377.png" alt="" />
+      <img data-src="https://i.ibb.co/N6Y2Vvh/97ce7444-ed31-4477-9086-3b91f6780377.png" alt="" />
       <div class="overlay-3-3"></div>
     </div>
   </div>
-  <div class="lozad into-the-deep-banner"
-    data-background-image="https://i.ibb.co/Sw8tvKH/d507dafa-eafa-4bb2-ac90-3f9dd06f622a.jpg" id="into-the-deep-banner">
+  <div class="into-the-deep-banner"
+    style="background-image: url('https://i.ibb.co/Sw8tvKH/d507dafa-eafa-4bb2-ac90-3f9dd06f622a.jpg');"
+    id="into-the-deep-banner">
   </div>
   <div class="into-the-deep-header">
     <h1>Once more,</h1>
@@ -741,15 +770,13 @@
   </div>
   <div class="image-target image-area-6" id="image-area-id-6">
     <div class="img-container-6">
-      <img class="lozad" data-placeholder-background="black"
-        data-src="https://i.ibb.co/23vPhgd/a9c330ca-f8ad-4486-93e8-bd5db9c34fe9.jpg" alt="" />
+      <img src="https://i.ibb.co/23vPhgd/a9c330ca-f8ad-4486-93e8-bd5db9c34fe9.jpg" alt="" loading="lazy" />
       <div class="overlay-6"></div>
     </div>
   </div>
 
   <div class="image-area-7">
-    <img class="lozad" data-placeholder-background="black"
-      data-src="https://i.ibb.co/3WTHW6K/8c1ad2ea-d8ff-484e-8704-93d62882b4d5.jpg">
+    <img src="https://i.ibb.co/3WTHW6K/8c1ad2ea-d8ff-484e-8704-93d62882b4d5.jpg" loading="lazy">
   </div>
 
   <div class="part-7" id="part-7">
@@ -767,8 +794,7 @@
     
   </div>
   <div class="image-area-8" id="image-area-id-8">
-    <img class="lozad" data-placeholder-background="black"
-      data-src="https://i.ibb.co/vLJcSBY/2305b1f1-5eac-41ac-96c7-27ecf734a0ee.jpg">
+    <img src="https://i.ibb.co/vLJcSBY/2305b1f1-5eac-41ac-96c7-27ecf734a0ee.jpg" loading="lazy">
   </div>
 
   <div class="part-8" id="part-8">
@@ -785,8 +811,9 @@
     </div>
     
   </div>
-  <div class="lozad into-the-void"
-    data-background-image="https://i.ibb.co/GvcyYYP/77ccd3d2-f742-4619-aab3-b8806c0ca0b4.png" id="into-the-void">
+  <div class="into-the-void"
+    style="background-image: url('https://i.ibb.co/GvcyYYP/77ccd3d2-f742-4619-aab3-b8806c0ca0b4.png');"
+    id="into-the-void">
   </div>
 
   <div class="part-9" id="part-9">

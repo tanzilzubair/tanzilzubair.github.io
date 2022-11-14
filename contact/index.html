@@ -523,11 +523,11 @@
     <div class="logo-area">
       
       <a href="/">
-        <h1 class="logo-text">Tanzil Zubair Bin Zaman</h1>
+        <h1 class="logo-text ml-title-1">Tanzil Zubair Bin Zaman</h1>
       </a>
       <a href="/">
         <div class="logo-icon">
-          <a href="/" class="logo-icon-text">T</a>
+          <a href="/" class="logo-icon-text ml-title-2">T</a>
         </div>
       </a>
     </div>
@@ -554,52 +554,159 @@
       
     </div>
   </nav>
+  <script>
+    
+    var textWrapperTitle = document.querySelector('.ml-title-1');
+    textWrapperTitle.innerHTML = textWrapperTitle.textContent.replace(/\S/g, "<span class='letterml-title-1' style='display: inline-block;'>$&</span>");
+    window.onload = function () {
+      anime.timeline({ loop: false })
+        .add({
+          targets: '.ml-title-1 .letterml-title-1',
+          translateX: [40, 0],
+          translateZ: 0,
+          opacity: [0, 1],
+          easing: "easeOutExpo",
+          duration: 1200,
+          delay: (el, i) => 250 + 30 * i
+        });
+    };
+
+  </script>
+  <script>
+    
+    var textWrapperTitle = document.querySelector('.ml-title-2');
+    textWrapperTitle.innerHTML = textWrapperTitle.textContent.replace(/\S/g, "<span class='letterml-title-2' style='display: inline-block;'>$&</span>");
+    window.onload = function () {
+      anime.timeline({ loop: false })
+        .add({
+          targets: '.ml-title-2 .letterml-title-2',
+          translateX: [40, 0],
+          translateZ: 0,
+          opacity: [0, 1],
+          easing: "easeOutExpo",
+          duration: 1200,
+          delay: (el, i) => 350 + 30 * i
+        });
+    };
+
+  </script>
 </header>
 	<div class="wrapper">
 <style>
-    .hero-area {
-        height: 60vh;
-        width: 100vw;
-        overflow: hidden;
-        background: var(--primaryColor);
-    }
-
-    .banner-box {
-        position: absolute;
-        top: 0;
-        left: 0;
-        width: 100vw;
-        height: 50vh;
-        display: grid;
-        grid-template-columns: repeat(14, 1fr);
-        grid-template-rows: repeat(9, 1fr);
-    }
-
-    .banner-textBox {
-        grid-column: 2 / 14;
-        grid-row: 3 / 9;
-        display: flex;
-        margin-top: 0.0px;
-        align-items: center;
-        justify-content: center;
-        line-height: 1.4;
-    }
-
-    .banner-text {
-        font-family: 'Ppneuemachina', sans-serif;
-        color: var(--secondaryColor);
-        font-weight: 800;
-        text-align: center;
-        font-size: clamp(65px, 8.5vw, 120px);
-    }
-</style>
-<div class="hero-area" id="particle-bg-2">
-    <div class="banner-box">
-        <div class="banner-textBox">
-            <h1 class="banner-text">Contact</h1>
-        </div>
-    </div>
-</div><div class="contact-grid">
+   .hero-area {
+     height: 50vh;
+     width: 100vw;
+     overflow: hidden;
+     background: var(--primaryColor);
+   }
+ 
+   .banner-box {
+     position: absolute;
+     top: 0;
+     left: 0;
+     width: 100vw;
+     height: 50vh;
+     display: grid;
+     grid-template-columns: repeat(14, 1fr);
+     grid-template-rows: repeat(9, 1fr);
+   }
+ 
+   .banner-textBox {
+     grid-column: 2 / 14;
+     grid-row: 3 / 9;
+     display: flex;
+     margin-top: 0.0px;
+     align-items: center;
+     justify-content: center;
+     line-height: 1.4;
+   }
+ 
+   .banner-header-text {
+     font-family: 'Ppneuemachina', sans-serif;
+     color: var(--secondaryColor);
+     font-weight: 900;
+     text-align: center;
+     font-size: clamp(65px, 8.5vw, 120px);
+   }
+ 
+   .banner-text-1 {
+     height: 40vh;
+     width:
+       55vw;
+     position: absolute;
+     top: 35vh;
+     left: 7.5vw;
+     justify-content: center;
+     align-items: center;
+     margin: 0;
+     font-size: clamp(40px, 3.5vw, 50px);
+     font-family: 'Ppneuemachina', sans-serif;
+     font-weight: 800;
+     line-height: 1.0;
+   }
+ 
+   .banner-text-2 {
+     height: 25vh;
+     width:
+       45vw;
+     position: absolute;
+     top: 65vh;
+     right: 7.5vw;
+     justify-content: center;
+     align-items: center;
+     text-align: right;
+     margin: 0;
+     font-size: clamp(40px, 3.5vw, 50px);
+     font-family: 'Ppneuemachina', sans-serif;
+     font-weight: 800;
+     line-height: 1.0;
+   }
+ 
+   @media (max-width: 600px) {
+     .banner-text-1 {
+       width:
+         75vw;
+       top: 35vh;
+       font-size: clamp(28px, 3.5vw, 50px);
+     }
+ 
+     .banner-text-2 {
+       width:
+         60vw;
+       top: 65vh;
+       font-size: clamp(28px, 3.5vw, 50px);
+     }
+   }
+ 
+   @media (min-width: 600px) and (max-width: 999px) {
+     .banner-text-1 {
+       width:
+         75vw;
+       top: 35vh;
+       font-size: clamp(35px, 4.0vw, 50px);
+     }
+ 
+     .banner-text-2 {
+       width:
+         60vw;
+       top: 65vh;
+       font-size: clamp(35px, 4.0vw, 50px);
+     }
+   }
+ </style>
+<div class="hero-area " id="particle-bg-2">
+   <div class="banner-box">
+     <div class="banner-textBox">
+       <h1 class="banner-header-text ml12">Contact</h1>
+     </div>
+     <div class="scroll-indicator" style="top:175%">
+       <span></span>
+       <span></span>
+       <span></span>
+     </div>
+   </div>
+ </div>
+<div class="contact-grid">
    <div class="contact-text-1">
       <h1>Wanna collab?</h1>
    </div>
@@ -992,6 +1099,23 @@
    integrity="sha512-z4OUqw38qNLpn1libAN9BsoDx6nbNFio5lA6CuTp9NlK83b89hgyCVq+N5FdBJptINztxn1Z3SaKSKUS5UP60Q=="
    crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
+<script>
+   
+  var textWrapper = document.querySelector('.ml12');
+  textWrapper.innerHTML = textWrapper.textContent.replace(/\S/g, "<span class='letterAnim' style='display: inline-block;'>$&</span>");
+  $(document).ready(function () {
+    anime.timeline({ loop: false })
+      .add({
+        targets: '.ml12 .letterAnim',
+        translateX: [40, 0],
+        translateZ: 0,
+        opacity: [0, 1],
+        easing: "easeOutExpo",
+        duration: 1200,
+        delay: (el, i) => 500 + 30 * i
+      });
+  });
+</script>
 
 <script src="/js/contact_page.min.js"></script>
 

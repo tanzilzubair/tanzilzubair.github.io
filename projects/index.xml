@@ -40,7 +40,7 @@
       <pubDate>Sun, 23 May 2021 07:00:00 +0000</pubDate>
       
       <guid>/projects/an-openweather-api-interface-my-second-package/</guid>
-      <description>Re-Inventing The Wheel There’s a saying well known by most programmers “Don’t reinvent the wheel’.</description>
+      <description>Re-Inventing The Wheel There’s a saying well known by most programmers: “Don’t reinvent the wheel’.</description>
     </item>
     
     <item>
@@ -73,7 +73,7 @@
     <item>
       <title>This Website, V:1.0.0!</title>
       <link>/projects/this-website/</link>
-      <pubDate>Tue, 01 Dec 2020 08:00:00 +0000</pubDate>
+      <pubDate>Sun, 01 Dec 2019 08:00:00 +0000</pubDate>
       
       <guid>/projects/this-website/</guid>
       <description>This Website! Yes, this website!. Built using HTML, Javascript and CSS (along with libraries to ease the pain of boilerplate code) , with Hugo as the CMS and Forestry mixed in for a little GUI convenience, this is my little space on the internet.</description>

@@ -34,9 +34,6 @@
   
 
   
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
-
-  
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=2">
@@ -527,11 +524,11 @@
     <div class="logo-area">
       
       <a href="/">
-        <h1 class="logo-text">Tanzil Zubair Bin Zaman</h1>
+        <h1 class="logo-text ml-title-1">Tanzil Zubair Bin Zaman</h1>
       </a>
       <a href="/">
         <div class="logo-icon">
-          <a href="/" class="logo-icon-text">T</a>
+          <a href="/" class="logo-icon-text ml-title-2">T</a>
         </div>
       </a>
     </div>
@@ -558,6 +555,42 @@
       
     </div>
   </nav>
+  <script>
+    
+    var textWrapperTitle = document.querySelector('.ml-title-1');
+    textWrapperTitle.innerHTML = textWrapperTitle.textContent.replace(/\S/g, "<span class='letterml-title-1' style='display: inline-block;'>$&</span>");
+    window.onload = function () {
+      anime.timeline({ loop: false })
+        .add({
+          targets: '.ml-title-1 .letterml-title-1',
+          translateX: [40, 0],
+          translateZ: 0,
+          opacity: [0, 1],
+          easing: "easeOutExpo",
+          duration: 1200,
+          delay: (el, i) => 250 + 30 * i
+        });
+    };
+
+  </script>
+  <script>
+    
+    var textWrapperTitle = document.querySelector('.ml-title-2');
+    textWrapperTitle.innerHTML = textWrapperTitle.textContent.replace(/\S/g, "<span class='letterml-title-2' style='display: inline-block;'>$&</span>");
+    window.onload = function () {
+      anime.timeline({ loop: false })
+        .add({
+          targets: '.ml-title-2 .letterml-title-2',
+          translateX: [40, 0],
+          translateZ: 0,
+          opacity: [0, 1],
+          easing: "easeOutExpo",
+          duration: 1200,
+          delay: (el, i) => 350 + 30 * i
+        });
+    };
+
+  </script>
 </header>
 	<div class="wrapper">
 <style>
@@ -1602,11 +1635,11 @@
                     <h1 class="post-long-left-content-title-font">This Website, V:1.0.0!</h1>
                 </div>
                 <div class="post-long-left-content-date">
-                    <p class="post-long-left-content-date-font">Dec 01, 2020</p>
+                    <p class="post-long-left-content-date-font">Dec 01, 2019</p>
                 </div>
             </div>
             <div class="post-long-left-content-description">
-                <p>This is my website, my little space on the internet to share my thoughts, my opinions, and proudly display my projects.</p>
+                <p>This is my website, my little space on the internet to share my thoughts and opinions, and proudly display my projects.</p>
             </div>
 
         </div>
@@ -2093,7 +2126,7 @@
                 </div>
             </div>
             <div class="post-long-right-content-description">
-                <p>My second attempt at open-source, but slightly diffeent: I&rsquo;m cutting out, improving and turning part of the engine-code lying at the heart of Caelum into its own project hosted on pub.dev, that anyone can use and improve on</p>
+                <p>My second attempt at open-source, turning part of Caelum&rsquo;s engine code into its own project that anyone can use and improve on!</p>
             </div>
 
         </div>
@@ -2818,10 +2851,10 @@
       <div class="post-square-content"></div>
       <h1 class="post-square-content-title-font">This Website, V:1.0.0!</h1>
       <div class="post-square-content-date">
-        <p class="post-square-content-date-font">Dec 01, 2020</p>
+        <p class="post-square-content-date-font">Dec 01, 2019</p>
       </div>
 
-      <p class="post-square-content-description">This is my website, my little space on the internet to share my thoughts, my opinions, and proudly display my projects.</p>
+      <p class="post-square-content-description">This is my website, my little space on the internet to share my thoughts and opinions, and proudly display my projects.</p>
     </div>
     <div class="post-square-content-img"><img src="https://i.ibb.co/vxM5SMp/57058efe-40f3-4e3c-9762-ffc00e3c7025.jpg" alt=""
         style="height: 100%; width:100%; object-fit: cover; z-index:5;" loading="lazy"></div>
@@ -3302,7 +3335,7 @@
         <p class="post-square-content-date-font">May 23, 2021</p>
       </div>
 
-      <p class="post-square-content-description">My second attempt at open-source, but slightly diffeent: I&rsquo;m cutting out, improving and turning part of the engine-code lying at the heart of Caelum into its own project hosted on pub.dev, that anyone can use and improve on</p>
+      <p class="post-square-content-description">My second attempt at open-source, turning part of Caelum&rsquo;s engine code into its own project that anyone can use and improve on!</p>
     </div>
     <div class="post-square-content-img"><img src="https://i.ibb.co/3f5BPxD/366bb76f-799a-4368-958c-b7b430c6cf7c.jpg" alt=""
         style="height: 100%; width:100%; object-fit: cover; z-index:5;" loading="lazy"></div>

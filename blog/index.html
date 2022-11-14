@@ -31,9 +31,6 @@
   
 
   
-  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
-
-  
   <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2">
   <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2">
   <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=2">
@@ -524,11 +521,11 @@
     <div class="logo-area">
       
       <a href="/">
-        <h1 class="logo-text">Tanzil Zubair Bin Zaman</h1>
+        <h1 class="logo-text ml-title-1">Tanzil Zubair Bin Zaman</h1>
       </a>
       <a href="/">
         <div class="logo-icon">
-          <a href="/" class="logo-icon-text">T</a>
+          <a href="/" class="logo-icon-text ml-title-2">T</a>
         </div>
       </a>
     </div>
@@ -555,6 +552,42 @@
       
     </div>
   </nav>
+  <script>
+    
+    var textWrapperTitle = document.querySelector('.ml-title-1');
+    textWrapperTitle.innerHTML = textWrapperTitle.textContent.replace(/\S/g, "<span class='letterml-title-1' style='display: inline-block;'>$&</span>");
+    window.onload = function () {
+      anime.timeline({ loop: false })
+        .add({
+          targets: '.ml-title-1 .letterml-title-1',
+          translateX: [40, 0],
+          translateZ: 0,
+          opacity: [0, 1],
+          easing: "easeOutExpo",
+          duration: 1200,
+          delay: (el, i) => 250 + 30 * i
+        });
+    };
+
+  </script>
+  <script>
+    
+    var textWrapperTitle = document.querySelector('.ml-title-2');
+    textWrapperTitle.innerHTML = textWrapperTitle.textContent.replace(/\S/g, "<span class='letterml-title-2' style='display: inline-block;'>$&</span>");
+    window.onload = function () {
+      anime.timeline({ loop: false })
+        .add({
+          targets: '.ml-title-2 .letterml-title-2',
+          translateX: [40, 0],
+          translateZ: 0,
+          opacity: [0, 1],
+          easing: "easeOutExpo",
+          duration: 1200,
+          delay: (el, i) => 350 + 30 * i
+        });
+    };
+
+  </script>
 </header>
 	<div class="wrapper">
 <style>

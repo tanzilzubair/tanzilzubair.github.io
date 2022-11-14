@@ -9,7 +9,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
   <meta name="HandheldFriendly" content="true">
   <meta name="description"
-    content="My second attempt at open-source, but slightly diffeent: I&#39;m cutting out, improving and turning part of the engine-code lying at the heart of Caelum into its own project hosted on pub.dev, that anyone can use and improve on">
+    content="My second attempt at open-source, turning part of Caelum&#39;s engine code into its own project that anyone can use and improve on!">
   <meta name="attribution"
     content='<a href="https://www.vecteezy.com/free-vector/t-logo">T Logo Vectors by Vecteezy</a>'>
   <meta name="theme-color" content="#ffffff">
@@ -615,13 +615,13 @@
 
 <div class="article-content-wrapper">
   <div class="article-content"><h2 id="re-inventing-the-wheel"><del>Re</del>-Inventing The Wheel</h2>
-<p><span class="firstcharacter">T</span>here’s a saying well known by most programmers “Don’t reinvent the wheel’. It is said in many scenarios, but means the same thing in almost all of them: Learn from those that came before you, and use their solutions to these problems, instead of wasting your time trying to do the same thing again.</p>
+<p><span class="firstcharacter">T</span>here’s a saying well known by most programmers: “Don’t reinvent the wheel’. It is said in many scenarios, but means the same thing in almost all of them: Learn from those that came before you, and use their solutions to these problems, instead of wasting your time trying to do the same thing again.</p>
 <div class="quote">
     <blockquote>
         <p><strong><em>But what if you are among the first ?</em></strong></p>
     </blockquote>
 </div>
-<p>While building my app, <em>Caelum,</em> I searched high and low for a package on <a href="pub.dev"  title="pub.dev" >pub.dev</a> that could handle the networking and server communication side of things, talking with the server and parsing the data payloads it sends, but alas, for reasons I will be talking about soon enough, I could not find one that had all the features I wanted : Security, Reliability, Modularity and Scalability.</p>
+<p>While building my app, <em>Caelum,</em> I had to search high and low for <em>packages</em> (self-contained, pre-written code) that could handle the networking and server communication side of things — talking with servers, parsing and validating data payloads, maintaining security, etc. — but alas, for reasons I will be talking about soon enough, I could not find one that had all the features I wanted : Security, Reliability, Modularity and Scalability.</p>
 <p>After hours of fruitless searching, I finally came to the conclusion that, weak as I may have been with network code, I was going to have to do this myself.</p>
 <p>The list of requirements was long and arduous: I had to design a robust API request system capable of handling a wide variety of request types, converting each instance of numerical data to and from a plethora of units, also accounting for every error the server could throw at me, not to mention implementing fallbacks upon fallbacks, as this system would lie at Caelum&rsquo;s heart and would be what drove everything else. So it had to be perfect, or at least damn near it.</p>
 <p>And it had to be so on the first try, as I didn’t have the time required to be able to extensively test <em>every</em> edge case and properly trigger <em>every</em> error to check if the system could handle it. This was going to be long and difficult, to say the least.</p>
