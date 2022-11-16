@@ -571,10 +571,14 @@
 
   </script>
   <script>
-    
-    var textWrapperTitle = document.querySelector('.ml-title-2');
-    textWrapperTitle.innerHTML = textWrapperTitle.textContent.replace(/\S/g, "<span class='letterml-title-2' style='display: inline-block;'>$&</span>");
-    window.onload = function () {
+    document.addEventListener('readystatechange', event => {
+
+      
+      if (event.target.readyState === "complete") {
+        
+        var textWrapperTitle = document.querySelector('.ml-title-2');
+        textWrapperTitle.innerHTML = textWrapperTitle.textContent.replace(/\S/g, "<span class='letterml-title-2' style='display: inline-block;'>$&</span>");
+      }
       anime.timeline({ loop: false })
         .add({
           targets: '.ml-title-2 .letterml-title-2',
@@ -585,8 +589,7 @@
           duration: 1200,
           delay: (el, i) => 350 + 30 * i
         });
-    };
-
+    });
   </script>
 </header>
 	<div class="wrapper">

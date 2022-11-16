@@ -41,8 +41,8 @@
    
    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/lozad/dist/lozad.min.js"></script>
    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
-   integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
-   
+      integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+
    
    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=2">
    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=2">
@@ -585,10 +585,14 @@
 
   </script>
   <script>
-    
-    var textWrapperTitle = document.querySelector('.ml-title-2');
-    textWrapperTitle.innerHTML = textWrapperTitle.textContent.replace(/\S/g, "<span class='letterml-title-2' style='display: inline-block;'>$&</span>");
-    window.onload = function () {
+    document.addEventListener('readystatechange', event => {
+
+      
+      if (event.target.readyState === "complete") {
+        
+        var textWrapperTitle = document.querySelector('.ml-title-2');
+        textWrapperTitle.innerHTML = textWrapperTitle.textContent.replace(/\S/g, "<span class='letterml-title-2' style='display: inline-block;'>$&</span>");
+      }
       anime.timeline({ loop: false })
         .add({
           targets: '.ml-title-2 .letterml-title-2',
@@ -599,13 +603,12 @@
           duration: 1200,
           delay: (el, i) => 350 + 30 * i
         });
-    };
-
+    });
   </script>
 </header>
 	<div class="wrapper">
 
-<div class="hero-area" id="particle-bg">
+<div class="hero-area">
    <style>
       .headerTextAppearance {
          display: inline-block;
@@ -711,76 +714,689 @@
       <span></span>
       <span></span>
    </div>
-   
-   <style>
+</div>
+<style>
+    
+   .logo-app-1 {
+      position: fixed;
+      right: 5%;
+      bottom: 15%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 70px;
+      width: 40px;
+      flex-direction: column;
+      z-index: 4;
+   }
+
+   .logo-app-2 {
+      position: fixed;
+      right: 5%;
+      bottom: 3%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      height: 70px;
+      width: 40px;
+      flex-direction: column;
+      z-index: 4;
+   }
+
+   .caelum-logo-1 {
+      height:40px;
+      width: 40px;
+   }
+
+   .chroma-logo {
+      height: 40px;
+      width: 40px;
+   }
+
+   .social-icons-box-landing {
+      position: fixed;
+      left: 4%;
+      bottom: 5%;
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      z-index: 4;
+   }
+
+   .social-icons-box-landing-row1 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-bottom: 31px;
+   }
+
+   .social-icons-box-landing-row1>div {
+      margin-top: 15px;
+      margin-left: 15px;
+   }
+
+   .social-icons-box-landing-row2 {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      margin-top: 31px;
+   }
+
+   .social-icons-box-landing-row2>div {
+      margin-top: 15px;
+      margin-left: 15px;
+   }
+
+   .logo-app-name {
+      color: #FFFFFF;
+      text-transform: uppercase;
+      font-family: 'Ppneuemachina', sans-serif;
+      font-weight: 800;
+      font-size: 12px;
+      margin: 0px;
+   }
+
+   @media (min-width: 650px) {
       .logo-app-1 {
-         position: absolute;
-         right: 5%;
-         bottom: 16%;
+         position: fixed;
+         right: 130px;
+         bottom: 3%;
          display: flex;
          justify-content: flex-start;
          align-items: center;
-         height: 70px;
-         width: max(40px, 6vw);
+         height: 85px;
+         width: 50px;
          flex-direction: column;
+         z-index: 4;
       }
 
       .logo-app-2 {
-         position: absolute;
-         right: 5%;
-         bottom: 5%;
+         position: fixed;
+         right: 40px;
+         bottom: 3%;
          display: flex;
          justify-content: flex-start;
          align-items: center;
-         height: 70px;
-         width: max(40px, 6vw);
-         ;
+         height: 85px;
+         width: 50px;
          flex-direction: column;
+         z-index: 4;
       }
 
+      .caelum-logo-1, .chroma-logo {
+         height: 50px;
+         width: 50px;
+      }
       .logo-app-name {
-         color: #FFFFFF;
-         text-transform: uppercase;
-         font-family: 'Ppneuemachina', sans-serif;
-         font-weight: 800;
-         font-size: 12px;
-         margin: 0px;
+         font-size: 14px;
+      }
+   }
+
+   @media (min-width: 800px) {
+      .logo-app-1 {
+         position: fixed;
+         right: 140px;
+         bottom: 3%;
+         display: flex;
+         justify-content: flex-start;
+         align-items: center;
+         height: 95px;
+         width: 60px;
+         flex-direction: column;
+         z-index: 4;
       }
 
-      .animate.pop {
-         animation-name: animate-pop;
-         animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
-         animation-duration: 0.6s;
-         -webkit-animation-fill-mode: forwards;
-         animation-fill-mode: forwards;
+      .logo-app-2 {
+         position: fixed;
+         right: 40px;
+         bottom: 3%;
+         display: flex;
+         justify-content: flex-start;
+         align-items: center;
+         height: 95px;
+         width: 60px;
+         flex-direction: column;
+         z-index: 4;
+      }
+
+      .caelum-logo-1, .chroma-logo {
+         height: 60px;
+         width: 60px;
+      }
+      .logo-app-name {
+         font-size: 16px;
+      }
+   }
+
+   @media (min-width: 1100px) {
+      .logo-app-1 {
+         position: fixed;
+         right: 170px;
+         bottom: 3%;
+         display: flex;
+         justify-content: flex-start;
+         align-items: center;
+         height: 95px;
+         width: 60px;
+         flex-direction: column;
+         z-index: 4;
+      }
+
+      .logo-app-2 {
+         position: fixed;
+         right: 55px;
+         bottom: 3%;
+         display: flex;
+         justify-content: flex-start;
+         align-items: center;
+         height: 95px;
+         width: 60px;
+         flex-direction: column;
+         z-index: 4;
+      }
+
+      .caelum-logo-1, .chroma-logo {
+         height: 60px;
+         width: 60px;
+      }
+      .logo-app-name {
+         font-size: 16px;
+      }
+   }
+
+   .animate.pop {
+      animation-name: animate-pop;
+      animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+      animation-duration: 0.6s;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+      opacity: 0;
+      transform: translateX(200%);
+   }
+
+   @keyframes animate-pop {
+      0% {
          opacity: 0;
-         transform: translateX(200%);
+         transform: translateX(-200%);
       }
 
-      @keyframes animate-pop {
-         0% {
-            opacity: 0;
-            transform: translateX(200%);
-         }
+      100% {
+         opacity: 1;
+         transform: translateX(0%);
+      }
+   }
 
-         100% {
-            opacity: 1;
-            transform: translateX(0%);
-         }
+   .delay-1 {
+      animation-delay: 2.8s;
+   }
+
+   .delay-2 {
+      animation-delay: 3.0s;
+   }
+
+   .delay-3 {
+      animation-delay: 3.2s;
+   }
+
+   .delay-4 {
+      animation-delay: 3.4s;
+   }
+</style>
+<style>
+    
+   .caelum-logo-1>path:nth-child(1) {
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      fill: transparent;
+      animation-name: stroke, fillLight;
+      animation-duration: 0.6s, 0.4s;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+      animation-delay: 1.1s, 2.5s;
+
+   }
+
+    
+   .caelum-logo-1>path:nth-child(2) {
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      fill: transparent;
+      animation-name: stroke, fillDark;
+      animation-duration: 0.5s, 0.4s;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+      animation-delay: 1.9s, 2.5s;
+
+   }
+
+    
+   .caelum-logo-1>path:nth-child(3) {
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      fill: transparent;
+      animation-name: stroke, fillDark;
+      animation-duration: 0.5s, 0.4s;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+      animation-delay: 1.4s, 2.5s;
+   }
+
+    
+   .caelum-logo-1>path:nth-child(4) {
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      fill: transparent;
+      animation-name: stroke, fillLight;
+      animation-duration: 0.5s, 0.4s;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+      animation-delay: 1.7s, 2.5s;
+   }
+
+   @keyframes fillLight {
+      100% {
+         fill: #EEEFF0;
+         stroke-width: 0;
+      }
+   }
+
+   @-webkit-keyframes fillLight {
+      100% {
+         fill: #EEEFF0;
+         stroke-width: 0;
+      }
+   }
+
+   @keyframes fillDark {
+      100% {
+         fill: #1C2424;
+         stroke-width: 0;
+      }
+   }
+
+   @-webkit-keyframes fillDark {
+      100% {
+         fill: #1C2424;
+         stroke-width: 0;
+      }
+   }
+
+   @keyframes stroke {
+      0% {
+         color: #EEEFF0;
       }
 
-      .delay-1 {
-         animation-delay: 1.2s;
+      100% {
+         stroke-dashoffset: 0;
+      }
+   }
+
+   @-webkit-keyframes stroke {
+      100% {
+         stroke-dashoffset: 0;
+      }
+   }
+</style>
+<style>
+    
+   .chroma-logo>path:nth-child(1) {
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      fill: transparent;
+      animation-name: stroke, fillLight;
+      animation-duration: 0.6s, 0.4s;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+      animation-delay: 1.1s, 2.5s;
+
+   }
+
+    
+   .chroma-logo>path:nth-child(2) {
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      fill: transparent;
+      animation-name: stroke, fillLily;
+      animation-duration: 0.5s, 0.4s;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+      animation-delay: 1.9s, 2.5s;
+
+   }
+
+    
+   .chroma-logo>path:nth-child(3) {
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      fill: transparent;
+      animation-name: stroke, fillBlue;
+      animation-duration: 0.5s, 0.4s;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+      animation-delay: 1.4s, 2.5s;
+   }
+
+    
+   .chroma-logo>path:nth-child(4) {
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      fill: transparent;
+      animation-name: stroke, fillGreen;
+      animation-duration: 0.5s, 0.4s;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+      animation-delay: 1.7s, 2.5s;
+   }
+
+    
+   .chroma-logo>path:nth-child(5) {
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      fill: transparent;
+      animation-name: stroke, fillYellow;
+      animation-duration: 0.5s, 0.4s;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+      animation-delay: 1.7s, 2.5s;
+   }
+
+    
+   .chroma-logo>path:nth-child(6) {
+      stroke-dasharray: 1;
+      stroke-dashoffset: 1;
+      fill: transparent;
+      animation-name: stroke, fillYellowInside;
+      animation-duration: 0.5s, 0.4s;
+      animation-timing-function: ease;
+      animation-fill-mode: forwards;
+      animation-delay: 1.7s, 2.5s;
+   }
+
+   @keyframes fillLily {
+      100% {
+         fill: #BA174E;
+         stroke-width: 0;
+      }
+   }
+
+   @-webkit-keyframes fillLily {
+      100% {
+         fill: #BA174E;
+         stroke-width: 0;
+      }
+   }
+
+   @keyframes fillBlue {
+      100% {
+         fill: #156FB0;
+         stroke-width: 0;
+      }
+   }
+
+   @-webkit-keyframes fillBlue {
+      100% {
+         fill: #156FB0;
+         stroke-width: 0;
+      }
+   }
+
+   @keyframes fillGreen {
+      100% {
+         fill: #758E29;
+         stroke-width: 0;
+      }
+   }
+
+   @-webkit-keyframes fillGreen {
+      100% {
+         fill: #758E29;
+         stroke-width: 0;
+      }
+   }
+
+   @keyframes fillYellow {
+      100% {
+         fill: #C49732;
+         stroke-width: 0;
+      }
+   }
+
+   @-webkit-keyframes fillYellow {
+      100% {
+         fill: #C49732;
+         stroke-width: 0;
+      }
+   }
+
+   @keyframes fillYellowInside {
+      100% {
+         fill: #1E1E1E;
+         stroke-width: 0;
+      }
+   }
+
+   @-webkit-keyframes fillYellowInside {
+      100% {
+         fill: #1E1E1E;
+         stroke-width: 0;
+      }
+   }
+
+   @keyframes fillLight {
+      100% {
+         fill: #EEEFF0;
+         stroke-width: 0;
+      }
+   }
+
+   @-webkit-keyframes fillLight {
+      100% {
+         fill: #EEEFF0;
+         stroke-width: 0;
+      }
+   }
+
+   @keyframes stroke {
+      0% {
+         color: #EEEFF0;
       }
 
-      .delay-2 {
-         animation-delay: 1.8s;
+      100% {
+         stroke-dashoffset: 0;
+      }
+   }
+
+   @-webkit-keyframes stroke {
+      0% {
+         color: #EEEFF0;
+      }
+
+      100% {
+         stroke-dashoffset: 0;
+      }
+   }
+</style>
+
+<div class="social-icons-box-landing">
+   <div class="social-icons-box-landing-row1">
+      <div class="social-menu-item animate pop delay-1">
+         <div class="social-button-menu social-button-background">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <span onclick="window.open('https:\/\/github.com\/tanzilzubair'); return false;"
+               onkeypress="window.open('https:\/\/github.com\/tanzilzubair'); return false;">
+               <svg style="padding:7px;" class="social-icon" width="20" height="20" viewBox="0 0 20 20" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path fill-rule="evenodd" clip-rule="evenodd"
+                     d="M10.026 0C4.517 0 0.052 4.465 0.052 9.974C0.052 14.38 2.909 18.119 6.873 19.439C7.372 19.529 7.552 19.222 7.552 18.958C7.552 18.721 7.544 18.093 7.541 17.262C4.766 17.864 4.18 15.924 4.18 15.924C3.728 14.772 3.073 14.465 3.073 14.465C2.168 13.846 3.142 13.86 3.142 13.86C4.144 13.93 4.669 14.888 4.669 14.888C5.559 16.412 7.005 15.972 7.571 15.717C7.662 15.072 7.922 14.632 8.206 14.383C5.992 14.132 3.664 13.276 3.664 9.453C3.664 8.366 4.053 7.474 4.688 6.778C4.587 6.525 4.242 5.51 4.787 4.138C4.787 4.138 5.624 3.869 7.529 5.159C8.327 4.938 9.178 4.827 10.025 4.823C10.874 4.827 11.726 4.938 12.521 5.159C14.427 3.868 15.263 4.138 15.263 4.138C15.808 5.51 15.466 6.525 15.362 6.778C16.002 7.474 16.386 8.365 16.386 9.453C16.386 13.286 14.056 14.128 11.834 14.375C12.189 14.683 12.509 15.291 12.509 16.221C12.509 17.555 12.497 18.631 12.497 18.958C12.497 19.225 12.675 19.535 13.184 19.437C17.146 18.115 20 14.379 20 9.974C20 4.465 15.535 0 10.026 0Z" />
+               </svg>
+            </span>
+         </div>
+      </div>
+      <div class="social-menu-item animate pop delay-2">
+         <div class="social-button-menu social-button-background">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <span onclick="window.open('https:\/\/www.instagram.com\/tanzil.zubair\/'); return false;"
+               onkeypress="window.open('https:\/\/www.instagram.com\/tanzil.zubair\/'); return false;">
+               <svg style="padding:5px;" class="social-icon" width="323" height="313" viewBox="0 0 323 313" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                     d="M99.7687 156.5C99.7687 123.496 127.375 96.7085 161.487 96.7085C195.571 96.7085 223.204 123.496 223.204 156.5C223.204 189.518 195.571 216.305 161.487 216.305C127.375 216.305 99.7687 189.518 99.7687 156.5ZM120.558 156.513C120.558 178.427 138.898 196.177 161.487 196.177C184.075 196.177 202.388 178.427 202.388 156.513C202.388 134.586 184.075 116.849 161.487 116.849C138.898 116.849 120.558 134.586 120.558 156.513Z"
+                     stroke="white" />
+                  <path
+                     d="M240.189 93.9913C240.189 101.465 233.932 107.55 226.181 107.55C218.429 107.55 212.173 101.465 212.173 93.9913C212.173 86.5176 218.429 80.4324 226.181 80.4324C233.932 80.4324 240.189 86.5176 240.189 93.9913Z"
+                     stroke="white" />
+                  <path
+                     d="M211.463 40.3941L211.463 40.3942L211.474 40.3944C221.486 40.602 231.377 42.4308 240.731 45.8412C256.872 51.8836 269.617 64.2495 275.875 79.8816C279.459 89.0578 281.332 98.7927 281.506 108.62L281.506 108.631L281.507 108.641C282.259 121.104 282.26 125.132 282.26 156.996C282.26 188.853 282.085 192.822 281.506 205.357L281.506 205.357L281.506 205.37C281.305 215.066 279.419 224.632 275.902 233.706C269.643 249.338 256.899 261.691 240.758 267.759C231.389 271.157 221.499 272.998 211.501 273.193L211.492 273.193L211.483 273.193C198.647 273.91 194.449 273.91 161.581 273.91C128.719 273.91 124.622 273.74 111.671 273.193L111.666 273.193C101.628 272.881 91.7369 270.884 82.4209 267.356L82.4193 267.356C66.2641 261.301 53.5186 248.934 47.2598 233.315C43.742 224.228 41.8561 214.662 41.6555 204.966L41.6553 204.956L41.6547 204.946C40.9021 192.483 40.9019 188.442 40.9019 156.591C40.9019 124.734 41.0768 120.765 41.655 108.23L41.6552 108.23L41.6555 108.217C41.8561 98.521 43.7421 88.9548 47.2599 79.8808C53.505 64.249 66.2496 51.8833 82.4038 45.841C91.7579 42.4177 101.648 40.589 111.633 40.3945L111.642 40.3943L111.651 40.3938C124.487 39.6904 128.686 39.6903 161.554 39.6903C194.416 39.6903 198.513 39.8468 211.463 40.3941ZM256.229 226.203C258.882 219.251 260.289 211.922 260.439 204.524H260.573L260.595 204.047C261.174 191.568 261.174 188.138 261.174 156.387V156.37C261.174 124.59 261.026 121.094 260.447 108.687C260.325 101.197 258.887 93.7739 256.23 86.7587L256.226 86.7502C252.068 76.3529 243.604 68.14 232.896 64.1401L232.891 64.1381C225.641 61.525 217.999 60.1458 210.263 60.0527C197.244 59.3353 193.857 59.3353 161.086 59.3353H161.069C128.274 59.3353 124.668 59.4917 111.865 60.0527C104.155 60.1586 96.4851 61.5377 89.2481 64.1379L89.2433 64.1397C78.4961 68.126 69.9766 76.3254 65.8179 86.7506L65.8178 86.7506L65.8151 86.7576C63.1036 93.8653 61.6931 101.353 61.5969 108.92C60.8834 121.562 60.8834 124.832 60.8834 156.586V156.604C60.8834 188.37 61.018 191.879 61.5969 204.274C61.7199 211.764 63.1576 219.187 65.8146 226.202L65.8179 226.211C69.9766 236.622 78.4959 244.835 89.2438 248.808L89.2473 248.81C96.4837 251.423 104.153 252.802 111.862 252.895C124.895 253.613 128.268 253.613 161.051 253.613H161.069C193.85 253.613 197.471 253.469 210.261 252.895C217.997 252.789 225.64 251.423 232.891 248.81L232.896 248.808C243.604 244.821 252.068 236.608 256.226 226.211L256.229 226.203Z"
+                     stroke="white" />
+               </svg>
+            </span>
+         </div>
+      </div>
+   </div>
+   <div class="social-icons-box-landing-row2">
+      <div class="social-menu-item animate pop delay-3">
+         <div class="social-button-menu social-button-background">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <span onclick="window.open('https:\/\/twitter.com\/tanzil7274'); return false;"
+               onkeypress="window.open('https:\/\/twitter.com\/tanzil7274'); return false;">
+               <svg style="padding:8px;" class="social-icon" width="20" height="16" viewBox="0 0 20 16" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                     d="M17.633 3.997C17.646 4.172 17.646 4.346 17.646 4.52C17.646 9.845 13.593 15.981 6.186 15.981C3.904 15.981 1.784 15.32 0 14.172C0.324 14.209 0.636 14.222 0.973 14.222C2.856 14.222 4.589 13.586 5.974 12.501C4.203 12.464 2.719 11.304 2.207 9.708C2.456 9.745 2.706 9.77 2.968 9.77C3.329 9.77 3.692 9.72 4.029 9.633C2.182 9.259 0.799 7.638 0.799 5.68V5.63C1.336 5.929 1.959 6.116 2.619 6.141C1.534 5.419 0.823 4.184 0.823 2.787C0.823 2.039 1.022 1.353 1.371 0.755C3.354 3.198 6.335 4.795 9.677 4.97C9.615 4.67 9.577 4.359 9.577 4.047C9.577 1.827 11.373 0.0190001 13.605 0.0190001C14.765 0.0190001 15.812 0.505 16.548 1.291C17.458 1.116 18.33 0.779 19.104 0.318C18.805 1.253 18.168 2.039 17.333 2.538C18.144 2.45 18.93 2.226 19.652 1.914C19.104 2.712 18.419 3.423 17.633 3.997Z" />
+               </svg>
+            </span>
+         </div>
+      </div>
+      <div class="social-menu-item animate pop delay-4">
+         <div class="social-button-menu social-button-background">
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <i></i>
+            <span onclick="window.open('https:\/\/www.facebook.com\/profile.php?id=100010015394729'); return false;"
+               onkeypress="window.open('https:\/\/www.facebook.com\/profile.php?id=100010015394729'); return false;">
+               <svg style="padding:8px;" class="social-icon" width="10" height="18" viewBox="0 0 10 18" fill="none"
+                  xmlns="http://www.w3.org/2000/svg">
+                  <path
+                     d="M6.397 17.997V9.801H9.162L9.573 6.592H6.397V4.548C6.397 3.622 6.655 2.988 7.984 2.988H9.668V0.127C8.849 0.0390003 8.025 -0.00299976 7.201 2.35814e-07C4.757 2.35814e-07 3.079 1.492 3.079 4.231V6.586H0.332V9.795H3.085V17.997H6.397Z" />
+               </svg>
+            </span>
+         </div>
+      </div>
+   </div>
+
+
+</div>
+
+
+<div class="logo-app-1">
+   <a href="https://caelum.tanzilzubair.tech" target="_blank" class="">
+      <svg class="caelum-logo-1" width="512" height="512" viewBox="0 0 512 512" fill="none"
+         xmlns="http://www.w3.org/2000/svg" alt='App Icon'>
+         
+         <path
+            d="M0 100C0 44.7715 44.7715 0 100 0H412C467.228 0 512 44.7715 512 100V412C512 467.228 467.228 512 412 512H100C44.7715 512 0 467.228 0 412V100Z"
+            fill="#EEEFF0" pathLength="1" stroke="#FFFFFF" stroke-width="20" />
+         
+         <path
+            d="M406 280.5C406 349.259 350.259 405 281.5 405C212.741 405 157 349.259 157 280.5C157 211.741 212.741 156 281.5 156C350.259 156 406 211.741 406 280.5Z"
+            fill="#1C2424" pathLength="1" stroke="#FFFFFF" stroke-width="20" />
+         
+         <path
+            d="M288 197C288 247.258 247.258 288 197 288C146.742 288 106 247.258 106 197C106 146.742 146.742 106 197 106C247.258 106 288 146.742 288 197Z"
+            fill="#1C2424" pathLength="1" stroke="#FFFFFF" stroke-width="20" />
+         
+         <path
+            d="M197 288C247.258 288 288 247.258 288 197C288 182.267 284.499 168.352 278.283 156.041C211.586 157.732 157.925 211.878 157.012 278.766C169.081 284.68 182.653 288 197 288Z"
+            fill="#EEEFF0" pathLength="1" stroke="#FFFFFF" stroke-width="20" />
+      </svg>
+   </a>
+   <style>
+      .logo-app-name .mask-app-logo {
+         display: inline-block;
+         height: 1.5em;
+         overflow: hidden;
+         overflow-wrap: break-word;
+         white-space: normal;
+      }
+
+      .logo-app-name .mask-app-logo .logo-words {
+         display: inline-block;
+         overflow-wrap: break-word;
+         white-space: normal;
       }
    </style>
-   
-   
+   <a href="https://caelum.tanzilzubair.tech" target="_blank" alt='App Icon'>
+      <h1 class="logo-app-name"><span class="mask-app-logo"><span class="logo-words">CAELUM</span></span></h1>
+   </a>
 </div>
-<div style="width: 100vw; height: 100vh;">
+
+<div class="logo-app-2">
+   <a href="https://chroma.tanzilzubair.tech" target="_blank" alt='App Icon'>
+      <svg class="chroma-logo" width="1024" height="1024" viewBox="0 0 1024 1024" fill="none"
+         xmlns="http://www.w3.org/2000/svg">
+         <path
+            d="M0 200C0 89.5431 89.5431 0 200 0H824C934.457 0 1024 89.5431 1024 200V824C1024 934.457 934.457 1024 824 1024H200C89.5431 1024 0 934.457 0 824V200Z"
+            fill="#EEEFF0" pathLength="1" stroke="#FFFFFF" stroke-width="20" />
+         <path
+            d="M345.518 306.458C322.086 283.026 322.086 245.036 345.518 221.605L468.702 98.4212C492.133 74.9898 530.123 74.9898 553.554 98.4213L676.738 221.605C700.17 245.036 700.17 283.026 676.738 306.458L553.554 429.641C530.123 453.073 492.133 453.073 468.702 429.641L345.518 306.458Z"
+            fill="#BA174E" pathLength="1" stroke="#FFFFFF" stroke-width="20" />
+         <path
+            d="M345.518 802.094C322.086 778.663 322.086 740.673 345.518 717.242L468.702 594.058C492.133 570.627 530.123 570.627 553.554 594.058L676.738 717.242C700.17 740.673 700.17 778.663 676.738 802.094L553.554 925.278C530.123 948.71 492.133 948.71 468.702 925.278L345.518 802.094Z"
+            fill="#156FB0" pathLength="1" stroke="#FFFFFF" stroke-width="20" />
+         <path
+            d="M586.498 556.025C563.067 532.593 563.067 494.603 586.498 471.172L709.682 347.988C733.114 324.557 771.104 324.557 794.535 347.988L917.719 471.172C941.15 494.603 941.15 532.593 917.719 556.025L794.535 679.208C771.103 702.64 733.114 702.64 709.682 679.208L586.498 556.025Z"
+            fill="#758E29" pathLength="1" stroke="#FFFFFF" stroke-width="20" />
+         <path
+            d="M106.426 556.025C82.9947 532.593 82.9947 494.604 106.426 471.172L229.61 347.988C253.041 324.557 291.031 324.557 314.463 347.988L437.646 471.172C461.078 494.604 461.078 532.593 437.646 556.025L314.463 679.209C291.031 702.64 253.041 702.64 229.61 679.209L106.426 556.025Z"
+            fill="#C49732" pathLength="1" stroke="#FFFFFF" stroke-width="20" />
+         <path
+            d="M243.803 438.281C259.424 422.66 284.751 422.66 300.372 438.281L347.819 485.728C363.44 501.349 363.44 526.676 347.819 542.297L300.372 589.743C284.751 605.364 259.424 605.364 243.803 589.743L196.356 542.297C180.735 526.676 180.736 501.349 196.356 485.728L243.803 438.281Z"
+            fill="#1E1E1E" pathLength="1" stroke="#FFFFFF" stroke-width="20" />
+      </svg>
+   </a>
+   <a href="https://chroma.tanzilzubair.tech" target="_blank" alt='App Icon'>
+      <h1 class="logo-app-name"><span class="mask-app-logo"><span class="logo-words">CHROMA</span></span></h1>
+   </a>
+
+</div>
+
+<div style="width: 1px; height: 100vh; pointer-events:none; z-index:-2">
    
 </div>
 
@@ -1418,32 +2034,18 @@
    });
 </script>
 <script>
-   
-   var sentence = document.querySelector('.logo-app-name');
-   let text = sentence.textContent;
-   let words = text.split(' ');
-
-   sentence.innerHTML = '';
-   
-   for (let word of words) {
-      let word_split = word;
-      console.log(word_split);
-
-      
-      sentence.innerHTML += '<span class="mask-header">' + '<span class="logo-words">' + word_split + '</span>' + '</span>';
-   }
    $(window).on("load", function () {
       anime.timeline({
          loop: false
       })
          .add({
             targets: '.logo-words',
-            translateY: [0, 0],
+            translateY: [100, 0],
             opacity: [0, 1],
             easing: "easeOutExpo",
             duration: 2000,
             delay: function (el, i) {
-               return 135 * i;
+               return 2200;
             }
          });
    });
