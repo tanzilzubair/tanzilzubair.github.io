@@ -3,16 +3,19 @@
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
     <loc>/blog/</loc>
-    <lastmod>2022-11-01T07:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/blog/github-copilot-higher-aspirations/</loc>
-    <lastmod>2022-11-01T07:00:00+00:00</lastmod>
+    <lastmod>2022-11-06T07:00:00+00:00</lastmod>
   </url><url>
     <loc>/</loc>
-    <lastmod>2022-11-01T07:00:00+00:00</lastmod>
+    <lastmod>2022-11-06T07:00:00+00:00</lastmod>
   </url><url>
     <loc>/blog/soul-of-the-silicon/</loc>
-    <lastmod>2022-11-01T07:00:00+00:00</lastmod>
+    <lastmod>2022-11-06T07:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/github-copilot-higher-aspirations/</loc>
+    <lastmod>2022-10-31T07:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/what-goes-into-a-flutter-app-part-2/</loc>
+    <lastmod>2022-10-23T07:00:34+00:00</lastmod>
   </url><url>
     <loc>/projects/chroma-mind-spaces/</loc>
     <lastmod>2022-10-18T07:00:00+00:00</lastmod>
@@ -41,14 +44,8 @@
     <loc>/blog/what-goes-into-a-flutter-app-part-3/</loc>
     <lastmod>2021-06-03T07:00:34+00:00</lastmod>
   </url><url>
-    <loc>/blog/what-goes-into-a-flutter-app-part-2/</loc>
-    <lastmod>2021-05-26T07:00:34+00:00</lastmod>
-  </url><url>
     <loc>/projects/an-openweather-api-interface-my-second-package/</loc>
     <lastmod>2021-05-23T07:00:00+00:00</lastmod>
-  </url><url>
-    <loc>/blog/what-goes-into-a-flutter-app-part-1/</loc>
-    <lastmod>2021-05-18T07:00:00+00:00</lastmod>
   </url><url>
     <loc>/projects/caelum-beautiful-weather/</loc>
     <lastmod>2021-05-17T07:00:00+00:00</lastmod>
@@ -65,14 +62,17 @@
     <loc>/blog/this-website-but-better/</loc>
     <lastmod>2021-02-10T07:00:00+00:00</lastmod>
   </url><url>
-    <loc>/blog/how-do-i-make-x/</loc>
-    <lastmod>2021-02-07T07:00:19+00:00</lastmod>
-  </url><url>
     <loc>/projects/mobx-architecture-my-first-package/</loc>
     <lastmod>2021-02-01T07:00:00+00:00</lastmod>
   </url><url>
+    <loc>/blog/what-goes-into-a-flutter-app-part-1/</loc>
+    <lastmod>2020-05-18T07:00:00+00:00</lastmod>
+  </url><url>
+    <loc>/blog/how-do-i-make-x/</loc>
+    <lastmod>2020-02-07T07:00:19+00:00</lastmod>
+  </url><url>
     <loc>/projects/this-website/</loc>
-    <lastmod>2019-12-01T08:00:00+00:00</lastmod>
+    <lastmod>2019-10-03T08:00:00+00:00</lastmod>
   </url><url>
     <loc>/projects/minecraft-nuclear-weapons-add-on/</loc>
     <lastmod>2016-11-12T07:00:00+00:00</lastmod>

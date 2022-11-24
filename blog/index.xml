@@ -6,24 +6,33 @@
     <description>Recent content in Blog on Tanzil Zubair Bin Zaman</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 01 Nov 2022 07:00:00 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Sun, 06 Nov 2022 07:00:00 +0000</lastBuildDate><atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>The Very Soul Of the Silicon</title>
+      <link>/blog/soul-of-the-silicon/</link>
+      <pubDate>Sun, 06 Nov 2022 07:00:00 +0000</pubDate>
+      
+      <guid>/blog/soul-of-the-silicon/</guid>
+      <description>Coming Soon!! And now I see with eye serene
+The very pulse, of the machine</description>
+    </item>
+    
     <item>
       <title>Github Copilot — Higher Aspirations</title>
       <link>/blog/github-copilot-higher-aspirations/</link>
-      <pubDate>Tue, 01 Nov 2022 07:00:00 +0000</pubDate>
+      <pubDate>Mon, 31 Oct 2022 07:00:00 +0000</pubDate>
       
       <guid>/blog/github-copilot-higher-aspirations/</guid>
       <description>Coming Soon!! </description>
     </item>
     
     <item>
-      <title>The Very Soul Of the Silicon</title>
-      <link>/blog/soul-of-the-silicon/</link>
-      <pubDate>Tue, 01 Nov 2022 07:00:00 +0000</pubDate>
+      <title>Flutter Apps :2</title>
+      <link>/blog/what-goes-into-a-flutter-app-part-2/</link>
+      <pubDate>Sun, 23 Oct 2022 07:00:34 +0000</pubDate>
       
-      <guid>/blog/soul-of-the-silicon/</guid>
-      <description>Coming Soon!! And now I see with eye serene
-The very pulse, of the machine</description>
+      <guid>/blog/what-goes-into-a-flutter-app-part-2/</guid>
+      <description>Disclaimer This is Part 2 of a series of articles that explore and seek to provide newcomers with a high-level overview of what all the parts of an app consist of and do, so that they can hit the ground running.</description>
     </item>
     
     <item>
@@ -72,24 +81,6 @@ The very pulse, of the machine</description>
     </item>
     
     <item>
-      <title>Flutter Apps :2</title>
-      <link>/blog/what-goes-into-a-flutter-app-part-2/</link>
-      <pubDate>Wed, 26 May 2021 07:00:34 +0000</pubDate>
-      
-      <guid>/blog/what-goes-into-a-flutter-app-part-2/</guid>
-      <description>Disclaimer This is Part 2 of a series of articles that explore and seek to provide newcomers with a high-level overview of what all the parts of an app consist of and do, so that they can hit the ground running.</description>
-    </item>
-    
-    <item>
-      <title>Flutter Apps :1</title>
-      <link>/blog/what-goes-into-a-flutter-app-part-1/</link>
-      <pubDate>Tue, 18 May 2021 07:00:00 +0000</pubDate>
-      
-      <guid>/blog/what-goes-into-a-flutter-app-part-1/</guid>
-      <description>Disclaimer This article is meant to be a starting point for people new to coding and trying their hand at Dart and Flutter, much as I was and did.</description>
-    </item>
-    
-    <item>
       <title>This Website, but even better (The Third)</title>
       <link>/blog/this-website-but-even-better-the-third/</link>
       <pubDate>Sun, 02 May 2021 07:00:00 +0000</pubDate>
@@ -117,9 +108,18 @@ The very pulse, of the machine</description>
     </item>
     
     <item>
+      <title>Flutter Apps :1</title>
+      <link>/blog/what-goes-into-a-flutter-app-part-1/</link>
+      <pubDate>Mon, 18 May 2020 07:00:00 +0000</pubDate>
+      
+      <guid>/blog/what-goes-into-a-flutter-app-part-1/</guid>
+      <description>Disclaimer This article is meant to be a starting point for people new to coding and trying their hand at Dart and Flutter, much as I was and did.</description>
+    </item>
+    
+    <item>
       <title>How do I make X?</title>
       <link>/blog/how-do-i-make-x/</link>
-      <pubDate>Sun, 07 Feb 2021 07:00:19 +0000</pubDate>
+      <pubDate>Fri, 07 Feb 2020 07:00:19 +0000</pubDate>
       
       <guid>/blog/how-do-i-make-x/</guid>
       <description>Preambles Ideas are a fickle, elusive thing. They come to us in droves, or sometimes not at all.</description>
