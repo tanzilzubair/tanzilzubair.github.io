@@ -4,89 +4,72 @@
     <title>Projects on Tanzil Zubair Bin Zaman</title>
     <link>/projects/</link>
     <description>Recent content in Projects on Tanzil Zubair Bin Zaman</description>
-    <generator>Hugo -- gohugo.io</generator>
+    <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 18 Oct 2022 07:00:00 +0000</lastBuildDate><atom:link href="/projects/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Tue, 18 Oct 2022 07:00:00 +0000</lastBuildDate>
+    <atom:link href="/projects/index.xml" rel="self" type="application/rss+xml" />
     <item>
       <title>Building Chroma, my 2nd app!!</title>
       <link>/projects/chroma-mind-spaces/</link>
       <pubDate>Tue, 18 Oct 2022 07:00:00 +0000</pubDate>
-      
       <guid>/projects/chroma-mind-spaces/</guid>
       <description>Coming Soon! Writing&amp;rsquo;s hard work! I haven&amp;rsquo;t gotten to finishing writing on some of the very interesting stuff that went down during the development for Chroma, but when I do, it&amp;rsquo;ll be here.</description>
     </item>
-    
     <item>
       <title>Chroma&#39;s website!</title>
       <link>/projects/chroma-website/</link>
       <pubDate>Tue, 18 Oct 2022 07:00:00 +0000</pubDate>
-      
       <guid>/projects/chroma-website/</guid>
       <description>Coming Soon! Writing&amp;rsquo;s tough! I haven&amp;rsquo;t gotten to finishing writing on some of the very interesting stuff that I coded up during the development for this site, such as the beautiful live fluid simulation I used for the site (WebGL technology!</description>
     </item>
-    
     <item>
       <title>Morbus, my 1st prize winning game!</title>
       <link>/projects/morbus/</link>
       <pubDate>Sun, 27 Feb 2022 07:00:00 +0000</pubDate>
-      
       <guid>/projects/morbus/</guid>
       <description>Coming Soon! The writing for this is taking a lot more effort than usual!</description>
     </item>
-    
     <item>
       <title>An OpenWeather client, my second package!</title>
       <link>/projects/an-openweather-api-interface-my-second-package/</link>
       <pubDate>Sun, 23 May 2021 07:00:00 +0000</pubDate>
-      
       <guid>/projects/an-openweather-api-interface-my-second-package/</guid>
       <description>Re-Inventing The Wheel There’s a saying well known by most programmers: “Don’t reinvent the wheel’.</description>
     </item>
-    
     <item>
       <title>Caelum: Beautiful Weather</title>
       <link>/projects/caelum-beautiful-weather/</link>
       <pubDate>Mon, 17 May 2021 07:00:00 +0000</pubDate>
-      
       <guid>/projects/caelum-beautiful-weather/</guid>
       <description>Before Before we begin with this winding tale, you can experience Caelum right now by yourselves, here for iOS, and here for Android.</description>
     </item>
-    
     <item>
       <title>Caelum&#39;s website!</title>
       <link>/projects/caelum-website/</link>
       <pubDate>Mon, 17 May 2021 07:00:00 +0000</pubDate>
-      
       <guid>/projects/caelum-website/</guid>
       <description>Coming Soon! Writing&amp;rsquo;s hard! I haven&amp;rsquo;t gotten to finishing writing on some of the very interesting stuff that I coded up during the development for this site, such as the cool accordion styled menu I used, the unconventional warping text animations, the typography and so much more, all of which you can check out here!</description>
     </item>
-    
     <item>
       <title>My first Flutter package!!</title>
       <link>/projects/mobx-architecture-my-first-package/</link>
       <pubDate>Mon, 01 Feb 2021 07:00:00 +0000</pubDate>
-      
       <guid>/projects/mobx-architecture-my-first-package/</guid>
       <description>The Inspiration The internet is a big place, and getting bigger everyday.</description>
     </item>
-    
     <item>
       <title>This Website, V:1.0.0!</title>
       <link>/projects/this-website/</link>
       <pubDate>Thu, 03 Oct 2019 08:00:00 +0000</pubDate>
-      
       <guid>/projects/this-website/</guid>
       <description>This Website! Yes, this website!. Built using HTML, Javascript and CSS (along with libraries to ease the pain of boilerplate code) , with Hugo as the CMS and Forestry mixed in for a little GUI convenience, this is my little space on the internet.</description>
     </item>
-    
     <item>
       <title>My First Minecraft Mod!</title>
       <link>/projects/minecraft-nuclear-weapons-add-on/</link>
       <pubDate>Sat, 12 Nov 2016 07:00:00 +0000</pubDate>
-      
       <guid>/projects/minecraft-nuclear-weapons-add-on/</guid>
       <description>The Beginning Ahh, my first coding project. Minecraft is something that I’ve loved all my life, the joy, the freedom, the boundless possibilities spreading out before you every time you open a world….</description>
     </item>
-    
   </channel>
 </rss>
